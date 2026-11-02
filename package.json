@@ -5,8 +5,13 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "start": "npx serve out",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "check:tbc": "node scripts/list-tbc.mjs",
+    "check:compliance": "node scripts/compliance-scan.mjs",
+    "check:links": "node scripts/check-links.mjs",
+    "check": "npm run lint && npm run typecheck && npm run build && npm run check:links && npm run check:compliance && npm run check:tbc"
   },
   "dependencies": {
     "@fontsource-variable/montserrat": "^5.3.0",
