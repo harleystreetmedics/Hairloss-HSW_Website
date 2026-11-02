@@ -31,7 +31,7 @@ export const GENERAL_FAQS: Faq[] = [
   },
   {
     q: "How much does treatment cost?",
-    a: "Your first consultation is free and online. Treatment prices depend on the treatment and the number of sessions, and your plan and its cost are confirmed in writing after your consultation. Finance options are available, subject to status.",
+    a: "You can have a free online consultation or a £195 in-clinic consultation, which is redeemable against treatment. Treatment prices depend on the treatment and the number of sessions, and your plan and its cost are confirmed in writing after your consultation. Finance options are available, subject to status.",
   },
   {
     q: "Where are your clinics?",

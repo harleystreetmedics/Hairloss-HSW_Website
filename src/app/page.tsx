@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ConditionCard, FaqAccordion, StepTimeline, TreatmentCard } from "@/components/cards";
 import { FollicleArt } from "@/components/FollicleArt";
 import { Icon } from "@/components/Icon";
-import { ClinicsSection, CtaBand, ResultsPlaceholder, ReviewsSection, TeamPlaceholder } from "@/components/sections";
+import { ClinicsSection, CtaBand, ResultsPlaceholder, ReviewsSection, TeamGrid } from "@/components/sections";
 import { Button, CheckList, Disclaimer, JsonLd, Section, SectionHeading, Tbc } from "@/components/ui";
 import { CONDITIONS, DIAGNOSIS_STEPS, PATTERNS, RX_SENTENCE } from "@/lib/conditions";
 import { GENERAL_FAQS } from "@/lib/faqs";
@@ -162,11 +162,12 @@ export default function Home() {
           title={<>Assessed by qualified <span className="text-gold">practitioners</span></>}
           intro={
             <>
-              Your consultation is with a member of our medical team. <Tbc>confirm who leads hair loss consultations and their registration</Tbc>
+              Your consultation is with a member of our GMC-registered medical team of consultant dermatologists, a plastic surgeon and
+              doctors.
             </>
           }
         />
-        <TeamPlaceholder />
+        <TeamGrid limit={3} />
       </Section>
 
       <Section tone="soft" labelledBy="pricing-title">
@@ -181,7 +182,7 @@ export default function Home() {
             />
             <CheckList
               items={[
-                <>Consultation: free and online, with no obligation</>,
+                <>Consultation: free online (15 minutes) or £195 in clinic (30 minutes, redeemable against treatment)</>,
                 <>PRP: <Tbc>price per session / course</Tbc></>,
                 <>Finance: Klarna, Clearpay and Ideal4Finance options, subject to status (18+, UK residents)</>,
               ]}

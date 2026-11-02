@@ -1,6 +1,8 @@
 # Review checklist
 
-_Updated 2 Nov 2026 after the Copilot research: re-ran build, lint, typecheck, links, compliance scan, 17 browser tests and Lighthouse (home 97, PRP 95, pricing 98 mobile performance; 100 accessibility and best practices). Placeholders reduced from 51 to 41; 10 Harley Street removed (not seeing patients)._
+_Updated 2 Nov 2026 after the Copilot research: re-ran build, lint, typecheck, links, compliance scan, 17 browser tests and Lighthouse (home 97, PRP 95, pricing 98 mobile performance; 100 accessibility and best practices). Placeholders reduced from 51 to 41; 10 Harley Street removed (not seeing patients). Then, from the main website: medical team, consultation prices (free online / £195 in clinic) and £50 deposit added; placeholders now 35._
+
+**Check:** the team, consultation prices and deposit come from the general main-site pages, not hair-specific sources. Confirm they apply to hair loss, and which team members see hair patients.
 
 Everything here needs a human check before launch. Run `npm run check` to rebuild and re-run every automated check, and `npm run check:tbc` to list the placeholders still on the site.
 
@@ -62,7 +64,7 @@ Automated scan plus a manual read of every page. Things for your compliance lead
 
 ## 3. Placeholders to fill (`[TBC]`, amber on the page)
 
-41 unique placeholders. Copilot doesn't document these; they need the clinic manager, compliance lead or website/CRM admin (see `docs/open-questions.md`).
+35 unique placeholders. Copilot doesn't document these; they need the clinic manager, compliance lead or website/CRM admin (see `docs/open-questions.md`).
 
 | Placeholder | Pages |
 |---|---|
@@ -76,30 +78,23 @@ Automated scan plus a manual read of every page. Things for your compliance lead
 | confirm whether offered | /diagnosis/, /treatments/ |
 | confirm whether offered and the device used | /diagnosis/ |
 | confirm whether prices are the same at both clinics | /pricing/ |
-| confirm who leads hair loss consultations and their registration | / |
 | consented before and after photos (pattern hair loss) | /, /results/ |
 | consented before and after photos (thinning crown) | /, /results/ |
 | CQC registration statement | /london/ |
 | CQC registration statement and number | /404/, /about/, /book/ +36 more |
-| deposit amount and cancellation notice period for hair loss appointments | /terms/ |
-| deposit and cancellation policy for hair loss appointments | /pricing/ |
 | exosome treatment price | /pricing/, /treatments/exosome-hair-treatment/ |
 | FCA credit broker statement and representative example, if required | /pricing/ |
 | frequency and course length | /treatments/low-level-laser-therapy/ |
+| GMC numbers for each hair loss practitioner | /about/ |
 | Healthcare Improvement Scotland registration statement | /404/, /about/, /book/ +36 more |
 | Healthcare Improvement Scotland registration statement and number | /about/ |
 | hosting and form provider, e.g. Netlify | /privacy-policy/ |
 | LLLT device (in clinic or home use) | /treatments/low-level-laser-therapy/ |
 | LLLT price | /pricing/, /treatments/low-level-laser-therapy/ |
 | microneedling device used on the scalp | /treatments/scalp-microneedling/ |
-| names, roles, GMC numbers, bios and photo permission | /about/ |
-| practitioner name | /about/, / |
 | price per session / course | /, /treatments/prp-hair-treatment/, /treatments/scalp-microneedling/ |
-| professional registrations (GMC/NMC) for each hair loss practitioner | /about/ |
 | PRP price per session and course | /pricing/ |
-| role, qualifications and GMC number | /about/, / |
 | scalp microneedling price | /pricing/ |
-| short bio and photo (with permission) | /about/, / |
 | verified Google review rating, count and link, plus hair loss testimonials with written permission | /, /results/ |
 | whether beard and eyebrow treatments are offered | /conditions/beard-and-eyebrow-thinning/ |
 | whether post-chemotherapy hair support is offered | /conditions/hair-loss-after-chemotherapy/ |
@@ -107,6 +102,7 @@ Automated scan plus a manual read of every page. Things for your compliance lead
 | which blood tests are offered in clinic and their price | /diagnosis/ |
 | which blood tests are offered in clinic, and the price | /conditions/medical-causes/ |
 | which scalp treatments are offered in clinic | /conditions/scalp-conditions/ |
+| which team members see hair loss patients, and GMC numbers | /about/, / |
 
 Where the data lives: prices and facts in `src/lib/treatments.ts` (`facts`, `priceTbc`, `aftercareTbc`), condition notes in `src/lib/conditions.ts` (`offeredTbc`), clinics and contact details in `src/lib/site.ts`, team/reviews/results placeholders in `src/components/sections.tsx`, regulator lines in `src/components/Footer.tsx` and `src/components/LocationPage.tsx`.
 

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { CtaBand } from "@/components/sections";
 import { CheckList, Disclaimer, PageHero, Section, SectionHeading, Tbc } from "@/components/ui";
 import { pageMetadata } from "@/lib/seo";
-import { BRAND } from "@/lib/site";
+import { BRAND, CONSULTATIONS } from "@/lib/site";
 import { TREATMENTS } from "@/lib/treatments";
 
 export const metadata = pageMetadata({
@@ -43,11 +43,24 @@ export default function PricingPage() {
               <tr>
                 <th scope="row" className="p-5 font-serif text-lg font-normal text-cream">
                   <Link href="/diagnosis/" className="hover:text-gold">
-                    Hair loss consultation
+                    Online consultation
                   </Link>
                 </th>
-                <td className="p-5 text-cream">Free</td>
-                <td className="p-5 text-sm text-stone">Online, with no obligation to go ahead</td>
+                <td className="p-5 text-cream">{CONSULTATIONS.online.price}</td>
+                <td className="p-5 text-sm text-stone">
+                  {CONSULTATIONS.online.time}. {CONSULTATIONS.online.detail}
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" className="p-5 font-serif text-lg font-normal text-cream">
+                  <Link href="/diagnosis/" className="hover:text-gold">
+                    In-clinic consultation
+                  </Link>
+                </th>
+                <td className="p-5 text-cream">{CONSULTATIONS.inClinic.price}</td>
+                <td className="p-5 text-sm text-stone">
+                  {CONSULTATIONS.inClinic.time}. {CONSULTATIONS.inClinic.detail}
+                </td>
               </tr>
               {TREATMENTS.map((t) => (
                 <tr key={t.slug}>
@@ -87,7 +100,7 @@ export default function PricingPage() {
                 "Your practitioner recommends a plan only after assessing you.",
                 "You'll receive the full cost of your plan before you agree to anything.",
                 "There is no obligation to go ahead with treatment after your consultation.",
-                <>Deposit and cancellation terms: <Tbc>deposit and cancellation policy for hair loss appointments</Tbc></>,
+                CONSULTATIONS.deposit,
               ]}
             />
           </div>

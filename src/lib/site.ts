@@ -60,6 +60,53 @@ export const CLINICS: Record<ClinicId, Clinic> = {
 
 export const CLINIC_LIST = [CLINICS.london, CLINICS.glasgow];
 
+// Medical team as listed on harleystreetaesthetic.co.uk/london/team and /glasgow/team (2 Nov 2026).
+// Which of them see hair loss patients is not stated there (docs/open-questions.md).
+export const TEAM = [
+  {
+    name: "Mr Khalil Al-Nakib",
+    post: "FRCSEd",
+    role: "Consultant Plastic Surgeon",
+    clinics: "London and Glasgow",
+    bio: "Consultant Plastic Surgeon with experience in reconstruction, trauma and burns, and in the use of lasers. Fellow of the Royal College of Surgeons of Edinburgh.",
+  },
+  {
+    name: "Dr Ayda Soltanzadeh",
+    post: "",
+    role: "Consultant Dermatologist",
+    clinics: "London and Glasgow",
+    bio: "Consultant Dermatologist with a background in clinical dermatology and a meticulous approach to aesthetic medicine.",
+  },
+  {
+    name: "Dr Nina Ku",
+    post: "",
+    role: "Dermatologist",
+    clinics: "London",
+    bio: "Dermatologist with an international clinical background and a particular interest in dermoscopy, skin cancer screening and minor dermatological procedures.",
+  },
+  {
+    name: "Dr Afraa Mohammed",
+    post: "MBBS, MD (Dermatology)",
+    role: "Dermatologist",
+    clinics: "London",
+    bio: "Dermatologist with more than 12 years of experience in dermatology and aesthetic medicine.",
+  },
+  {
+    name: "Dr Mazhar Khan",
+    post: "MBBS, MRCGP, DRCOG, DFFP",
+    role: "Medical Doctor",
+    clinics: "London",
+    bio: "Medical doctor with over 23 years of clinical experience, including more than 20 years as a GP in NHS and private practice.",
+  },
+] as const;
+
+/** Consultation options from harleystreetaesthetic.co.uk/london/pricing (Consultations tab, 2 Nov 2026). */
+export const CONSULTATIONS = {
+  online: { price: "Free", time: "15 minutes", detail: "Video assessment, medical history review and preliminary advice. No obligation." },
+  inClinic: { price: "£195", time: "30 minutes", detail: "Full assessment, medical history review and a bespoke treatment plan. Redeemable against treatment." },
+  deposit: "A £50 deposit is required to secure appointments. It is fully redeemable against your treatment cost. If you decide not to go ahead after your consultation, it is refundable provided you give 48 hours' notice.",
+};
+
 export const TRACKING = {
   gtmId: process.env.NEXT_PUBLIC_GTM_ID ?? "",
   ga4Id: process.env.NEXT_PUBLIC_GA4_ID ?? "",

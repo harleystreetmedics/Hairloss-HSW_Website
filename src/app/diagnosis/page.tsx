@@ -50,7 +50,8 @@ export default function DiagnosisPage() {
               ]}
             />
             <p className="mt-6 text-sm text-stone">
-              Your first consultation is free, online and has no obligation. It is a consultation, not free treatment.
+              You can choose a free 15-minute online video consultation, or a 30-minute in-clinic consultation (£195, redeemable against
+              treatment) where your scalp can be examined in person. The free online consultation is a consultation, not free treatment.
             </p>
           </div>
           <div>

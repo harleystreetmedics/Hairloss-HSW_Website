@@ -121,5 +121,13 @@ I asked the Copilot chat in all three workspaces (Aesthetics, Wellness, Medics),
 - **Dr Ahmad** fronts the pigmentation adverts. No GMC number, profile or hair loss role documented.
 - **Not documented anywhere:** CQC/HIS wording and numbers, practitioner directory and GMC/NMC numbers, booking URL, enquiry destination, GA4/GTM/Pixel IDs, Google rating, opening hours.
 
+## 9. Main site follow-up (2 Nov 2026, at your request)
+From harleystreetaesthetic.co.uk, rendered in a headless browser:
+- **Consultations** (London pricing → Consultations tab): Online Consultation **Free**, 15 minutes (video assessment, medical history review, preliminary advice, no obligation). In-Clinic Consultation **£195**, 30 minutes (full assessment, bespoke plan, redeemable against treatment). 3D Skin Analysis £50 (not relevant to hair).
+- **Deposit:** "A deposit of £50 is required to secure all appointments, which is fully redeemable against your treatment cost." The pricing FAQ says it's refundable if you don't proceed after consultation, provided 48 hours' notice is given.
+- **Finance:** Klarna (pay in 3), Clearpay (pay in 4), interest-free finance up to 12 months for purchases over £1,000.
+- **Team** (/london/team, /glasgow/team): Mr Khalil Al-Nakib FRCSEd (Consultant Plastic Surgeon, London and Glasgow), Dr Ayda Soltanzadeh (Consultant Dermatologist, London and Glasgow), Dr Nina Ku (Dermatologist), Dr Afraa Mohammed MBBS MD (Dermatologist), Dr Mazhar Khan MBBS MRCGP DRCOG DFFP (Medical Doctor). Described as GMC-registered; no GMC numbers; no hair loss role stated. Bios on the hair site are shortened from these pages.
+- **Not on the main site:** hair loss treatments or prices, CQC/HIS wording, GMC numbers, tracking IDs (no GA4, GTM or Meta Pixel requests seen when the page loaded). The footer "Privacy Policy" and "Terms of Service" links point to `#` (broken), and `/privacy-policy` returns 404. Worth fixing on the main site.
+
 ## 7. Not available yet (see open-questions.md)
 Everything from Copilot: confirmed treatment list, devices/products, sessions, prices, consultation fee, packages, finance, practitioners and GMC numbers, CQC/HIS numbers, testimonials, before/after photos and consent, booking link for hair, enquiry destination, GA4/GTM/Pixel IDs, brand voice notes, competitors.

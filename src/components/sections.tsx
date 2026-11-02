@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BRAND, CLINIC_LIST } from "@/lib/site";
+import { BRAND, CLINIC_LIST, TEAM } from "@/lib/site";
 import { ClinicTabs } from "./location";
 import { Icon } from "./Icon";
 import { Button, Section, SectionHeading, Tbc } from "./ui";
@@ -77,26 +77,35 @@ export function ResultsPlaceholder() {
   );
 }
 
-export function TeamPlaceholder() {
+/** Medical team from the main site's team pages. */
+export function TeamGrid({ limit }: { limit?: number }) {
+  const people = limit ? TEAM.slice(0, limit) : TEAM;
   return (
-    <div className="grid gap-5 md:grid-cols-3">
-      {[1, 2, 3].map((n) => (
-        <div key={n} className="rounded-2xl border border-cream/10 bg-card p-7 shadow-card">
-          <span className="flex h-16 w-16 items-center justify-center rounded-full bg-black-soft text-gold">
-            <Icon name="user" className="h-7 w-7" />
-          </span>
-          <p className="mt-5 font-serif text-2xl text-cream">
-            <Tbc>practitioner name</Tbc>
-          </p>
-          <p className="mt-2 text-sm text-stone">
-            <Tbc>role, qualifications and GMC number</Tbc>
-          </p>
-          <p className="mt-3 text-sm text-stone">
-            <Tbc>short bio and photo (with permission)</Tbc>
-          </p>
-        </div>
-      ))}
-    </div>
+    <>
+      <ul className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {people.map((p) => (
+          <li key={p.name} className="rounded-2xl border border-cream/10 bg-card p-7 shadow-card">
+            <span aria-hidden="true" className="flex h-16 w-16 items-center justify-center rounded-full border border-gold/40 bg-black-soft font-serif text-xl text-gold">
+              {p.name.replace(/^(Mr|Dr) /, "").split(" ").map((w) => w[0]).join("").slice(0, 2)}
+            </span>
+            <h3 className="mt-5 font-serif text-2xl text-cream">{p.name}</h3>
+            <p className="mt-1 text-sm font-semibold text-gold">
+              {p.role}
+              {p.post && <span className="font-normal text-stone"> · {p.post}</span>}
+            </p>
+            <p className="mt-1 text-xs tracking-[0.15em] text-stone uppercase">{p.clinics}</p>
+            <p className="mt-4 text-sm leading-relaxed text-stone">{p.bio}</p>
+          </li>
+        ))}
+      </ul>
+      <p className="mt-6 text-sm text-stone">
+        Our team is GMC-registered.{" "}
+        <a href={`${BRAND.mainSite}/london/team`} className="text-gold underline underline-offset-2 hover:text-cream">
+          Read full profiles on our main website
+        </a>
+        . <Tbc>which team members see hair loss patients, and GMC numbers</Tbc>
+      </p>
+    </>
   );
 }
 

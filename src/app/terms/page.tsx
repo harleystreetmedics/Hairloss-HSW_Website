@@ -1,7 +1,6 @@
 import { LegalPage } from "@/components/LegalPage";
-import { Tbc } from "@/components/ui";
 import { pageMetadata } from "@/lib/seo";
-import { BRAND } from "@/lib/site";
+import { BRAND, CONSULTATIONS } from "@/lib/site";
 
 export const metadata = pageMetadata({
   title: "Terms of Use",
@@ -21,9 +20,9 @@ export default function TermsPage() {
       <p>Any prices shown are a guide and are confirmed at consultation. We may change prices.</p>
       <h2>Bookings and cancellations</h2>
       <p>
-        Your first consultation is free and online. If you book a treatment remotely (online, by phone or by message), you have a
+        You can choose a free online consultation or an in-clinic consultation (£195, redeemable against treatment). {CONSULTATIONS.deposit} If you book a treatment remotely (online, by phone or by message), you have a
         14-day right to cancel, which we&rsquo;ll confirm in writing, and you won&rsquo;t pay for treatment if your practitioner finds
-        it unsuitable for you. <Tbc>deposit amount and cancellation notice period for hair loss appointments</Tbc>
+        it unsuitable for you.
       </p>
       <h2>Content</h2>
       <p>
