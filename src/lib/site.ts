@@ -77,7 +77,7 @@ export const NAV = [
   { href: "/conditions/", label: "Conditions" },
   { href: "/treatments/", label: "Treatments" },
   { href: "/diagnosis/", label: "Diagnosis" },
-  { href: "/which-treatment/", label: "Find your treatment" },
+  { href: "/which-treatment/", label: "Treatment finder" },
   { href: "/pricing/", label: "Pricing" },
   { href: "/faq/", label: "FAQ" },
   { href: "/about/", label: "Clinics & team" },
