@@ -13,7 +13,7 @@ import { TREATMENTS } from "@/lib/treatments";
 export const metadata = pageMetadata({
   title: "Hair Loss Treatment London & Glasgow | Harley Street Aesthetics",
   description:
-    "Doctor-led hair loss assessment and non-surgical treatment for men and women in London and Glasgow. We look for the cause first, then talk through options such as PRP. Results vary.",
+    "Clinician-led hair loss assessment and non-surgical treatment for men and women in London and Glasgow. We look for the cause first, then talk through options such as PRP. Results vary.",
   path: "/",
 });
 
@@ -32,7 +32,7 @@ export default function Home() {
         <div className="container-x relative pt-16 pb-14 sm:pt-24 lg:pt-32">
           <div className="max-w-3xl">
             <p className="inline-flex items-center gap-2 rounded-full border border-gold/50 px-4 py-1.5 text-[0.7rem] font-semibold tracking-[0.2em] text-gold uppercase">
-              <Icon name="sparkle" className="h-4 w-4" /> Doctor-led hair loss clinic
+              <Icon name="sparkle" className="h-4 w-4" /> Clinician-led hair loss clinic
             </p>
             <h1 id="hero-title" className="mt-7 text-[2.6rem] leading-[1.05] sm:text-6xl lg:text-7xl">
               Hair loss treatment in <span className="text-gold">London</span> &amp; <span className="text-gold">Glasgow</span>
@@ -181,9 +181,9 @@ export default function Home() {
             />
             <CheckList
               items={[
-                <>Consultation: <Tbc>consultation fee</Tbc></>,
+                <>Consultation: free and online, with no obligation</>,
                 <>PRP: <Tbc>price per session / course</Tbc></>,
-                <>Finance: <Tbc>finance provider and terms</Tbc></>,
+                <>Finance: Klarna, Clearpay and Ideal4Finance options, subject to status (18+, UK residents)</>,
               ]}
             />
           </div>

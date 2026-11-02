@@ -1,40 +1,36 @@
 # Open questions
 
-Everything here is shown on the site as an amber `[TBC: …]` placeholder or left out until answered. Most need the company Copilot, which needed a sign-in when I tried on 2 Nov 2026.
+Updated 2 November 2026 after reading the company Copilot. Everything still open is shown on the site as an amber `[TBC: …]` placeholder, or left out. Run `npm run check:tbc` for the live list.
 
-## Access
-1. **Copilot sign-in.** Please sign in to https://copilot-hsm.strategyguys.agency in the Chrome profile Claude is connected to (the one logged in to Meta Business Suite). Then I can fill the items below from the playbooks.
-2. **Endolift source code.** `C:\Users\Welcome\Downloads\endolift-site` doesn't exist. I rebuilt the shared components from the built site in `Downloads\endolift-out`. If the source lives elsewhere (another folder, GitHub, Hostinger), tell me and I'll align the two codebases.
+## Biggest gap
+1. **There's no hair loss playbook in the Harley Street Aesthetics Copilot workspace.** The only one is "Non-Surgical Hair Rejuvenation" in the **Harley Street Medics** workspace (sources dated Mar and Jul 2026). Per your brief I've treated that as outdated. Its treatment list matches your current Facebook posts, so I used the list and protocol facts but **not its prices**. Please create or move a hair loss playbook into the HSA workspace and confirm the points below.
 
 ## Brand and ownership
-3. Hair loss is meant to sit under **Harley Street Aesthetics**, but the Facebook hair page is called **"Hair Loss Treatment - Harley Street Medical Wellness"** (posts say "Harley Street Aesthetics"). Which brand is correct for the page, and should the page be renamed?
-4. If Copilot still lists hair loss under Harley Street Medics, that's outdated (per your brief). To check once signed in.
-5. Final subdomain (assumed `hairloss.harleystreetaesthetic.co.uk`).
+2. The Facebook hair page is called **"Hair Loss Treatment - Harley Street Medical Wellness"**, but its posts say "Harley Street Aesthetics". Which brand is correct?
+3. Final subdomain (assumed `hairloss.harleystreetaesthetic.co.uk`).
+4. Endolift source code: `Downloads\endolift-site` doesn't exist. If it lives elsewhere, I can align the two codebases.
 
-## Treatments (confirm which we actually offer)
-6. PRP: kit/system used, sessions, interval, maintenance, numbing, downtime, side effects, aftercare.
-7. Scalp microneedling: device (Virtue RF on the scalp, as the old Glasgow page suggested?), sessions, downtime.
-8. Low-level laser therapy: in-clinic device or home device? Brand, sessions.
-9. Exosomes: product name, source, and its UK regulatory status. The site says "evidence is still developing", as the Facebook posts do. Should it stay on the site at all?
-10. Do we offer: trichoscopy (dermatoscope scalp exam), blood tests (which panel, in-house or referred), DNA/genetic hair testing, mesotherapy for hair, LED, hair transplant/FUE, scalp micropigmentation, support after chemotherapy, beard/eyebrow treatments? None are built yet.
-11. Which conditions do we treat and which do we refer (e.g. scarring alopecia, hair loss after chemotherapy, suspected thyroid disease)? Where do we refer to (GP, NHS dermatology, named consultant)?
+## Treatments
+5. **Prices for HSA.** Are the Medics playbook prices still right for HSA? (Conditioned Media £399 / £1,099 for 3; Virtue Conditioned Media £499 / £1,299; Exosomes £599 / £1,599; Virtue Exosomes £699 / £1,899.) What do **PRP**, **microneedling** and **low-level laser** cost? None are priced in the playbook.
+6. What do the **"Virtue"** versions involve (Virtue RF microneedling on the scalp?), and which exosome / conditioned media **products** are used, with their UK regulatory status?
+7. Microneedling device for the scalp; LLLT device (in clinic or home use) and session frequency.
+8. Side effects and aftercare sheets for each treatment (not in the playbook). The site uses general, cautious wording for clinical sign-off.
+9. **Hair Rejuvenation IV Drip (£295)** is in the playbook but not on the site, because your own Facebook posts say vitamin drips aren't a proven general treatment for hair loss. Confirm it should stay off.
+10. Do we offer trichoscopy, blood tests, DNA testing, mesotherapy for hair, scalp micropigmentation, or prescription treatments? None are documented. Transplants are not offered.
+11. Which conditions do we refer (scarring alopecia, alopecia areata, post-chemotherapy, beard/eyebrow), and to whom?
+12. The consultation is free and online. How is the **scalp assessment** done: by video/photos, or in clinic afterwards?
 
-## Prices and booking
-12. Consultation: free or paid? Online or in clinic? Fee, and whether it's redeemable.
-13. Price per session and course for each treatment; packages; whether London and Glasgow prices match.
-14. Finance: provider(s), FCA status, representative example (the main site mentions Klarna, Clearpay and medical loans).
-15. Deposit and cancellation terms (main site mentions a £50 deposit; check for hair).
-16. Booking: should hair use the same calendar as Endolift (`link.harleystreetaesthetic.co.uk/widget/bookings/aesthetic-consultant-1`) or a hair-specific calendar?
-17. Enquiry form destination (GoHighLevel webhook, email or CRM). Currently set up for Netlify Forms with a TODO.
-18. Is WhatsApp 07700 106236 the right number for hair enquiries?
-19. Is 10 Harley Street open for appointments yet? (The Endolift notes said it was under construction in Oct 2026.)
+## Booking, enquiries and tracking
+13. Booking calendar for hair (the Endolift calendar `link.harleystreetaesthetic.co.uk/widget/bookings/aesthetic-consultant-1` is shown as a fallback, flagged TBC).
+14. Enquiry form destination (CRM / webhook / email). Currently Netlify Forms with a TODO.
+15. GA4, GTM and Meta Pixel IDs.
+16. Deposit amount and cancellation notice period for hair appointments (only the eye funnel documents a £50 deposit).
+17. Finance: the FCA credit-broker statement and any representative example needed for Ideal4Finance.
 
-## People and proof
-20. Who treats hair loss? Names, roles, qualifications, GMC numbers, bios, photo permission. ("Dr Ahmad" appears in the Facebook video.)
-21. CQC registration (London) and Healthcare Improvement Scotland registration (Glasgow): exact wording and numbers. The Endolift footer wording is ready to reuse once confirmed.
-22. Reviews: Google rating, review count and link; any hair loss testimonials with permission.
-23. Before/after photos for hair, with written patient consent for web use.
-24. Company legal name, registered office, company number, ICO registration number (for privacy policy and footer).
-
-## Tracking
-25. GA4, GTM and Meta Pixel IDs (the site reads them from environment variables and loads them only after cookie consent).
+## People, proof and regulation
+18. Who does hair loss consultations and treatments? Names, roles, GMC/NMC numbers, bios, photo permission. ("Dr Ahmad" appears in the Facebook hair video, but Copilot only documents him for pigmentation.)
+19. CQC (London) and Healthcare Improvement Scotland (Glasgow) wording and numbers. Not documented in Copilot.
+20. Before/after photos: the playbook says "clinic before/after photos exist for exosome hair regrowth". Do we have written consent for web use?
+21. Google rating, review count and link; hair loss testimonials with permission.
+22. Opening hours (not in Copilot; the site uses the Endolift site's hours).
+23. Company and ICO details in the privacy policy were copied from the Endolift site. Confirm they're still current.

@@ -10,6 +10,9 @@ const RULES = [
   { re: /\b(clinically proven|scientifically proven|100%|permanent(ly)? (results|cure|regrowth)|cure[sd]? (hair loss|baldness|alopecia))\b/i, why: "absolute or unproven claim" },
   { re: /\b(regrow(th)? (your|in) (hair )?(in )?(weeks|days)|in (just )?weeks)\b/i, why: "time-bound result claim" },
   { re: /\b(best|leading|no\.? ?1|number one|world-class|uk's leading)\b/i, why: "superlative claim needing substantiation", allow: /best (time|describes|route|served)/i },
+  // Hair playbook "never say" rules (Copilot, Non-Surgical Hair Rejuvenation).
+  { re: /(revers(e|es|ed|ing) (your )?(baldness|hair loss)|works? for advanced hair loss|regrow(s)? hair in every case)/i, why: "playbook 'never say' claim" },
+  { re: /free (doctor appointment|treatment)/i, why: "playbook: free consultation is not a free doctor appointment or treatment", allow: /not free treatment/i },
   // Time pressure / urgency (CAP 3.31, 8.17).
   { re: /\b(limited time|today only|book now before|offer ends|hurry|last chance|only \d+ (spaces|slots) left)\b/i, why: "time-pressure wording" },
   // Statistics we have no source for.

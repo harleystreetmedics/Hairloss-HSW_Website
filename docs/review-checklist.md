@@ -1,5 +1,7 @@
 # Review checklist
 
+_Updated 2 Nov 2026 after the Copilot research: re-ran build, lint, typecheck, links, compliance scan, 17 browser tests and Lighthouse (home 97, PRP 95, pricing 98 mobile performance; 100 accessibility and best practices). Placeholders reduced from 51 to 41; 10 Harley Street removed (not seeing patients)._
+
 Everything here needs a human check before launch. Run `npm run check` to rebuild and re-run every automated check, and `npm run check:tbc` to list the placeholders still on the site.
 
 ## 1. QA results (2 November 2026)
@@ -41,9 +43,9 @@ Compared side by side with harleystreetaesthetic.co.uk and the Endolift build: s
 Automated scan plus a manual read of every page. Things for your compliance lead or prescriber to look at:
 
 1. **Prescription medicines.** No medicine is named anywhere. The only wording is: "Prescription treatments may be discussed at your consultation if clinically appropriate." It appears on treatment, condition, men/women and diagnosis pages. Confirm it's acceptable to show this sentence near treatment content, and that the "Medical treatment" mention in the Facebook posts is aligned.
-2. **Exosomes** (`/treatments/exosome-hair-treatment/`). Worded as "a newer approach, evidence is still developing", with an amber evidence notice and no efficacy claims. Exosome products are not licensed medicines in the UK. Please confirm the product, its regulatory status, and whether the page should stay live. **Borderline: highest-risk page.**
+2. **Exosomes and cell-conditioned media** (`/treatments/exosome-hair-treatment/`). Both are in the Medics hair playbook. Worded as "evidence is still developing", with an amber evidence notice and no efficacy claims. Exosome products are not licensed medicines in the UK. Please confirm the product, its regulatory status, and whether the page should stay live. **Borderline: highest-risk page.**
 3. **PRP, microneedling, LLLT.** Described as "may", "some people", "results vary", with evidence caveats. Check you're comfortable with "Studies have looked mainly at pattern hair loss" (LLLT) and "Research into PRP for hair loss is ongoing" (PRP).
-4. **"Doctor-led"** is used in the hero, metadata and location pages. The Facebook bio says "GMC-registered doctors". Confirm that hair consultations are with a doctor; if some are with nurses, change to "clinician-led". **Borderline.**
+4. **"Clinician-led"** replaced "doctor-led" everywhere (2 Nov), because Copilot doesn't document who does hair consultations and the hair playbook says not to describe the free online consultation as a doctor appointment. Switch back to "doctor-led" only if every hair consultation is with a GMC-registered doctor.
 5. **"Non-surgical"** and "Help thinning hair look fuller" style wording is fine; no "regrow", "cure", "permanent" or time-bound claims are used.
 6. **Results page promise:** "No filters, editing or retouching, same lighting and angle; each photo states the treatment and time between photos." Confirm the clinic can meet this before adding photos.
 7. **Quiz** never diagnoses. Red-flag answers (sudden, inflamed scalp, unwell, patches) remove treatment suggestions and advise medical assessment / GP / NHS 111.
@@ -52,51 +54,58 @@ Automated scan plus a manual read of every page. Things for your compliance lead
 10. **Condition content** (15 pages) is general medical information written cautiously. **A clinician should read every condition and treatment page** (`src/lib/conditions.ts`, `src/lib/treatments.ts`), especially "may not suit" lists and side effects, which are general rather than the clinic's own protocols.
 11. **Health data:** the form's "main concern" dropdown is health-related. The form tells people not to send detailed medical information; the privacy policy says explicit consent is the basis. Confirm with your DPO.
 12. **Privacy policy company details** (Harley Street Medics Ltd, 211B Main Street, Bellshill ML4 1AJ, ICO ZB819731) were copied from the Endolift site's published privacy policy. Confirm they're current.
+14. **Copilot "never say" rules** (hair playbook) are now in the compliance scan: no "reverse baldness", "works for advanced hair loss", "regrow hair in every case", or "free doctor appointment / free treatment". "Advanced hair loss" is listed under "may not suit" on every treatment page.
+15. **Protocol facts shown on treatment pages** come from the Medics hair playbook (outdated brand, current content): 30–60 minute sessions, usually 3–6 sessions 4–6 weeks apart, maintenance every few months, no downtime, numbing cream before PRP, results over 3–6 months. Confirm they apply at HSA.
+16. **IV drip** for hair is in the playbook but left off the site (your Facebook posts say vitamin drips aren't a proven general treatment).
+17. **14-day cancellation** wording in the terms comes from the HSA compliance rules in Copilot; the deposit is still TBC.
 13. **Opening hours** were taken from the Endolift site (London Tue–Fri 9–7, Sat 9–6; Glasgow Mon–Fri 9–6). Confirm for hair appointments.
 
 ## 3. Placeholders to fill (`[TBC]`, amber on the page)
 
-51 unique placeholders. Most will be answered by the Copilot playbooks (see `docs/open-questions.md`).
+41 unique placeholders. Copilot doesn't document these; they need the clinic manager, compliance lead or website/CRM admin (see `docs/open-questions.md`).
 
 | Placeholder | Pages |
 |---|---|
-| appointment length | /treatments/prp-hair-treatment/ |
 | blood test price, if offered | /pricing/ |
 | clinic aftercare notes for LLLT | /treatments/low-level-laser-therapy/ |
 | clinic aftercare sheet for exosome treatment | /treatments/exosome-hair-treatment/ |
 | clinic aftercare sheet for PRP | /treatments/prp-hair-treatment/ |
 | clinic aftercare sheet for scalp microneedling | /treatments/scalp-microneedling/ |
 | confirm every treatment listed is offered at this clinic | /glasgow/, /london/ |
-| confirm hair loss appointments are offered at 10 Harley Street | /about/, /book/, /glasgow/ +2 more |
 | confirm this calendar is right for hair loss consultations | /book/, /glasgow/, /london/ |
-| confirm whether offered (trichoscopy/DNA testing/transplant/SMP) | /diagnosis/, /treatments/ |
-| confirm whether offered and the device used (trichoscopy) | /diagnosis/ |
+| confirm whether offered | /diagnosis/, /treatments/ |
+| confirm whether offered and the device used | /diagnosis/ |
 | confirm whether prices are the same at both clinics | /pricing/ |
 | confirm who leads hair loss consultations and their registration | / |
-| consented before and after photos (pattern hair loss, thinning crown) | /, /results/ |
-| consultation fee | /, /pricing/ |
-| consultation fee, deposit and cancellation terms for hair loss appointments | /terms/ |
-| CQC registration statement (and number) | footer on every page, /london/, /about/ |
+| consented before and after photos (pattern hair loss) | /, /results/ |
+| consented before and after photos (thinning crown) | /, /results/ |
+| CQC registration statement | /london/ |
+| CQC registration statement and number | /404/, /about/, /book/ +36 more |
+| deposit amount and cancellation notice period for hair loss appointments | /terms/ |
 | deposit and cancellation policy for hair loss appointments | /pricing/ |
-| exosome product name and source | /treatments/exosome-hair-treatment/ |
 | exosome treatment price | /pricing/, /treatments/exosome-hair-treatment/ |
-| finance provider and terms / FCA status and representative example | /, /pricing/ |
-| frequency and course length (LLLT) | /treatments/low-level-laser-therapy/ |
-| Healthcare Improvement Scotland registration statement (and number) | footer on every page, /glasgow/, /about/ |
-| hosting and form provider | /privacy-policy/ |
-| consultation in clinic or online, fee, redeemable? | /diagnosis/, /pricing/ |
+| FCA credit broker statement and representative example, if required | /pricing/ |
+| frequency and course length | /treatments/low-level-laser-therapy/ |
+| Healthcare Improvement Scotland registration statement | /404/, /about/, /book/ +36 more |
+| Healthcare Improvement Scotland registration statement and number | /about/ |
+| hosting and form provider, e.g. Netlify | /privacy-policy/ |
 | LLLT device (in clinic or home use) | /treatments/low-level-laser-therapy/ |
 | LLLT price | /pricing/, /treatments/low-level-laser-therapy/ |
 | microneedling device used on the scalp | /treatments/scalp-microneedling/ |
-| practitioner names, roles, qualifications, GMC numbers, bios, photo permission | /, /about/ |
-| number of sessions (and interval) | PRP, microneedling, exosome pages |
-| price per session / course (PRP, microneedling) | /, PRP and microneedling pages, /pricing/ |
-| typical downtime | PRP, microneedling, exosome pages |
-| verified Google review rating, count and link, plus hair loss testimonials with permission | /, /results/ |
+| names, roles, GMC numbers, bios and photo permission | /about/ |
+| practitioner name | /about/, / |
+| price per session / course | /, /treatments/prp-hair-treatment/, /treatments/scalp-microneedling/ |
+| professional registrations (GMC/NMC) for each hair loss practitioner | /about/ |
+| PRP price per session and course | /pricing/ |
+| role, qualifications and GMC number | /about/, / |
+| scalp microneedling price | /pricing/ |
+| short bio and photo (with permission) | /about/, / |
+| verified Google review rating, count and link, plus hair loss testimonials with written permission | /, /results/ |
 | whether beard and eyebrow treatments are offered | /conditions/beard-and-eyebrow-thinning/ |
 | whether post-chemotherapy hair support is offered | /conditions/hair-loss-after-chemotherapy/ |
 | which alopecia areata treatments are offered in clinic vs referred | /conditions/alopecia-areata/ |
-| which blood tests are offered in clinic, and the price | /diagnosis/, /conditions/medical-causes/ |
+| which blood tests are offered in clinic and their price | /diagnosis/ |
+| which blood tests are offered in clinic, and the price | /conditions/medical-causes/ |
 | which scalp treatments are offered in clinic | /conditions/scalp-conditions/ |
 
 Where the data lives: prices and facts in `src/lib/treatments.ts` (`facts`, `priceTbc`, `aftercareTbc`), condition notes in `src/lib/conditions.ts` (`offeredTbc`), clinics and contact details in `src/lib/site.ts`, team/reviews/results placeholders in `src/components/sections.tsx`, regulator lines in `src/components/Footer.tsx` and `src/components/LocationPage.tsx`.

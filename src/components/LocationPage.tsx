@@ -16,7 +16,7 @@ export function LocationPage({ id }: { id: ClinicId }) {
       <PageHero
         eyebrow={`${c.city} clinic`}
         title={`Hair loss clinic in ${c.city}`}
-        intro={`Doctor-led hair loss assessment and non-surgical treatment for men and women at our ${c.city} clinic, ${a.line1}${a.line2 ? `, ${a.line2}` : ""}.`}
+        intro={`Clinician-led hair loss assessment and non-surgical treatment for men and women at our ${c.city} clinic, ${a.line1}${a.line2 ? `, ${a.line2}` : ""}.`}
         crumbs={[{ name: c.city, path: `/${c.id}/` }]}
       >
         <div className="mt-9 flex flex-col gap-4 sm:flex-row">

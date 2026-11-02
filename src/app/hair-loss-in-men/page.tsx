@@ -4,7 +4,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Hair Loss Treatment for Men London & Glasgow",
   description:
-    "Receding hairline, thinning crown or patchy beard? Doctor-led hair loss assessment for men in London and Glasgow, with non-surgical options. Results vary.",
+    "Receding hairline, thinning crown or patchy beard? Clinician-led hair loss assessment for men in London and Glasgow, with non-surgical options. Results vary.",
   path: "/hair-loss-in-men/",
 });
 

@@ -6,7 +6,7 @@ Researched 2 November 2026, read-only. Source tags used below:
 - **[END]** The Endolift sibling site. The source folder `C:\Users\Welcome\Downloads\endolift-site` does **not exist** on this PC. I used its built static output in `C:\Users\Welcome\Downloads\endolift-out` (also live on the Hostinger preview `lightyellow-ferret-251293.hostingersite.com`) and the research notes in `C:\Users\Welcome\Desktop\Endolift_Website\endolift-research-findings.md`. Both read-only.
 - **[FB]** Meta Business Suite, business portfolio "Harley Street Medics" (id 297402053429019), read-only.
 - **[HSM-old]** Old hair pages on harleystreetmedics.clinic. Background only; outdated; nothing copied (no design, phone numbers, prices, branding or external links).
-- **[PB]** Company Copilot playbooks: **not yet read**. The Copilot showed its sign-in page in the Chrome profile Claude is connected to. Every item that needs Copilot is marked `[TBC]`.
+- **[PB]** Company Copilot (copilot-hsm.strategyguys.agency), read 2 November 2026 after you signed in. See §8. Tags: **[PB-HSA]** Harley Street Aesthetics workspace playbooks, **[PB-HSM]** the Harley Street Medics workspace playbook "Non-Surgical Hair Rejuvenation".
 
 ---
 
@@ -92,6 +92,34 @@ Only treatments named in current HSA-branded hair content [FB]; all need confirm
 
 ## 6. Keywords (to validate with Search Console / Ads data)
 Primary: hair loss treatment London, hair loss treatment Glasgow, PRP hair treatment London/Glasgow, female hair loss treatment, alopecia treatment, thinning hair treatment, receding hairline treatment. Secondary (one page each): male pattern baldness treatment, female pattern hair loss, alopecia areata treatment, telogen effluvium, postpartum hair loss, menopause hair loss, traction alopecia, scalp microneedling, low-level laser therapy hair, exosome hair treatment, hair loss consultation. I couldn't access search volume tools, so these are unvalidated.
+
+## 8. Company Copilot findings (2 Nov 2026, read-only chat questions)
+
+I asked the Copilot chat in all three workspaces (Aesthetics, Wellness, Medics), marked as internal questions, not about patients. Then I switched the workspace selector back to Harley Street Aesthetics.
+
+### Where hair loss sits
+- **Harley Street Aesthetics workspace:** 15 treatment playbooks (anti-wrinkle, CO2, dark circles, fillers, Endolift, eye rejuvenation, aesthetic analysis app, facials and peels, Nu Sculpt, pigmentation, skin boosters, stretch marks, thread lift, Veluria, Virtue RF). **None covers hair loss.** Virtue RF (with or without exosomes) and the pigmentation protocol are face/neck only. [PB-HSA]
+- **Harley Street Wellness workspace:** no hair loss playbook (IV/wellness, blood testing, metabolic, membership, EBOO, etc.).
+- **Harley Street Medics workspace:** playbook **"Non-Surgical Hair Rejuvenation"** (`hair-rejuvenation`), sources `hair-restoration.md` (Jul 2026) and `hair-rejuvenation.mdx` (reviewed 10 Mar 2026). ⚠ Per your brief, hair loss listed under Medics is **outdated**; logged in open-questions. I've used its *treatment list and protocol facts*, which match the clinic's current Facebook posts, but **not its prices**.
+
+### From "Non-Surgical Hair Rejuvenation" [PB-HSM]
+- **Treatments:** PRP, microneedling, low-level laser therapy, and "regenerative options (cell-conditioned media and exosomes)". "Virtue" versions of conditioned media and exosomes are listed but not defined. Hair Rejuvenation IV Drip (£295) is also listed. **Not included on the website**, because the Facebook posts say "Vitamin drips are not a proven general treatment for hair loss".
+- **Audience:** men and women with mild to moderate thinning or early-stage hair loss; people who want a non-surgical option before considering a transplant. Transplants aren't offered.
+- **Protocol:** sessions 30–60 minutes; numbing cream before PRP injections; no downtime; typically 3–6 sessions 4–6 weeks apart, with maintenance every few months; full results develop over 3–6 months.
+- **Never say:** that treatment will "reverse" baldness or regrow hair in every case; that it works for advanced hair loss; doctors' names from older pages (name only the current team); that the free online consultation is a free doctor appointment or free treatment.
+- **Prices (Medics, not used on the site):** Conditioned Media Cell Therapy £399 / £1,099 (3); Virtue Cell Conditioned Media £499 / £1,299; Exosomes Therapy £599 / £1,599; Virtue Exosomes Therapy £699 / £1,899; IV drip £295. No separate PRP, microneedling or LLLT price.
+- **Finance:** Klarna, Clearpay and Ideal4Finance, subject to status (18+, UK residents).
+- **Before/after:** "Clinic before/after photos exist for exosome hair regrowth". Consent status not stated.
+- **Not in the playbook:** devices, side effects, aftercare, consultation fee, clinic locations, practitioners/GMC numbers, referral criteria, CQC/HIS.
+
+### General HSA facts [PB-HSA]
+- **Consultation:** free, no-obligation, **online** with the medical team (Endolift, Eye Rejuvenation, Pigmentation, Veluria and other playbooks).
+- **10 Harley Street:** under construction and **seeing no patients**. Don't direct appointments there. Removed from the site.
+- **Finance:** Klarna (pay in 3), Clearpay (pay in 4), Ideal4Finance (interest-free up to 12 months over £1,000), subject to status. No FCA statement or representative example is documented.
+- **Deposit:** only the eye funnel documents £50 (redeemable). Nothing for hair.
+- **Cancellation rule:** remote bookings get the statutory 14-day cancellation notice in writing; treatment refunded if the clinician finds the patient unsuitable.
+- **Dr Ahmad** fronts the pigmentation adverts. No GMC number, profile or hair loss role documented.
+- **Not documented anywhere:** CQC/HIS wording and numbers, practitioner directory and GMC/NMC numbers, booking URL, enquiry destination, GA4/GTM/Pixel IDs, Google rating, opening hours.
 
 ## 7. Not available yet (see open-questions.md)
 Everything from Copilot: confirmed treatment list, devices/products, sessions, prices, consultation fee, packages, finance, practitioners and GMC numbers, CQC/HIS numbers, testimonials, before/after photos and consent, booking link for hair, enquiry destination, GA4/GTM/Pixel IDs, brand voice notes, competitors.

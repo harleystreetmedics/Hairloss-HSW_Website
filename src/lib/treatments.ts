@@ -39,7 +39,7 @@ export const TREATMENTS: Treatment[] = [
       "Platelet-rich plasma prepared from a small sample of your own blood and injected into areas of thinning on the scalp.",
     metaTitle: "PRP Hair Treatment London & Glasgow",
     metaDescription:
-      "PRP (platelet-rich plasma) hair treatment for thinning hair at our London and Glasgow clinics. Doctor-led consultation, scalp assessment and a personal plan. Results vary.",
+      "PRP (platelet-rich plasma) hair treatment for thinning hair at our London and Glasgow clinics. Clinician-led consultation, scalp assessment and a personal plan. Results vary.",
     intro: [
       "Platelet-rich plasma (PRP) is a treatment that uses a concentrated portion of your own blood. It is used for some types of thinning hair, most often pattern hair loss, and is usually given as a course of sessions.",
       "PRP is one of several options we may discuss after assessing your scalp and the likely cause of your hair loss. It does not suit every type of hair loss, so we always start with a consultation.",
@@ -49,17 +49,18 @@ export const TREATMENTS: Treatment[] = [
       "Platelets contain growth factors. The aim of injecting PRP into thinning areas is to support the hair follicles there. Research into PRP for hair loss is ongoing, and how well it works varies from person to person.",
     ],
     facts: [
-      { label: "Sessions", tbc: "number of sessions and interval" },
-      { label: "Appointment", tbc: "appointment length" },
-      { label: "Downtime", tbc: "typical downtime" },
+      { label: "Sessions", value: "Usually 3–6, 4–6 weeks apart" },
+      { label: "Appointment", value: "30–60 minutes" },
+      { label: "Downtime", value: "None expected" },
       { label: "Price", tbc: "price per session / course" },
     ],
     maySuit: [
-      "Adults (18+) with early to moderate thinning, such as pattern hair loss",
+      "Adults (18+) with mild to moderate thinning or early-stage hair loss, such as pattern hair loss",
       "People who want to understand the cause of their thinning before choosing a treatment",
       "Those happy to commit to a course of sessions and review appointments",
     ],
     mayNotSuit: [
+      "Advanced hair loss, where these treatments are not expected to help",
       "Hair loss with a cause that needs medical treatment first, such as a thyroid problem or deficiency",
       "Scarring alopecia, which needs specialist assessment",
       "Some blood or platelet disorders, or certain blood-thinning medicines",
@@ -69,7 +70,7 @@ export const TREATMENTS: Treatment[] = [
     onTheDay: [
       { title: "Check-in and review", text: "Your practitioner confirms your medical history, consent and the areas to treat." },
       { title: "Blood sample", text: "A small blood sample is taken from your arm and prepared in a centrifuge." },
-      { title: "Comfort", text: "Options to make the injections more comfortable are discussed with you." },
+      { title: "Comfort", text: "Numbing cream is applied to the scalp before the injections." },
       { title: "Treatment", text: "The prepared plasma is injected into the agreed areas of the scalp with a fine needle." },
     ],
     aftercare: [
@@ -90,7 +91,7 @@ export const TREATMENTS: Treatment[] = [
       },
       {
         q: "Is PRP painful?",
-        a: "Most people feel some discomfort from the injections. Your practitioner will discuss ways to make treatment more comfortable before you start.",
+        a: "Numbing cream is applied before the injections. Most people find treatment tolerable, though you may feel some discomfort.",
       },
       {
         q: "How many sessions will I need?",
@@ -123,15 +124,16 @@ export const TREATMENTS: Treatment[] = [
     ],
     facts: [
       { label: "Device", tbc: "microneedling device used on the scalp" },
-      { label: "Sessions", tbc: "number of sessions and interval" },
-      { label: "Downtime", tbc: "typical downtime" },
+      { label: "Sessions", value: "Usually 3–6, 4–6 weeks apart" },
+      { label: "Downtime", value: "None expected" },
       { label: "Price", tbc: "price per session / course" },
     ],
     maySuit: [
-      "Adults (18+) with thinning hair, such as pattern hair loss",
+      "Adults (18+) with mild to moderate thinning, such as pattern hair loss",
       "People looking for a non-surgical option as part of a wider plan",
     ],
     mayNotSuit: [
+      "Advanced hair loss, where these treatments are not expected to help",
       "Active scalp infection, open wounds or flaring psoriasis or eczema on the scalp",
       "Scarring alopecia, which needs specialist assessment",
       "A tendency to keloid scarring",
@@ -193,11 +195,12 @@ export const TREATMENTS: Treatment[] = [
       { label: "Price", tbc: "LLLT price" },
     ],
     maySuit: [
-      "Adults (18+) with pattern hair loss or general thinning",
+      "Adults (18+) with mild to moderate pattern hair loss or general thinning",
       "People who prefer a non-invasive option",
       "Those able to keep to a regular schedule of sessions",
     ],
     mayNotSuit: [
+      "Advanced hair loss, where these treatments are not expected to help",
       "Hair loss that needs a medical cause treating first",
       "Light sensitivity, or taking medicines that increase light sensitivity",
       "Active scalp conditions that need treatment first",
@@ -227,26 +230,26 @@ export const TREATMENTS: Treatment[] = [
   },
   {
     slug: "exosome-hair-treatment",
-    name: "Exosome-based scalp treatment",
+    name: "Exosome and conditioned media treatment",
     shortName: "Exosomes",
     icon: "cell",
     summary:
-      "A newer approach where evidence is still developing. We'll explain honestly what is and isn't known before you decide.",
+      "Regenerative options (exosomes or cell-conditioned media) for the scalp. Evidence is still developing, and we'll explain what is and isn't known.",
     metaTitle: "Exosome Hair Treatment: An Honest Guide",
     metaDescription:
-      "Exosome-based scalp treatment is a newer approach to thinning hair and the evidence is still developing. Learn what it involves and talk it through at a consultation.",
+      "Exosome and cell-conditioned media scalp treatments are newer approaches to thinning hair, and the evidence is still developing. Learn what they involve and discuss them at a consultation.",
     intro: [
-      "Exosomes are tiny particles that cells release to send signals to other cells. Exosome-based products are being explored in aesthetic medicine, including for thinning hair.",
+      "Exosomes are tiny particles that cells release to send signals to other cells. Cell-conditioned media is a related product containing substances released by cells grown in a laboratory. Both are being explored in aesthetic medicine, including for thinning hair.",
       "This is a newer approach and the evidence is still developing. We won't recommend it in place of treatments that have more evidence for your type of hair loss, and we'll explain what is known and what isn't before you decide.",
     ],
     howItWorks: [
-      "Exosome-based products are applied to the scalp, often alongside microneedling, or injected. The idea is that the signals they carry may support the scalp and hair follicles.",
+      "These products are applied to the scalp, often alongside microneedling, or injected. The idea is that the signals they carry may support the scalp and hair follicles.",
       "There is not yet enough high-quality research to say how well this works for hair loss or for whom. Your practitioner will talk you through the product used and its status.",
     ],
     facts: [
-      { label: "Product", tbc: "exosome product name and source" },
-      { label: "Sessions", tbc: "number of sessions" },
-      { label: "Downtime", tbc: "typical downtime" },
+      { label: "Options", value: "Exosomes or cell-conditioned media" },
+      { label: "Sessions", value: "Usually 3–6, 4–6 weeks apart" },
+      { label: "Downtime", value: "None expected" },
       { label: "Price", tbc: "exosome treatment price" },
     ],
     maySuit: [
@@ -254,6 +257,7 @@ export const TREATMENTS: Treatment[] = [
       "People who understand that evidence is still developing and want to discuss it as one option",
     ],
     mayNotSuit: [
+      "Advanced hair loss, where these treatments are not expected to help",
       "Hair loss with an untreated medical cause",
       "Scarring alopecia, which needs specialist assessment",
       "Active scalp infection or inflamed scalp skin",

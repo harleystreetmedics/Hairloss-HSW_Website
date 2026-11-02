@@ -37,15 +37,8 @@ export const CLINICS: Record<ClinicId, Clinic> = {
     id: "london",
     city: "London",
     name: "Harley Street Aesthetics London",
-    addresses: [
-      { line1: "2 Grosvenor Gardens", line2: "Belgravia", locality: "London", postcode: "SW1W 0DH" },
-      {
-        line1: "10 Harley Street",
-        locality: "London",
-        postcode: "W1G 9PF",
-        tbc: "confirm hair loss appointments are offered at 10 Harley Street",
-      },
-    ],
+    // 10 Harley Street is under construction and seeing no patients (Copilot HSA playbooks, Nov 2026).
+    addresses: [{ line1: "2 Grosvenor Gardens", line2: "Belgravia", locality: "London", postcode: "SW1W 0DH" }],
     phone: { display: "020 4628 3165", href: "tel:+442046283165", e164: "+442046283165" },
     mapsUrl: "https://www.google.com/maps/search/?api=1&query=2+Grosvenor+Gardens+London+SW1W+0DH",
     mapEmbed: "https://www.google.com/maps?q=2%20Grosvenor%20Gardens%2C%20Belgravia%2C%20London%2C%20SW1W%200DH&output=embed",

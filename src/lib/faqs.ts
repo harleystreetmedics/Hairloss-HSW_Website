@@ -11,7 +11,7 @@ export const GENERAL_FAQS: Faq[] = [
   },
   {
     q: "Which treatments do you offer?",
-    a: "Depending on your diagnosis, options we may discuss include PRP, scalp microneedling and low-level laser therapy. We also discuss exosome-based approaches, where evidence is still developing. Prescription treatments may be discussed at your consultation if clinically appropriate.",
+    a: "Depending on your diagnosis, options we may discuss include PRP, scalp microneedling and low-level laser therapy. We also discuss regenerative options such as exosomes and cell-conditioned media, where evidence is still developing. Prescription treatments may be discussed at your consultation if clinically appropriate.",
   },
   {
     q: "Can you guarantee my hair will grow back?",
@@ -19,7 +19,7 @@ export const GENERAL_FAQS: Faq[] = [
   },
   {
     q: "How long until I see a difference?",
-    a: "Hair grows slowly, so changes usually take months rather than weeks to judge. We plan review appointments so we can track your progress together.",
+    a: "Hair grows slowly, so changes usually take 3–6 months to judge. We plan review appointments so we can track your progress together. Results vary.",
   },
   {
     q: "My hair loss started suddenly or comes in patches. What should I do?",
@@ -31,7 +31,7 @@ export const GENERAL_FAQS: Faq[] = [
   },
   {
     q: "How much does treatment cost?",
-    a: "Prices depend on the treatment and the number of sessions. Your plan and its cost are confirmed in writing after your consultation. Our pricing page explains how pricing works.",
+    a: "Your first consultation is free and online. Treatment prices depend on the treatment and the number of sessions, and your plan and its cost are confirmed in writing after your consultation. Finance options are available, subject to status.",
   },
   {
     q: "Where are your clinics?",

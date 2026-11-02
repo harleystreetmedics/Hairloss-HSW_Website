@@ -34,7 +34,7 @@ export function Footer() {
             <Wordmark />
           </a>
           <p className="mt-5 max-w-sm text-sm leading-relaxed">
-            Doctor-led assessment and non-surgical hair loss treatment for men and women at our London and Glasgow clinics.
+            Clinician-led assessment and non-surgical hair loss treatment for men and women at our London and Glasgow clinics.
           </p>
           <a href={BRAND.allTreatments} className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-white">
             All treatments at Harley Street Aesthetics <Icon name="arrow" className="h-4 w-4" />

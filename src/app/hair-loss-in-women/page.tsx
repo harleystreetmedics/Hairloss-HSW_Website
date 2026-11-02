@@ -4,7 +4,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Female Hair Loss Treatment London & Glasgow",
   description:
-    "Thinning hair, a wider parting or shedding after pregnancy or around the menopause? Doctor-led female hair loss assessment in London and Glasgow. Results vary.",
+    "Thinning hair, a wider parting or shedding after pregnancy or around the menopause? Clinician-led female hair loss assessment in London and Glasgow. Results vary.",
   path: "/hair-loss-in-women/",
 });
 

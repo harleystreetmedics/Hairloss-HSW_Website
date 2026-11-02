@@ -83,7 +83,7 @@ export const CONDITIONS: Condition[] = [
     summary: "Gradual thinning over the top of the scalp, often with a widening parting.",
     metaTitle: "Female Pattern Hair Loss Treatment London & Glasgow",
     metaDescription:
-      "Female pattern hair loss assessment and treatment options in London and Glasgow. A doctor-led consultation looks for the cause first. Results vary.",
+      "Female pattern hair loss assessment and treatment options in London and Glasgow. A clinician-led consultation looks for the cause first. Results vary.",
     intro: [
       "Female pattern hair loss is the most common cause of thinning hair in women. Rather than a receding hairline, it usually shows as gradual thinning over the top of the scalp, with the front hairline kept.",
       "It can be linked to genetics and hormones, and it can become more noticeable around the menopause. Other causes of shedding can happen at the same time, which is why we look at the whole picture.",
@@ -122,7 +122,7 @@ export const CONDITIONS: Condition[] = [
     summary: "A hairline that moves back over time, most often at the temples.",
     metaTitle: "Receding Hairline Treatment London & Glasgow",
     metaDescription:
-      "Worried about a receding hairline? Get a doctor-led assessment at our London or Glasgow clinic and talk through non-surgical options. Results vary.",
+      "Worried about a receding hairline? Get a clinician-led assessment at our London or Glasgow clinic and talk through non-surgical options. Results vary.",
     intro: [
       "A receding hairline is when the hairline moves back from the forehead, often at the temples first. In men it is usually part of male pattern baldness.",
       "In women, a receding hairline is less common and can have other causes, such as tight hairstyles (traction alopecia) or, rarely, a scarring condition. That's why assessment matters.",
@@ -158,7 +158,7 @@ export const CONDITIONS: Condition[] = [
     summary: "Thinning at the top and back of the head, often noticed in photos or under bright light.",
     metaTitle: "Crown Thinning Treatment London & Glasgow",
     metaDescription:
-      "Thinning at the crown? Book a doctor-led hair loss consultation in London or Glasgow to find the cause and discuss options. Results vary.",
+      "Thinning at the crown? Book a clinician-led hair loss consultation in London or Glasgow to find the cause and discuss options. Results vary.",
     intro: [
       "Crown thinning means less hair density at the top and back of the head. It's often first noticed in photos, in a mirror under bright light, or by a hairdresser.",
       "In men, it's commonly part of male pattern baldness. In women, thinning on top is more often part of female pattern hair loss.",
@@ -338,7 +338,7 @@ export const CONDITIONS: Condition[] = [
     summary: "Thinning or changes in hair texture around the perimenopause and menopause.",
     metaTitle: "Menopause Hair Loss Treatment London & Glasgow",
     metaDescription:
-      "Hair thinning around the menopause is common. Get a doctor-led assessment in London or Glasgow and talk through suitable options. Results vary.",
+      "Hair thinning around the menopause is common. Get a clinician-led assessment in London or Glasgow and talk through suitable options. Results vary.",
     intro: [
       "Changes in hormone levels around the perimenopause and menopause can affect hair. Many women notice thinning on top, a wider parting, or hair that feels finer or drier.",
       "Female pattern hair loss can become more noticeable at this time, and other causes such as thyroid problems or low iron can also play a part. A full assessment helps separate these.",

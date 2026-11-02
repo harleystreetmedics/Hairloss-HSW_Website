@@ -72,6 +72,10 @@ export default async function TreatmentPage({ params }: PageProps<"/treatments/[
               {[...t.intro, ...t.howItWorks].map((p) => (
                 <p key={p}>{p}</p>
               ))}
+              <p>
+                Hair grows slowly. Any change usually builds over 3–6 months as the hair cycle progresses, and a course is often followed by
+                maintenance sessions every few months. Results vary and are not guaranteed.
+              </p>
               <p>{RX_SENTENCE}</p>
             </div>
           </div>

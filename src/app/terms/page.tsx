@@ -21,7 +21,9 @@ export default function TermsPage() {
       <p>Any prices shown are a guide and are confirmed at consultation. We may change prices.</p>
       <h2>Bookings and cancellations</h2>
       <p>
-        <Tbc>consultation fee, deposit and cancellation terms for hair loss appointments</Tbc>
+        Your first consultation is free and online. If you book a treatment remotely (online, by phone or by message), you have a
+        14-day right to cancel, which we&rsquo;ll confirm in writing, and you won&rsquo;t pay for treatment if your practitioner finds
+        it unsuitable for you. <Tbc>deposit amount and cancellation notice period for hair loss appointments</Tbc>
       </p>
       <h2>Content</h2>
       <p>

@@ -46,12 +46,8 @@ export default function PricingPage() {
                     Hair loss consultation
                   </Link>
                 </th>
-                <td className="p-5">
-                  <Tbc>consultation fee</Tbc>
-                </td>
-                <td className="p-5 text-sm text-stone">
-                  <Tbc>in clinic or online; redeemable against treatment?</Tbc>
-                </td>
+                <td className="p-5 text-cream">Free</td>
+                <td className="p-5 text-sm text-stone">Online, with no obligation to go ahead</td>
               </tr>
               {TREATMENTS.map((t) => (
                 <tr key={t.slug}>
@@ -98,7 +94,9 @@ export default function PricingPage() {
           <div>
             <SectionHeading id="finance-title" eyebrow="Spreading the cost" title="Finance" className="mb-8!" />
             <p className="text-lg leading-relaxed text-stone">
-              Finance options may be available, subject to status. <Tbc>finance provider, FCA status and representative example</Tbc>
+              You may be able to spread the cost with Klarna (pay in 3), Clearpay (pay in 4) or Ideal4Finance (interest-free finance
+              over up to 12 months on treatment over £1,000), subject to status. Applicants must be 18 or over and UK residents.{" "}
+              <Tbc>FCA credit broker statement and representative example, if required</Tbc>
             </p>
             <a href={BRAND.finance} className="mt-6 inline-flex items-center gap-2 font-semibold text-gold underline underline-offset-2 hover:text-cream">
               Finance at Harley Street Aesthetics

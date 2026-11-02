@@ -50,7 +50,7 @@ export default function DiagnosisPage() {
               ]}
             />
             <p className="mt-6 text-sm text-stone">
-              Consultation format and fee: <Tbc>in clinic or online, fee and whether it is redeemable</Tbc>
+              Your first consultation is free, online and has no obligation. It is a consultation, not free treatment.
             </p>
           </div>
           <div>
