@@ -1,0 +1,21 @@
+# Decisions log
+
+| # | Date | Decision | Why |
+|---|---|---|---|
+| 1 | 2026-11-02 | Project folder is `C:\Users\Welcome\Desktop\Hairloss_Website` (was empty). | It existed, was empty and matches the project name. It's separate from `Desktop\Endolift_Website`, which holds Endolift research and design references and stays read-only. |
+| 2 | 2026-11-02 | Rebuild the Endolift components from its built output in `Downloads\endolift-out`. | `Downloads\endolift-site` doesn't exist on this PC. Its compiled HTML, CSS and JS show the tokens, markup and behaviour, so the sibling look can be matched exactly. Nothing in that folder was changed. |
+| 3 | 2026-11-02 | Stack: Next.js 16.4 (App Router, Turbopack), TypeScript, Tailwind v4, `output: 'export'`, `trailingSlash: true`, unoptimised images. | Same as the Endolift build, which is a static export with trailing-slash URLs. |
+| 4 | 2026-11-02 | Self-host Playfair Display and Montserrat variable fonts via `@fontsource-variable`. | Endolift does the same (no Google Fonts request, better privacy and performance). |
+| 5 | 2026-11-02 | Treatments limited to consultation/scalp assessment, PRP, scalp microneedling, low-level laser therapy and exosome-based treatment. | These are the only options named in the clinic's current HSA-branded hair content (Facebook, Oct–Nov 2026). Everything else is in open-questions until confirmed. |
+| 6 | 2026-11-02 | No prescription-only medicine named anywhere; "Prescription treatments may be discussed at your consultation if clinically appropriate." | Human Medicines Regulations 2012, MHRA guidance and CAP Code rule 12.12. |
+| 7 | 2026-11-02 | Exosome page kept, worded as "evidence is still developing", not as a proven or approved treatment, and flagged for clinical and regulatory review. | Matches the clinic's own Facebook wording; avoids ASA/MHRA risk. |
+| 8 | 2026-11-02 | Every unknown fact (prices, practitioners, regulator numbers, reviews, photos) is an amber `[TBC: …]` placeholder via a `<Tbc>` component. A build check (`npm run check:tbc`) lists them all. | Brief: never invent facts; placeholders must be highlighted and listed. |
+| 9 | 2026-11-02 | No reviews or before/after photos shown; the sections render a clear placeholder until verified content with consent exists. | The main site's reviews can't be verified; no hair photos with consent are available. |
+| 10 | 2026-11-02 | No stock or patient photography. Imagery is abstract, brand-coloured graphics (follicle line art, gradients). | No licensed hair imagery available; the brief bans stock presented as results. Real clinic photos can replace the graphics later. |
+| 11 | 2026-11-02 | Enquiry form posts to **Netlify Forms** (`hair-enquiry`) with honeypot and Netlify spam filtering. TODO: switch to the CRM/webhook once confirmed. | Brief fallback when Copilot doesn't give a destination. |
+| 12 | 2026-11-02 | Primary CTA "Book consultation" goes to `/book/`, which has the enquiry form, both clinics' phone numbers, WhatsApp and the existing HSA booking calendar link (flagged TBC for hair). | Gives a working path today without guessing the right calendar. |
+| 13 | 2026-11-02 | Site URL comes from `NEXT_PUBLIC_SITE_URL` (default `https://hairloss.harleystreetaesthetic.co.uk`). Indexing is off (`noindex` + `Disallow: /`) unless `NEXT_PUBLIC_ALLOW_INDEXING=true`. | Same as the Endolift preview. Prevents a preview being indexed before approval. |
+| 14 | 2026-11-02 | London address shown as 2 Grosvenor Gardens; 10 Harley Street listed as a second address marked TBC. | The Endolift notes said not to send patients to 10 Harley Street (under construction). |
+| 15 | 2026-11-02 | Quiz runs entirely in the browser, stores nothing and always ends with "book a consultation". It suggests topics to read, never a diagnosis. Red-flag answers (sudden or patchy loss, scarring, unwell) point to a medical assessment / GP. | Brief requirement; avoids processing health data. |
+| 16 | 2026-11-02 | Cookie consent reuses the Endolift logic and storage key (`hsa-cookie-consent`). | Same brand family; analytics and pixels load only after opt-in (UK GDPR/PECR). |
+| 17 | 2026-11-02 | Netlify is the primary host (`netlify.toml`), with Vercel as an alternative. | Brief. Note: the Endolift build is currently on a Hostinger preview, so `docs/deployment.md` also covers Hostinger. |
