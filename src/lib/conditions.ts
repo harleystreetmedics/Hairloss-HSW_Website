@@ -23,8 +23,6 @@ export type Condition = {
   options: string[];
   referral?: string;
   urgent?: string;
-  /** Shown as an amber placeholder when we don't yet know if the clinic offers this. */
-  offeredTbc?: string;
   faqs: Faq[];
   related: string[];
 };
@@ -240,7 +238,6 @@ export const CONDITIONS: Condition[] = [
       RX_SENTENCE,
       "Some people with alopecia areata need specialist dermatology care. We'll explain your options and refer you if that's the best route.",
     ],
-    offeredTbc: "which alopecia areata treatments are offered in clinic vs referred",
     urgent: "Patchy or sudden hair loss should always be assessed by a doctor. If you're losing hair quickly or in several patches, please book a consultation or see your GP.",
     faqs: [
       {
@@ -463,7 +460,6 @@ export const CONDITIONS: Condition[] = [
       "Vitamin drips are not a proven general treatment for hair loss.",
       "Once any medical cause is managed, treatments for remaining thinning can be discussed.",
     ],
-    offeredTbc: "which blood tests are offered in clinic, and the price",
     faqs: [
       {
         q: "Should I take supplements for my hair?",
@@ -511,7 +507,6 @@ export const CONDITIONS: Condition[] = [
       "Treating the scalp condition comes first; some hair treatments aren't suitable on an inflamed scalp.",
       RX_SENTENCE,
     ],
-    offeredTbc: "which scalp treatments are offered in clinic",
     urgent: "A very painful scalp, spreading redness, pus or fever needs prompt medical attention from your GP or NHS 111.",
     faqs: [
       {
@@ -542,7 +537,6 @@ export const CONDITIONS: Condition[] = [
     ],
     treatments: [],
     options: ["Treatment options, if any, depend on your medical history and your oncology team's advice."],
-    offeredTbc: "whether post-chemotherapy hair support is offered",
     faqs: [
       {
         q: "Can I have treatment during chemotherapy?",
@@ -569,7 +563,6 @@ export const CONDITIONS: Condition[] = [
     assessment: STANDARD_ASSESSMENT,
     treatments: [],
     options: ["Options depend on the cause and are discussed at consultation."],
-    offeredTbc: "whether beard and eyebrow treatments are offered",
     faqs: [
       {
         q: "Is a patchy beard a sign of alopecia areata?",

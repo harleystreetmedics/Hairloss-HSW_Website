@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { CtaBand } from "@/components/sections";
-import { CheckList, Disclaimer, PageHero, Section, SectionHeading, Tbc } from "@/components/ui";
+import { CheckList, Disclaimer, PageHero, Section, SectionHeading } from "@/components/ui";
 import { pageMetadata } from "@/lib/seo";
 import { CONSULTATIONS } from "@/lib/site";
-import { TREATMENTS, VIRTUE_TBC } from "@/lib/treatments";
+import { TREATMENTS } from "@/lib/treatments";
 
 export const metadata = pageMetadata({
   title: "Hair Loss Treatment Prices",
@@ -67,37 +67,17 @@ export default function PricingPage() {
                         </td>
                         <td className="p-5 text-sm text-stone">
                           Number of sessions agreed at consultation.
-                          {p.option.startsWith("Virtue") && (
-                            <>
-                              {" "}
-                              <Tbc>{VIRTUE_TBC}</Tbc>
-                            </>
-                          )}
                         </td>
                       </tr>
                     ))
-                  : [
-                      <tr key={t.slug}>
-                        <th scope="row" className="p-5 font-serif text-lg font-normal text-cream">
-                          <Link href={`/treatments/${t.slug}/`} className="hover:text-gold">
-                            {t.name}
-                          </Link>
-                        </th>
-                        <td className="p-5">
-                          <Tbc>{t.priceTbc}</Tbc>
-                        </td>
-                        <td className="p-5 text-sm text-stone">Number of sessions agreed at consultation</td>
-                      </tr>,
-                    ],
+                  : [],
               )}
               <tr>
                 <th scope="row" className="p-5 font-serif text-lg font-normal text-cream">
-                  Blood tests
+                  Comprehensive blood test
                 </th>
-                <td className="p-5">
-                  <Tbc>blood test price, if offered</Tbc>
-                </td>
-                <td className="p-5 text-sm text-stone">Only when clinically indicated</td>
+                <td className="p-5 text-cream">£295</td>
+                <td className="p-5 text-sm text-stone">Comprehensive panel of 50+ biomarkers, reviewed by a doctor. Only when clinically indicated.</td>
               </tr>
             </tbody>
           </table>
@@ -107,7 +87,7 @@ export default function PricingPage() {
         </p>
       </Section>
       <Section tone="soft" labelledBy="how-title">
-        <div className="grid gap-12 lg:grid-cols-2">
+        <div className="max-w-3xl">
           <div>
             <SectionHeading id="how-title" eyebrow="How pricing works" title="No surprises" className="mb-8!" />
             <CheckList
@@ -115,15 +95,8 @@ export default function PricingPage() {
                 "Your practitioner recommends a plan only after assessing you.",
                 "You'll receive the full cost of your plan before you agree to anything.",
                 "There is no obligation to go ahead with treatment after your consultation.",
-                <>Deposit and cancellation terms: <Tbc>deposit and cancellation policy for Harley Street Medical Wellness</Tbc></>,
               ]}
             />
-          </div>
-          <div>
-            <SectionHeading id="finance-title" eyebrow="Spreading the cost" title="Finance" className="mb-8!" />
-            <p className="text-lg leading-relaxed text-stone">
-              Finance options may be available, subject to status. <Tbc>finance providers for Harley Street Medical Wellness, FCA statement and representative example</Tbc>
-            </p>
           </div>
         </div>
         <Disclaimer className="mt-12" />

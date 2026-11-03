@@ -2,8 +2,8 @@ import Link from "next/link";
 import { ConditionCard, FaqAccordion, StepTimeline, TreatmentCard } from "@/components/cards";
 import { FollicleArt } from "@/components/FollicleArt";
 import { Icon } from "@/components/Icon";
-import { ClinicsSection, CtaBand, ResultsPlaceholder, ReviewsSection, TeamGrid } from "@/components/sections";
-import { Button, CheckList, Disclaimer, JsonLd, Section, SectionHeading, Tbc } from "@/components/ui";
+import { ClinicsSection, CtaBand, TeamGrid } from "@/components/sections";
+import { Button, CheckList, Disclaimer, JsonLd, Section, SectionHeading } from "@/components/ui";
 import { CONDITIONS, DIAGNOSIS_STEPS, PATTERNS, RX_SENTENCE } from "@/lib/conditions";
 import { GENERAL_FAQS } from "@/lib/faqs";
 import { clinicsSchema, consultationSchema, faqSchema, treatmentsListSchema } from "@/lib/schema";
@@ -150,9 +150,11 @@ export default function Home() {
           id="results-title"
           eyebrow="Results"
           title={<>Honest about <span className="text-gold">results</span></>}
-          intro="Hair grows slowly, so changes take months to judge, and results vary between people. We'll only ever show real patient photos with written consent."
+          intro="Hair grows slowly, so changes usually take 3–6 months to judge, and results vary between people. We'll only ever show real patient photos with written consent."
         />
-        <ResultsPlaceholder />
+        <Button href="/results/" variant="outline">
+          About results
+        </Button>
       </Section>
 
       <Section labelledBy="team-title">
@@ -184,8 +186,7 @@ export default function Home() {
                 <>Consultation: included with every treatment, or £295 for a standalone in-clinic consultation</>,
                 <>PRP: from £399 a session, or £1,099 for a course of 3</>,
                 <>Autologous exosomes: from £599 a session, or £1,599 for a course of 3</>,
-                <>Finance: <Tbc>finance options for Harley Street Medical Wellness</Tbc></>,
-              ]}
+                              ]}
             />
           </div>
           <div className="lg:col-span-5">
@@ -196,8 +197,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <ReviewsSection tone="rich" />
-
+      
       <Section tone="soft" labelledBy="faq-title">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">

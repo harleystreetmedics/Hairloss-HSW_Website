@@ -1,5 +1,7 @@
 # Open questions
 
+> **3 Nov 2026:** you asked for unknown items to be left off the site instead of shown as placeholders. Everything below is now **optional**. The site is complete without it, and each item can be added later if you supply it.
+
 _Also checked harleystreetaesthetic.co.uk on 2 Nov 2026 (see research.md §9). Main-site footer links to Privacy Policy and Terms are broken (`#`), worth fixing there._
 
 Updated 2 November 2026 after reading the company Copilot. Everything still open is shown on the site as an amber `[TBC: …]` placeholder, or left out. Run `npm run check:tbc` for the live list.

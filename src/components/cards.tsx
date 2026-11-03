@@ -4,7 +4,6 @@ import type { Condition } from "@/lib/conditions";
 import type { Faq } from "@/lib/faqs";
 import type { Fact, Risk, Treatment } from "@/lib/treatments";
 import { Icon } from "./Icon";
-import { Tbc } from "./ui";
 
 const CARD =
   "group flex h-full flex-col rounded-2xl border border-cream/10 bg-card p-6 shadow-card transition hover:-translate-y-0.5 hover:border-gold/60 sm:p-7";
@@ -43,11 +42,11 @@ export function TreatmentCard({ t, headingLevel = 3 }: { t: Treatment; headingLe
 
 export function FactStrip({ facts }: { facts: Fact[] }) {
   return (
-    <dl className="grid grid-cols-2 gap-y-8 border-y border-white/10 py-8 lg:grid-cols-4">
+    <dl className={`grid grid-cols-2 gap-y-8 border-y border-white/10 py-8 ${facts.length === 2 ? "mx-auto max-w-xl" : facts.length === 3 ? "lg:grid-cols-3" : "lg:grid-cols-4"}`}>
       {facts.map((f) => (
         <div key={f.label} className="flex flex-col-reverse items-center px-2 text-center">
           <dt className="mt-2 text-[0.7rem] tracking-[0.2em] text-stone uppercase">{f.label}</dt>
-          <dd className="font-serif text-xl text-gold sm:text-2xl">{f.value ?? <Tbc>{f.tbc}</Tbc>}</dd>
+          <dd className="font-serif text-xl text-gold sm:text-2xl">{f.value}</dd>
         </div>
       ))}
     </dl>

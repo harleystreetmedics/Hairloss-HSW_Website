@@ -57,12 +57,6 @@ export function LocationPage({ id }: { id: ClinicId }) {
                   {c.phone.display}
                 </a>
               </li>
-              <li className="flex gap-3">
-                <Icon name="shield" className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
-                <span>
-                  {id === "london" ? <Tbc>CQC registration statement</Tbc> : <Tbc>Healthcare Improvement Scotland registration statement</Tbc>}
-                </span>
-              </li>
             </ul>
             <div className="mt-8">
               <ContactLinks />
@@ -94,9 +88,6 @@ export function LocationPage({ id }: { id: ClinicId }) {
             </li>
           ))}
         </ul>
-        <p className="mt-6 text-sm text-stone">
-          Treatments available in {c.city}: <Tbc>confirm every treatment listed is offered at this clinic</Tbc>
-        </p>
       </Section>
 
       <Section labelledBy="cond-title">

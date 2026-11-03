@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { LegalPage } from "@/components/LegalPage";
-import { Tbc } from "@/components/ui";
 import { pageMetadata } from "@/lib/seo";
 import { BRAND } from "@/lib/site";
 
@@ -15,8 +14,7 @@ export default function PrivacyPage() {
     <LegalPage title="Privacy policy" path="/privacy-policy/">
       <h2>Who we are</h2>
       <p>
-        This website is operated by Harley Street Medical Wellness, the data controller for personal data collected through it.{" "}
-        <Tbc>company name, registered office and ICO registration number</Tbc>
+        This website is operated by Harley Street Medical Wellness, the data controller for personal data collected through it.
       </p>
       <p>
         Contact us about privacy at <a href={`mailto:${BRAND.email}`}>{BRAND.email}</a>.
@@ -42,7 +40,7 @@ export default function PrivacyPage() {
       </ul>
       <h2>Who we share it with</h2>
       <p>
-        Our website hosting and form provider (<Tbc>hosting and form provider, e.g. Netlify</Tbc>), our email
+        Our website hosting and form provider (Netlify), our email
         and customer-management providers and, if you consent, Google and Meta for analytics and advertising measurement. Some of these
         providers may process data outside the UK under appropriate safeguards.
       </p>

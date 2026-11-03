@@ -3,13 +3,15 @@ import { FactStrip, FaqAccordion, RiskList, StepTimeline } from "@/components/ca
 import { FollicleArt } from "@/components/FollicleArt";
 import { Icon } from "@/components/Icon";
 import { CtaBand, RelatedLinks } from "@/components/sections";
-import { Button, CheckList, Disclaimer, JsonLd, PageHero, Section, SectionHeading, Tbc } from "@/components/ui";
+import { Button, CheckList, Disclaimer, JsonLd, PageHero, Section, SectionHeading } from "@/components/ui";
 import { CONDITIONS, RX_SENTENCE } from "@/lib/conditions";
 import { faqSchema, treatmentSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
 import { TREATMENTS, treatmentBySlug } from "@/lib/treatments";
 
 export const dynamicParams = false;
+
+const plainName = (t: { shortName: string; name: string }) => (t.shortName === "PRP" ? "PRP" : t.name.toLowerCase());
 
 export function generateStaticParams() {
   return TREATMENTS.map((t) => ({ slug: t.slug }));
@@ -67,7 +69,7 @@ export default async function TreatmentPage({ params }: PageProps<"/treatments/[
       <Section labelledBy="what-title">
         <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-7">
-            <SectionHeading id="what-title" eyebrow="How it works" title={<>What is {t.shortName === "LLLT" ? "low-level laser therapy" : t.shortName}?</>} />
+            <SectionHeading id="what-title" eyebrow="How it works" title={<>What is {plainName(t)}?</>} />
             <div className="space-y-5 text-lg leading-relaxed text-stone">
               {[...t.intro, ...t.howItWorks].map((p) => (
                 <p key={p}>{p}</p>
@@ -120,9 +122,6 @@ export default async function TreatmentPage({ params }: PageProps<"/treatments/[
               <li key={a}>{a}</li>
             ))}
           </ul>
-          <p className="mt-4 text-sm">
-            <Tbc>{t.aftercareTbc}</Tbc>
-          </p>
         </div>
       </Section>
 
@@ -152,7 +151,7 @@ export default async function TreatmentPage({ params }: PageProps<"/treatments/[
         <Disclaimer className="mt-12" />
       </Section>
 
-      <CtaBand title={`Is ${t.shortName === "LLLT" ? "laser therapy" : t.shortName} right for you?`} />
+      <CtaBand title={`Is ${plainName(t)} right for you?`} />
     </>
   );
 }

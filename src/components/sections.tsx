@@ -39,44 +39,6 @@ export function ClinicsSection({ tone = "rich" as "rich" | "soft" }) {
   );
 }
 
-/** Reviews carousel slot. Shows a placeholder until verified reviews with permission are supplied. */
-export function ReviewsSection({ tone = "soft" as "rich" | "soft" }) {
-  return (
-    <Section tone={tone} labelledBy="reviews-title">
-      <SectionHeading
-        id="reviews-title"
-        eyebrow="Patient reviews"
-        title={<>What our patients <span className="text-gold">say</span></>}
-        intro="We only publish genuine reviews from verified sources, with permission."
-      />
-      <div className="rounded-2xl border border-dashed border-gold/40 bg-card p-8 text-center">
-        <Icon name="star" className="mx-auto h-8 w-8 text-gold" />
-        <p className="mt-4 text-stone">
-          <Tbc>verified Google review rating, count and link, plus hair loss testimonials with written permission</Tbc>
-        </p>
-      </div>
-    </Section>
-  );
-}
-
-export function ResultsPlaceholder() {
-  return (
-    <div className="grid gap-6 md:grid-cols-2">
-      {["Before and after: pattern hair loss", "Before and after: thinning crown"].map((label) => (
-        <figure key={label} className="overflow-hidden rounded-xl border border-gold/20 bg-card">
-          <div className="flex aspect-[43/24] items-center justify-center bg-black-soft p-6 text-center">
-            <Tbc>consented before and after photos ({label.split(": ")[1]})</Tbc>
-          </div>
-          <figcaption className="p-5">
-            <p className="font-serif text-xl text-cream">{label}</p>
-            <p className="mt-1 text-sm text-stone">Photos will only be shown with the patient&rsquo;s written consent. Results vary.</p>
-          </figcaption>
-        </figure>
-      ))}
-    </div>
-  );
-}
-
 /** Medical team from harleystreetmedicalwellness.co.uk. */
 export function TeamGrid() {
   return (
@@ -94,9 +56,6 @@ export function TeamGrid() {
           </li>
         ))}
       </ul>
-      <p className="mt-6 text-sm text-stone">
-        <Tbc>which team members see hair loss patients, and GMC numbers</Tbc>
-      </p>
     </>
   );
 }

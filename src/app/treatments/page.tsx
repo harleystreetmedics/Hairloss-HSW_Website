@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { TreatmentCard } from "@/components/cards";
 import { CtaBand } from "@/components/sections";
-import { CheckList, Disclaimer, JsonLd, PageHero, Section, SectionHeading, Tbc } from "@/components/ui";
+import { CheckList, Disclaimer, JsonLd, PageHero, Section, SectionHeading } from "@/components/ui";
 import { RX_SENTENCE } from "@/lib/conditions";
 import { treatmentsListSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
@@ -47,9 +47,6 @@ export default function TreatmentsIndex() {
             RX_SENTENCE,
             "Nutritional support may be discussed when clinically indicated. Vitamin drips are not a proven general treatment for hair loss.",
             "Referral to your GP or a specialist dermatologist when that's the right route.",
-            <>
-              Other treatments such as hair transplantation, scalp micropigmentation or DNA hair testing: <Tbc>confirm whether offered</Tbc>
-            </>,
           ]}
         />
         <Disclaimer className="mt-12" />

@@ -1,5 +1,5 @@
 import { ClinicCards, CtaBand, TeamGrid } from "@/components/sections";
-import { CheckList, Disclaimer, JsonLd, PageHero, Section, SectionHeading, Tbc } from "@/components/ui";
+import { CheckList, Disclaimer, JsonLd, PageHero, Section, SectionHeading } from "@/components/ui";
 import { clinicsSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
 import { BRAND } from "@/lib/site";
@@ -61,16 +61,6 @@ export default function AboutPage() {
           intro="Our GMC-registered medical team, led by our Medical Director, Dr Ahmad."
         />
         <TeamGrid />
-      </Section>
-      <Section labelledBy="reg-title">
-        <SectionHeading id="reg-title" eyebrow="Regulation" title="Registration and standards" />
-        <CheckList
-          items={[
-            <>London: <Tbc>CQC registration statement and number</Tbc></>,
-            <>Glasgow: <Tbc>Healthcare Improvement Scotland registration statement and number</Tbc></>,
-            <>Practitioners: GMC-registered doctors. <Tbc>GMC numbers for each hair loss practitioner</Tbc></>,
-          ]}
-        />
       </Section>
       <Section tone="soft" labelledBy="clinics-title">
         <SectionHeading id="clinics-title" eyebrow="Our clinics" title="London and Glasgow" />

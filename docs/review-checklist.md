@@ -1,5 +1,7 @@
 # Review checklist
 
+_3 Nov 2026 (later): all placeholders filled from Copilot/websites or removed, as you asked. Checks re-run: lint, types, build, links, compliance (pass), 17 browser tests (pass)._
+
 _3 Nov 2026: **rebranded to Harley Street Medical Wellness** and added PCOS and hair breakage pages. Re-ran lint, typecheck, build, links, compliance scan (pass), 17 browser tests (pass) and Lighthouse (home 96, about 97 mobile performance; 100 accessibility and best practices). Placeholders 36: some HSA facts (free online consultation, deposit, finance, company details) are now TBC for Wellness. Note: the Wellness site's own pages show unverified stats ("10K+ happy clients", "98% satisfaction") and testimonials; none were reused._
 
 _Updated 2 Nov 2026 after the Copilot research: re-ran build, lint, typecheck, links, compliance scan, 17 browser tests and Lighthouse (home 97, PRP 95, pricing 98 mobile performance; 100 accessibility and best practices). Placeholders reduced from 51 to 41; 10 Harley Street removed (not seeing patients). Then, from the main website: medical team, consultation prices (free online / £195 in clinic) and £50 deposit added; placeholders now 35. On 3 Nov, hair prices were added from the Harley Street Medical Wellness pricing page (PRP from £399, autologous exosomes from £599, Virtue options); placeholders now 32._
@@ -64,53 +66,25 @@ Automated scan plus a manual read of every page. Things for your compliance lead
 17. **14-day cancellation** wording in the terms comes from the HSA compliance rules in Copilot; the deposit is still TBC.
 13. **Opening hours** were taken from the Endolift site (London Tue–Fri 9–7, Sat 9–6; Glasgow Mon–Fri 9–6). Confirm for hair appointments.
 
-## 3. Placeholders to fill (`[TBC]`, amber on the page)
+## 3. Placeholders: none left (3 Nov 2026)
 
-36 unique placeholders. Copilot doesn't document these; they need the clinic manager, compliance lead or website/CRM admin (see `docs/open-questions.md`).
+You asked for every placeholder to be filled from the Copilot or your websites, and removed if neither has it. The Wellness Copilot workspace only documents blood testing, so this was added: comprehensive blood test **£295**, 50+ biomarkers, reviewed by a doctor, results in 24–48 hours (`kb/hsw/blood-testing.md`, 11 Oct 2026). `npm run check:tbc` now reports **0**.
 
-| Placeholder | Pages |
-|---|---|
-| blood test price, if offered | /pricing/ |
-| clinic aftercare notes for LLLT | /treatments/low-level-laser-therapy/ |
-| clinic aftercare sheet for exosome treatment | /treatments/exosome-hair-treatment/ |
-| clinic aftercare sheet for PRP | /treatments/prp-hair-treatment/ |
-| clinic aftercare sheet for scalp microneedling | /treatments/scalp-microneedling/ |
-| company name, registered office and ICO registration number | /privacy-policy/ |
-| confirm every treatment listed is offered at this clinic | /glasgow/, /london/ |
-| confirm whether a free online consultation is offered for hair loss | /diagnosis/ |
-| confirm whether offered | /diagnosis/, /treatments/ |
-| confirm whether offered and the device used | /diagnosis/ |
-| consented before and after photos (pattern hair loss) | /, /results/ |
-| consented before and after photos (thinning crown) | /, /results/ |
-| CQC registration statement | /london/ |
-| CQC registration statement and number | /404/, /about/, /book/ +38 more |
-| deposit and cancellation notice period | /terms/ |
-| deposit and cancellation policy for Harley Street Medical Wellness | /pricing/ |
-| finance options for Harley Street Medical Wellness | / |
-| finance providers for Harley Street Medical Wellness, FCA statement and representative example | /pricing/ |
-| frequency and course length | /treatments/low-level-laser-therapy/ |
-| GMC numbers for each hair loss practitioner | /about/ |
-| Healthcare Improvement Scotland registration statement | /404/, /about/, /book/ +38 more |
-| Healthcare Improvement Scotland registration statement and number | /about/ |
-| hosting and form provider, e.g. Netlify | /privacy-policy/ |
-| LLLT device (in clinic or home use) | /treatments/low-level-laser-therapy/ |
-| LLLT price | /pricing/, /treatments/low-level-laser-therapy/ |
-| microneedling device used on the scalp | /treatments/scalp-microneedling/ |
-| scalp microneedling price (not listed separately; may be part of the Virtue options) | /pricing/, /treatments/scalp-microneedling/ |
-| verified Google review rating, count and link, plus hair loss testimonials with written permission | /, /results/ |
-| what the Virtue option involves | /pricing/ |
-| whether beard and eyebrow treatments are offered | /conditions/beard-and-eyebrow-thinning/ |
-| whether post-chemotherapy hair support is offered | /conditions/hair-loss-after-chemotherapy/ |
-| which alopecia areata treatments are offered in clinic vs referred | /conditions/alopecia-areata/ |
-| which blood tests are offered in clinic and their price | /diagnosis/ |
-| which blood tests are offered in clinic, and the price | /conditions/medical-causes/ |
-| which scalp treatments are offered in clinic | /conditions/scalp-conditions/ |
-| which team members see hair loss patients, and GMC numbers | /about/, / |
+**Removed from the site because neither source has them.** You can add any of these back later by giving me the details:
+- CQC (London) and Healthcare Improvement Scotland (Glasgow) registration lines. The footer now says "All treatments are administered by GMC-registered doctors", taken from the Wellness website. The Copilot says not to write "We are CQC registered".
+- GMC numbers, and which doctors see hair patients.
+- Reviews section (no verified hair reviews) and the before/after gallery (no consented hair photos). The results page keeps the honest explanation.
+- Prices for scalp microneedling and low-level laser. Their pages stay, without a price.
+- Device names, LLLT session frequency, and the clinic's own aftercare sheets. General aftercare wording stays.
+- Description of the "Virtue" options. The prices stay.
+- Free online consultation, deposit and cancellation terms, finance, WhatsApp.
+- Company name, registered office and ICO number in the privacy policy.
+- Trichoscopy, DNA testing, transplant/SMP mentions, and the "offered or referred?" notes on condition pages.
 
 Where the data lives: prices and facts in `src/lib/treatments.ts` (`facts`, `priceTbc`, `aftercareTbc`), condition notes in `src/lib/conditions.ts` (`offeredTbc`), clinics and contact details in `src/lib/site.ts`, team/reviews/results placeholders in `src/components/sections.tsx`, regulator lines in `src/components/Footer.tsx` and `src/components/LocationPage.tsx`.
 
 ## 4. Before launch
-- [ ] Fill or remove every `[TBC]` (`npm run check:tbc` must print 0).
+- [x] Every `[TBC]` filled or removed (`npm run check:tbc` prints 0).
 - [ ] Clinician sign-off of all condition and treatment copy.
 - [ ] Compliance sign-off of items in section 2.
 - [ ] Confirm enquiry destination; switch the form from Netlify Forms if needed (`src/components/EnquiryForm.tsx`, TODO comment).

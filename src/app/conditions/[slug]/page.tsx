@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { FaqAccordion, StepTimeline, TreatmentCard } from "@/components/cards";
 import { Icon } from "@/components/Icon";
 import { CtaBand, RelatedLinks } from "@/components/sections";
-import { Button, CheckList, Disclaimer, JsonLd, PageHero, Section, SectionHeading, Tbc } from "@/components/ui";
+import { Button, CheckList, Disclaimer, JsonLd, PageHero, Section, SectionHeading } from "@/components/ui";
 import { CONDITIONS, conditionBySlug } from "@/lib/conditions";
 import { conditionSchema, faqSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
@@ -55,11 +55,6 @@ export default async function ConditionPage({ params }: PageProps<"/conditions/[
                 <p key={p}>{p}</p>
               ))}
             </div>
-            {c.offeredTbc && (
-              <p className="mt-6 text-sm">
-                <Tbc>{c.offeredTbc}</Tbc>
-              </p>
-            )}
           </div>
           <div className="space-y-5 lg:col-span-5">
             <div className="rounded-2xl bg-card p-7 shadow-card">

@@ -1,7 +1,7 @@
 import { StepTimeline } from "@/components/cards";
 import { Icon } from "@/components/Icon";
 import { CtaBand } from "@/components/sections";
-import { Button, CheckList, Disclaimer, JsonLd, PageHero, Section, SectionHeading, Tbc } from "@/components/ui";
+import { Button, CheckList, Disclaimer, JsonLd, PageHero, Section, SectionHeading } from "@/components/ui";
 import { DIAGNOSIS_STEPS, RX_SENTENCE } from "@/lib/conditions";
 import { consultationSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
@@ -51,7 +51,7 @@ export default function DiagnosisPage() {
             />
             <p className="mt-6 text-sm text-stone">
               Every treatment includes a comprehensive consultation. A standalone in-clinic consultation with a GMC-registered doctor is
-              £295. Online consultation: <Tbc>confirm whether a free online consultation is offered for hair loss</Tbc>
+              £295.
             </p>
           </div>
           <div>
@@ -60,9 +60,6 @@ export default function DiagnosisPage() {
               <p>
                 Your practitioner looks closely at your scalp and hair: the pattern and density of thinning, the condition of the scalp skin,
                 and signs that point to a particular cause.
-              </p>
-              <p>
-                Magnified scalp examination (trichoscopy): <Tbc>confirm whether offered and the device used</Tbc>
               </p>
             </div>
           </div>
@@ -79,7 +76,8 @@ export default function DiagnosisPage() {
                 may be recommended. These can be arranged by us or through your GP.
               </p>
               <p>
-                <Tbc>which blood tests are offered in clinic and their price</Tbc>
+                Our comprehensive blood test checks more than 50 biomarkers, with results reviewed by a qualified doctor. It costs £295
+                and results are usually ready within 24–48 hours.
               </p>
               <p>Nutritional support may be discussed when clinically indicated. Vitamin drips are not a proven general treatment for hair loss.</p>
             </div>
@@ -92,7 +90,6 @@ export default function DiagnosisPage() {
                 the cost, before you decide anything.
               </p>
               <p>{RX_SENTENCE}</p>
-              <p>DNA or genetic hair testing: <Tbc>confirm whether offered</Tbc></p>
             </div>
           </div>
         </div>

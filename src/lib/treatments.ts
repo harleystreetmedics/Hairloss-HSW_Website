@@ -4,7 +4,7 @@
 
 import type { Faq } from "./faqs";
 
-export type Fact = { label: string; value?: string; tbc?: string };
+export type Fact = { label: string; value: string };
 export type Risk = { name: string; level: "Common" | "Less common" | "Rare"; text: string };
 
 export type Treatment = {
@@ -22,16 +22,12 @@ export type Treatment = {
   mayNotSuit: string[];
   onTheDay: { title: string; text: string }[];
   aftercare: string[];
-  aftercareTbc: string;
   risks: Risk[];
   evidenceNote?: string;
   faqs: Faq[];
   /** Published prices (Harley Street Medical Wellness pricing page, "PRP & Autologous Exosomes for Hair", 3 Nov 2026). */
   prices?: { option: string; single: string; course: string }[];
-  priceTbc?: string;
 };
-
-export const VIRTUE_TBC = "what the Virtue option involves";
 
 export const TREATMENTS: Treatment[] = [
   {
@@ -81,7 +77,6 @@ export const TREATMENTS: Treatment[] = [
       "You will be given written aftercare advice at your appointment.",
       "Your practitioner will tell you when you can wash your hair and return to exercise.",
     ],
-    aftercareTbc: "clinic aftercare sheet for PRP",
     risks: [
       { name: "Tenderness and redness", level: "Common", text: "The scalp can feel tender or look pink for a short time after injections." },
       { name: "Bruising", level: "Common", text: "Small bruises can appear where blood is taken or where the scalp is injected." },
@@ -130,10 +125,8 @@ export const TREATMENTS: Treatment[] = [
       "Evidence is still developing and responses vary. Your practitioner will explain what is realistic for you.",
     ],
     facts: [
-      { label: "Device", tbc: "microneedling device used on the scalp" },
       { label: "Sessions", value: "Usually 3–6, 4–6 weeks apart" },
       { label: "Downtime", value: "None expected" },
-      { label: "Price", tbc: "scalp microneedling price (not listed separately; may be part of the Virtue options)" },
     ],
     maySuit: [
       "Adults (18+) with mild to moderate thinning, such as pattern hair loss",
@@ -154,7 +147,6 @@ export const TREATMENTS: Treatment[] = [
       { title: "Aftercare", text: "You'll get written aftercare advice before you leave." },
     ],
     aftercare: ["You will be given written aftercare advice at your appointment, including when to wash your hair and use hair products."],
-    aftercareTbc: "clinic aftercare sheet for scalp microneedling",
     risks: [
       { name: "Redness and tenderness", level: "Common", text: "The scalp can look red and feel tender for a short time." },
       { name: "Pinpoint bleeding or scabbing", level: "Common", text: "Tiny spots of bleeding or small scabs can occur and usually settle quickly." },
@@ -175,7 +167,6 @@ export const TREATMENTS: Treatment[] = [
         a: "Sometimes. Your practitioner may suggest combining treatments if they think it is appropriate for your diagnosis.",
       },
     ],
-    priceTbc: "scalp microneedling price (not listed separately; may be part of the Virtue options)",
   },
   {
     slug: "low-level-laser-therapy",
@@ -196,10 +187,7 @@ export const TREATMENTS: Treatment[] = [
       "LLLT usually needs regular sessions over several months before any change can be judged.",
     ],
     facts: [
-      { label: "Device", tbc: "LLLT device (in clinic or home use)" },
-      { label: "Sessions", tbc: "frequency and course length" },
       { label: "Downtime", value: "None expected" },
-      { label: "Price", tbc: "LLLT price" },
     ],
     maySuit: [
       "Adults (18+) with mild to moderate pattern hair loss or general thinning",
@@ -218,7 +206,6 @@ export const TREATMENTS: Treatment[] = [
       { title: "Back to your day", text: "There is no expected downtime." },
     ],
     aftercare: ["No special aftercare is usually needed. Your practitioner will tell you about anything specific to you."],
-    aftercareTbc: "clinic aftercare notes for LLLT",
     risks: [
       { name: "Mild scalp warmth or itch", level: "Less common", text: "Some people notice mild warmth, itching or tenderness." },
       { name: "Headache", level: "Less common", text: "A mild headache has been reported by some people." },
@@ -233,7 +220,6 @@ export const TREATMENTS: Treatment[] = [
         a: "Hair grows slowly, so any change usually takes several months to judge. Your practitioner will plan review appointments with you.",
       },
     ],
-    priceTbc: "LLLT price",
   },
   {
     slug: "exosome-hair-treatment",
@@ -278,7 +264,6 @@ export const TREATMENTS: Treatment[] = [
       { title: "Treatment", text: "The preparation is injected into, or applied to, the agreed areas of the scalp." },
     ],
     aftercare: ["You will be given written aftercare advice at your appointment."],
-    aftercareTbc: "clinic aftercare sheet for exosome treatment",
     risks: [
       { name: "Redness and tenderness", level: "Common", text: "The scalp can feel tender or look pink for a short time after treatment." },
       { name: "Bruising", level: "Common", text: "Small bruises can appear where blood is taken or where the scalp is injected." },
