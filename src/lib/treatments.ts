@@ -26,8 +26,12 @@ export type Treatment = {
   risks: Risk[];
   evidenceNote?: string;
   faqs: Faq[];
-  priceTbc: string;
+  /** Published prices (Harley Street Medical Wellness pricing page, "PRP & Autologous Exosomes for Hair", 3 Nov 2026). */
+  prices?: { option: string; single: string; course: string }[];
+  priceTbc?: string;
 };
+
+export const VIRTUE_TBC = "what the Virtue option involves";
 
 export const TREATMENTS: Treatment[] = [
   {
@@ -52,7 +56,7 @@ export const TREATMENTS: Treatment[] = [
       { label: "Sessions", value: "Usually 3–6, 4–6 weeks apart" },
       { label: "Appointment", value: "30–60 minutes" },
       { label: "Downtime", value: "None expected" },
-      { label: "Price", tbc: "price per session / course" },
+      { label: "Price", value: "From £399 a session" },
     ],
     maySuit: [
       "Adults (18+) with mild to moderate thinning or early-stage hair loss, such as pattern hair loss",
@@ -102,7 +106,10 @@ export const TREATMENTS: Treatment[] = [
         a: "Sometimes. Depending on the cause of your hair loss, your practitioner may discuss combining treatments. Prescription treatments may be discussed at your consultation if clinically appropriate.",
       },
     ],
-    priceTbc: "PRP price per session and course",
+    prices: [
+      { option: "PRP therapy", single: "£399", course: "£1,099" },
+      { option: "Virtue PRP therapy", single: "£599", course: "£1,599" },
+    ],
   },
   {
     slug: "scalp-microneedling",
@@ -126,7 +133,7 @@ export const TREATMENTS: Treatment[] = [
       { label: "Device", tbc: "microneedling device used on the scalp" },
       { label: "Sessions", value: "Usually 3–6, 4–6 weeks apart" },
       { label: "Downtime", value: "None expected" },
-      { label: "Price", tbc: "price per session / course" },
+      { label: "Price", tbc: "scalp microneedling price (not listed separately; may be part of the Virtue options)" },
     ],
     maySuit: [
       "Adults (18+) with mild to moderate thinning, such as pattern hair loss",
@@ -168,7 +175,7 @@ export const TREATMENTS: Treatment[] = [
         a: "Sometimes. Your practitioner may suggest combining treatments if they think it is appropriate for your diagnosis.",
       },
     ],
-    priceTbc: "scalp microneedling price",
+    priceTbc: "scalp microneedling price (not listed separately; may be part of the Virtue options)",
   },
   {
     slug: "low-level-laser-therapy",
@@ -230,27 +237,27 @@ export const TREATMENTS: Treatment[] = [
   },
   {
     slug: "exosome-hair-treatment",
-    name: "Exosome and conditioned media treatment",
+    name: "Autologous exosome treatment",
     shortName: "Exosomes",
     icon: "cell",
     summary:
-      "Regenerative options (exosomes or cell-conditioned media) for the scalp. Evidence is still developing, and we'll explain what is and isn't known.",
+      "Exosomes prepared from your own blood (autologous) and used on the scalp. Evidence is still developing, and we'll explain what is and isn't known.",
     metaTitle: "Exosome Hair Treatment: An Honest Guide",
     metaDescription:
-      "Exosome and cell-conditioned media scalp treatments are newer approaches to thinning hair, and the evidence is still developing. Learn what they involve and discuss them at a consultation.",
+      "Autologous exosome hair treatment in London and Glasgow, from £599 a session. A newer approach where evidence is still developing. Learn what it involves and discuss it at a consultation.",
     intro: [
-      "Exosomes are tiny particles that cells release to send signals to other cells. Cell-conditioned media is a related product containing substances released by cells grown in a laboratory. Both are being explored in aesthetic medicine, including for thinning hair.",
+      "Exosomes are tiny particles that cells release to send signals to other cells. Autologous means they are prepared from your own blood, as with PRP. Exosome treatments are being explored in aesthetic medicine, including for thinning hair.",
       "This is a newer approach and the evidence is still developing. We won't recommend it in place of treatments that have more evidence for your type of hair loss, and we'll explain what is known and what isn't before you decide.",
     ],
     howItWorks: [
-      "These products are applied to the scalp, often alongside microneedling, or injected. The idea is that the signals they carry may support the scalp and hair follicles.",
-      "There is not yet enough high-quality research to say how well this works for hair loss or for whom. Your practitioner will talk you through the product used and its status.",
+      "A blood sample is taken and prepared, and the exosome preparation is then injected into, or applied to, the agreed areas of the scalp. The idea is that the signals exosomes carry may support the scalp and hair follicles.",
+      "There is not yet enough high-quality research to say how well this works for hair loss or for whom. Your practitioner will talk you through how the preparation is made and what is known.",
     ],
     facts: [
-      { label: "Options", value: "Exosomes or cell-conditioned media" },
+      { label: "Source", value: "Your own blood (autologous)" },
       { label: "Sessions", value: "Usually 3–6, 4–6 weeks apart" },
       { label: "Downtime", value: "None expected" },
-      { label: "Price", tbc: "exosome treatment price" },
+      { label: "Price", value: "From £599 a session" },
     ],
     maySuit: [
       "Adults (18+) with thinning hair who have had a full assessment",
@@ -261,18 +268,20 @@ export const TREATMENTS: Treatment[] = [
       "Hair loss with an untreated medical cause",
       "Scarring alopecia, which needs specialist assessment",
       "Active scalp infection or inflamed scalp skin",
+      "Some blood or platelet disorders, or certain blood-thinning medicines",
       "Pregnancy or breastfeeding",
     ],
     onTheDay: [
-      { title: "Check-in and consent", text: "Your practitioner goes through the product, the evidence and the risks with you." },
-      { title: "Preparation", text: "The scalp is cleansed and comfort options are discussed." },
-      { title: "Treatment", text: "The product is applied, often with microneedling, to the agreed areas." },
+      { title: "Check-in and consent", text: "Your practitioner goes through the treatment, the evidence and the risks with you." },
+      { title: "Blood sample", text: "A small blood sample is taken from your arm and prepared." },
+      { title: "Comfort", text: "The scalp is cleansed and numbing cream is applied." },
+      { title: "Treatment", text: "The preparation is injected into, or applied to, the agreed areas of the scalp." },
     ],
     aftercare: ["You will be given written aftercare advice at your appointment."],
     aftercareTbc: "clinic aftercare sheet for exosome treatment",
     risks: [
-      { name: "Redness and tenderness", level: "Common", text: "Mostly related to the microneedling or injections used to apply the product." },
-      { name: "Irritation or reaction", level: "Less common", text: "Any product applied to the skin can cause irritation or an allergic reaction." },
+      { name: "Redness and tenderness", level: "Common", text: "The scalp can feel tender or look pink for a short time after treatment." },
+      { name: "Bruising", level: "Common", text: "Small bruises can appear where blood is taken or where the scalp is injected." },
       { name: "Infection", level: "Rare", text: "Any treatment that breaks the skin carries a small risk of infection." },
     ],
     evidenceNote:
@@ -284,10 +293,13 @@ export const TREATMENTS: Treatment[] = [
       },
       {
         q: "Where do the exosomes come from?",
-        a: "This depends on the product. Your practitioner will tell you exactly which product is used, where it comes from and its regulatory status before you decide.",
+        a: "They are autologous, which means they are prepared from a sample of your own blood. Your practitioner will explain how the preparation is made before you decide.",
       },
     ],
-    priceTbc: "exosome treatment price",
+    prices: [
+      { option: "Autologous exosomes therapy", single: "£599", course: "£1,599" },
+      { option: "Virtue exosomes therapy", single: "£799", course: "£1,899" },
+    ],
   },
 ];
 

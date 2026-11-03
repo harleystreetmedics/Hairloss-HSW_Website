@@ -11,7 +11,7 @@ export const GENERAL_FAQS: Faq[] = [
   },
   {
     q: "Which treatments do you offer?",
-    a: "Depending on your diagnosis, options we may discuss include PRP, scalp microneedling and low-level laser therapy. We also discuss regenerative options such as exosomes and cell-conditioned media, where evidence is still developing. Prescription treatments may be discussed at your consultation if clinically appropriate.",
+    a: "Depending on your diagnosis, options we may discuss include PRP, scalp microneedling and low-level laser therapy. We also offer autologous exosome treatment, prepared from your own blood, where evidence is still developing. Prescription treatments may be discussed at your consultation if clinically appropriate.",
   },
   {
     q: "Can you guarantee my hair will grow back?",

@@ -3,7 +3,7 @@ import { CtaBand } from "@/components/sections";
 import { CheckList, Disclaimer, PageHero, Section, SectionHeading, Tbc } from "@/components/ui";
 import { pageMetadata } from "@/lib/seo";
 import { BRAND, CONSULTATIONS } from "@/lib/site";
-import { TREATMENTS } from "@/lib/treatments";
+import { TREATMENTS, VIRTUE_TBC } from "@/lib/treatments";
 
 export const metadata = pageMetadata({
   title: "Hair Loss Treatment Prices",
@@ -62,19 +62,45 @@ export default function PricingPage() {
                   {CONSULTATIONS.inClinic.time}. {CONSULTATIONS.inClinic.detail}
                 </td>
               </tr>
-              {TREATMENTS.map((t) => (
-                <tr key={t.slug}>
-                  <th scope="row" className="p-5 font-serif text-lg font-normal text-cream">
-                    <Link href={`/treatments/${t.slug}/`} className="hover:text-gold">
-                      {t.name}
-                    </Link>
-                  </th>
-                  <td className="p-5">
-                    <Tbc>{t.priceTbc}</Tbc>
-                  </td>
-                  <td className="p-5 text-sm text-stone">Number of sessions agreed at consultation</td>
-                </tr>
-              ))}
+              {TREATMENTS.flatMap((t) =>
+                t.prices
+                  ? t.prices.map((p) => (
+                      <tr key={p.option}>
+                        <th scope="row" className="p-5 font-serif text-lg font-normal text-cream">
+                          <Link href={`/treatments/${t.slug}/`} className="hover:text-gold">
+                            {p.option}
+                          </Link>
+                        </th>
+                        <td className="p-5 text-cream">
+                          {p.single} <span className="text-sm text-stone">per session</span>
+                          <br />
+                          {p.course} <span className="text-sm text-stone">for a course of 3</span>
+                        </td>
+                        <td className="p-5 text-sm text-stone">
+                          Number of sessions agreed at consultation.
+                          {p.option.startsWith("Virtue") && (
+                            <>
+                              {" "}
+                              <Tbc>{VIRTUE_TBC}</Tbc>
+                            </>
+                          )}
+                        </td>
+                      </tr>
+                    ))
+                  : [
+                      <tr key={t.slug}>
+                        <th scope="row" className="p-5 font-serif text-lg font-normal text-cream">
+                          <Link href={`/treatments/${t.slug}/`} className="hover:text-gold">
+                            {t.name}
+                          </Link>
+                        </th>
+                        <td className="p-5">
+                          <Tbc>{t.priceTbc}</Tbc>
+                        </td>
+                        <td className="p-5 text-sm text-stone">Number of sessions agreed at consultation</td>
+                      </tr>,
+                    ],
+              )}
               <tr>
                 <th scope="row" className="p-5 font-serif text-lg font-normal text-cream">
                   Blood tests
@@ -88,7 +114,7 @@ export default function PricingPage() {
           </table>
         </div>
         <p className="mt-4 text-sm text-stone">
-          London and Glasgow prices: <Tbc>confirm whether prices are the same at both clinics</Tbc>
+          Prices are the same at our London and Glasgow clinics. Your plan and its cost are confirmed at consultation.
         </p>
       </Section>
       <Section tone="soft" labelledBy="how-title">
