@@ -3,7 +3,7 @@ import { ConditionCard, FaqAccordion, StepTimeline, TreatmentCard } from "@/comp
 import { FollicleArt } from "@/components/FollicleArt";
 import { Icon } from "@/components/Icon";
 import { ClinicsSection, CtaBand, ResultsPlaceholder, ReviewsSection, TeamGrid } from "@/components/sections";
-import { Button, CheckList, Disclaimer, JsonLd, Section, SectionHeading } from "@/components/ui";
+import { Button, CheckList, Disclaimer, JsonLd, Section, SectionHeading, Tbc } from "@/components/ui";
 import { CONDITIONS, DIAGNOSIS_STEPS, PATTERNS, RX_SENTENCE } from "@/lib/conditions";
 import { GENERAL_FAQS } from "@/lib/faqs";
 import { clinicsSchema, consultationSchema, faqSchema, treatmentsListSchema } from "@/lib/schema";
@@ -11,7 +11,7 @@ import { pageMetadata } from "@/lib/seo";
 import { TREATMENTS } from "@/lib/treatments";
 
 export const metadata = pageMetadata({
-  title: "Hair Loss Treatment London & Glasgow | Harley Street Aesthetics",
+  title: "Hair Loss Treatment London & Glasgow | Harley Street Medical Wellness",
   description:
     "Clinician-led hair loss assessment and non-surgical treatment for men and women in London and Glasgow. We look for the cause first, then talk through options such as PRP. Results vary.",
   path: "/",
@@ -162,12 +162,11 @@ export default function Home() {
           title={<>Assessed by qualified <span className="text-gold">practitioners</span></>}
           intro={
             <>
-              Your consultation is with a member of our GMC-registered medical team of consultant dermatologists, a plastic surgeon and
-              doctors.
+              Your consultation is with a member of our GMC-registered medical team, led by our Medical Director, Dr Ahmad.
             </>
           }
         />
-        <TeamGrid limit={3} />
+        <TeamGrid />
       </Section>
 
       <Section tone="soft" labelledBy="pricing-title">
@@ -182,10 +181,10 @@ export default function Home() {
             />
             <CheckList
               items={[
-                <>Consultation: free online (15 minutes) or £195 in clinic (30 minutes, redeemable against treatment)</>,
+                <>Consultation: included with every treatment, or £295 for a standalone in-clinic consultation</>,
                 <>PRP: from £399 a session, or £1,099 for a course of 3</>,
                 <>Autologous exosomes: from £599 a session, or £1,599 for a course of 3</>,
-                <>Finance: Klarna, Clearpay and Ideal4Finance options, subject to status (18+, UK residents)</>,
+                <>Finance: <Tbc>finance options for Harley Street Medical Wellness</Tbc></>,
               ]}
             />
           </div>

@@ -1,5 +1,7 @@
 # Review checklist
 
+_3 Nov 2026: **rebranded to Harley Street Medical Wellness** and added PCOS and hair breakage pages. Re-ran lint, typecheck, build, links, compliance scan (pass), 17 browser tests (pass) and Lighthouse (home 96, about 97 mobile performance; 100 accessibility and best practices). Placeholders 36: some HSA facts (free online consultation, deposit, finance, company details) are now TBC for Wellness. Note: the Wellness site's own pages show unverified stats ("10K+ happy clients", "98% satisfaction") and testimonials; none were reused._
+
 _Updated 2 Nov 2026 after the Copilot research: re-ran build, lint, typecheck, links, compliance scan, 17 browser tests and Lighthouse (home 97, PRP 95, pricing 98 mobile performance; 100 accessibility and best practices). Placeholders reduced from 51 to 41; 10 Harley Street removed (not seeing patients). Then, from the main website: medical team, consultation prices (free online / £195 in clinic) and £50 deposit added; placeholders now 35. On 3 Nov, hair prices were added from the Harley Street Medical Wellness pricing page (PRP from £399, autologous exosomes from £599, Virtue options); placeholders now 32._
 
 **Check:** the team, consultation prices and deposit come from the general main-site pages, not hair-specific sources. Confirm they apply to hair loss, and which team members see hair patients.
@@ -64,7 +66,7 @@ Automated scan plus a manual read of every page. Things for your compliance lead
 
 ## 3. Placeholders to fill (`[TBC]`, amber on the page)
 
-32 unique placeholders. Copilot doesn't document these; they need the clinic manager, compliance lead or website/CRM admin (see `docs/open-questions.md`).
+36 unique placeholders. Copilot doesn't document these; they need the clinic manager, compliance lead or website/CRM admin (see `docs/open-questions.md`).
 
 | Placeholder | Pages |
 |---|---|
@@ -73,18 +75,22 @@ Automated scan plus a manual read of every page. Things for your compliance lead
 | clinic aftercare sheet for exosome treatment | /treatments/exosome-hair-treatment/ |
 | clinic aftercare sheet for PRP | /treatments/prp-hair-treatment/ |
 | clinic aftercare sheet for scalp microneedling | /treatments/scalp-microneedling/ |
+| company name, registered office and ICO registration number | /privacy-policy/ |
 | confirm every treatment listed is offered at this clinic | /glasgow/, /london/ |
-| confirm this calendar is right for hair loss consultations | /book/, /glasgow/, /london/ |
+| confirm whether a free online consultation is offered for hair loss | /diagnosis/ |
 | confirm whether offered | /diagnosis/, /treatments/ |
 | confirm whether offered and the device used | /diagnosis/ |
 | consented before and after photos (pattern hair loss) | /, /results/ |
 | consented before and after photos (thinning crown) | /, /results/ |
 | CQC registration statement | /london/ |
-| CQC registration statement and number | /404/, /about/, /book/ +36 more |
-| FCA credit broker statement and representative example, if required | /pricing/ |
+| CQC registration statement and number | /404/, /about/, /book/ +38 more |
+| deposit and cancellation notice period | /terms/ |
+| deposit and cancellation policy for Harley Street Medical Wellness | /pricing/ |
+| finance options for Harley Street Medical Wellness | / |
+| finance providers for Harley Street Medical Wellness, FCA statement and representative example | /pricing/ |
 | frequency and course length | /treatments/low-level-laser-therapy/ |
 | GMC numbers for each hair loss practitioner | /about/ |
-| Healthcare Improvement Scotland registration statement | /404/, /about/, /book/ +36 more |
+| Healthcare Improvement Scotland registration statement | /404/, /about/, /book/ +38 more |
 | Healthcare Improvement Scotland registration statement and number | /about/ |
 | hosting and form provider, e.g. Netlify | /privacy-policy/ |
 | LLLT device (in clinic or home use) | /treatments/low-level-laser-therapy/ |

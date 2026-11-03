@@ -21,6 +21,8 @@ export default function WomenPage() {
         "telogen-effluvium",
         "postpartum-hair-loss",
         "menopause-hair-loss",
+        "pcos-hair-loss",
+        "hair-breakage",
         "medical-causes",
         "traction-alopecia",
         "alopecia-areata",

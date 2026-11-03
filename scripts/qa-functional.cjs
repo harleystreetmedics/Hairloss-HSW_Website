@@ -19,7 +19,7 @@ const ok = (c, m) => console.log((c ? 'PASS ' : 'FAIL ') + m);
   ok(!requests.some((u) => /googletagmanager|facebook\.net/.test(u)), 'no analytics/pixel requests before consent');
   await p.getByRole('button', { name: 'Reject non-essential' }).click();
   ok(!(await p.getByRole('dialog', { name: 'Your privacy' }).isVisible().catch(() => false)), 'banner closes on reject');
-  const stored = await p.evaluate(() => localStorage.getItem('hsa-cookie-consent'));
+  const stored = await p.evaluate(() => localStorage.getItem('hsw-cookie-consent'));
   ok(stored && JSON.parse(stored).analytics === false, 'rejection stored');
 
   // Location switcher changes sticky call link

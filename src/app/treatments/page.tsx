@@ -10,7 +10,7 @@ import { TREATMENTS } from "@/lib/treatments";
 export const metadata = pageMetadata({
   title: "Hair Loss Treatments London & Glasgow",
   description:
-    "Non-surgical hair loss treatments at Harley Street Aesthetics: PRP, scalp microneedling, low-level laser therapy and more, chosen after a clinician-led assessment.",
+    "Non-surgical hair loss treatments at Harley Street Medical Wellness: PRP, scalp microneedling, low-level laser therapy and more, chosen after a clinician-led assessment.",
   path: "/treatments/",
 });
 

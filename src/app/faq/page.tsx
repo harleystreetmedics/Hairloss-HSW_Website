@@ -9,7 +9,7 @@ import { TREATMENTS } from "@/lib/treatments";
 export const metadata = pageMetadata({
   title: "Hair Loss FAQ",
   description:
-    "Answers to common questions about hair loss assessment and treatment at Harley Street Aesthetics in London and Glasgow, including PRP, results and costs.",
+    "Answers to common questions about hair loss assessment and treatment at Harley Street Medical Wellness in London and Glasgow, including PRP, results and costs.",
   path: "/faq/",
 });
 

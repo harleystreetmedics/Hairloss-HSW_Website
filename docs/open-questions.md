@@ -8,8 +8,8 @@ Updated 2 November 2026 after reading the company Copilot. Everything still open
 1. **There's no hair loss playbook in the Harley Street Aesthetics Copilot workspace.** The only one is "Non-Surgical Hair Rejuvenation" in the **Harley Street Medics** workspace (sources dated Mar and Jul 2026). Per your brief I've treated that as outdated. Its treatment list matches your current Facebook posts, so I used the list and protocol facts but **not its prices**. Please create or move a hair loss playbook into the HSA workspace and confirm the points below.
 
 ## Brand and ownership
-2. **Brand:** hair prices live on the **Harley Street Medical Wellness** site, and the Facebook page is Wellness-branded, but this site is built as Harley Street Aesthetics (per the brief). Should the hair site be Wellness-branded instead (logo, domain, phone 020 4628 3137, consultation £295 vs HSA £195)? Previously: the Facebook hair page is called **"Hair Loss Treatment - Harley Street Medical Wellness"**, but its posts say "Harley Street Aesthetics". Which brand is correct?
-3. Final subdomain (assumed `hairloss.harleystreetaesthetic.co.uk`).
+2. ✅ **Brand:** you confirmed on 3 Nov that hair loss is a **Harley Street Medical Wellness** service, and the site has been rebranded.
+3. Final subdomain (now assumed `hairloss.harleystreetmedicalwellness.co.uk`).
 4. Endolift source code: `Downloads\endolift-site` doesn't exist. If it lives elsewhere, I can align the two codebases.
 
 ## Treatments
@@ -22,17 +22,25 @@ Updated 2 November 2026 after reading the company Copilot. Everything still open
 11. Which conditions do we refer (scarring alopecia, alopecia areata, post-chemotherapy, beard/eyebrow), and to whom?
 12. ✅ Resolved from the main site: a free 15-minute online video consultation, or £195 for 30 minutes in clinic (redeemable). Confirm both apply to hair loss.
 
+## Wellness details still needed (after the rebrand)
+24. Is there a **free online consultation** for hair loss? The Wellness site only lists a £295 in-clinic consultation, and says every treatment includes a consultation.
+25. **Deposit and cancellation** terms for Wellness (the £50 deposit was a Harley Street Aesthetics rule).
+26. **Finance** for Wellness: are Klarna, Clearpay or Ideal4Finance available? Do you need an FCA statement?
+27. **WhatsApp:** the Wellness site lists none, so it's hidden on the hair site. Is there a Wellness WhatsApp number?
+28. **Company and ICO details** for Harley Street Medical Wellness (privacy policy and footer).
+29. The Wellness site's Privacy Policy, Terms and Cookie Policy links go to `#`, and `/privacy-policy` returns a 404. Worth fixing there.
+
 ## Booking, enquiries and tracking
-13. Booking calendar for hair (the Endolift calendar `link.harleystreetaesthetic.co.uk/widget/bookings/aesthetic-consultant-1` is shown as a fallback, flagged TBC).
+13. Booking: the Wellness site has no public calendar, so "Book" uses the enquiry form plus a link to the Wellness contact page. Is there a booking calendar for Wellness?
 14. Enquiry form destination (CRM / webhook / email). Currently Netlify Forms with a TODO.
 15. GA4, GTM and Meta Pixel IDs.
 16. ✅ Resolved from the main site: a £50 deposit secures all appointments. It is redeemable, and refundable with 48 hours' notice. Confirm this applies to hair.
 17. Finance: the FCA credit-broker statement and any representative example needed for Ideal4Finance.
 
 ## People, proof and regulation
-18. The main site's team (Al-Nakib, Soltanzadeh, Ku, Mohammed, Khan) is now on the hair site. Still open: which of them see hair loss patients, GMC numbers, photo permission, and who "Dr Ahmad" (Facebook hair video) is. He isn't on the main site team page.
+18. The Wellness team (Dr Ahmad, Medical Director; Dr Ayda Soltanzadeh and Dr Mazhar Khan, Wellness Consultants) is now on the hair site, with their photos from the Wellness website. Still open: which of them see hair loss patients, GMC numbers, photo permission, and Dr Ahmad's full name for the profile.
 19. CQC (London) and Healthcare Improvement Scotland (Glasgow) wording and numbers. Not documented in Copilot.
 20. Before/after photos: the playbook says "clinic before/after photos exist for exosome hair regrowth". Do we have written consent for web use?
 21. Google rating, review count and link; hair loss testimonials with permission.
-22. Opening hours (not in Copilot; the site uses the Endolift site's hours).
-23. Company and ICO details in the privacy policy were copied from the Endolift site. Confirm they're still current.
+22. ✅ Opening hours now from the Wellness site: Mon–Fri 9am–6pm, Sat 10am–4pm, both clinics.
+23. See 28.

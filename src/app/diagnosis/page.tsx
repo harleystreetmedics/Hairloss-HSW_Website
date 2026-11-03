@@ -50,8 +50,8 @@ export default function DiagnosisPage() {
               ]}
             />
             <p className="mt-6 text-sm text-stone">
-              You can choose a free 15-minute online video consultation, or a 30-minute in-clinic consultation (£195, redeemable against
-              treatment) where your scalp can be examined in person. The free online consultation is a consultation, not free treatment.
+              Every treatment includes a comprehensive consultation. A standalone in-clinic consultation with a GMC-registered doctor is
+              £295. Online consultation: <Tbc>confirm whether a free online consultation is offered for hair loss</Tbc>
             </p>
           </div>
           <div>

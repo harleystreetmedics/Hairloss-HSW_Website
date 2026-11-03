@@ -120,7 +120,7 @@ export const TREATMENTS: Treatment[] = [
       "Controlled micro-injuries to the scalp skin using a medical device, sometimes used alongside other hair loss treatments.",
     metaTitle: "Scalp Microneedling for Thinning Hair",
     metaDescription:
-      "Scalp microneedling for thinning hair at Harley Street Aesthetics in London and Glasgow. Assessment first, then a personal plan. Results vary between individuals.",
+      "Scalp microneedling for thinning hair at Harley Street Medical Wellness in London and Glasgow. Assessment first, then a personal plan. Results vary between individuals.",
     intro: [
       "Scalp microneedling uses a medical device with very fine needles to make tiny, controlled punctures in the skin of the scalp. It is carried out in clinic by a trained practitioner.",
       "It may be offered on its own or alongside other treatments, depending on your diagnosis. We'll explain the options that make sense for you at consultation.",
@@ -186,7 +186,7 @@ export const TREATMENTS: Treatment[] = [
       "Low-level (red) light applied to the scalp, a non-invasive option that may be discussed for some types of thinning.",
     metaTitle: "Low-Level Laser Therapy for Hair Loss",
     metaDescription:
-      "Low-level laser therapy (LLLT) for thinning hair at Harley Street Aesthetics London and Glasgow. Non-invasive, assessment-led, results vary.",
+      "Low-level laser therapy (LLLT) for thinning hair at Harley Street Medical Wellness London and Glasgow. Non-invasive, assessment-led, results vary.",
     intro: [
       "Low-level laser therapy (LLLT), sometimes called photobiomodulation, uses low-energy red light on the scalp. It does not heat or cut the skin.",
       "It is one of the non-invasive options we may discuss for some types of thinning hair, usually as part of a wider plan.",

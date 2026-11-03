@@ -6,7 +6,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Book a Hair Loss Consultation",
   description:
-    "Request a hair loss consultation at Harley Street Aesthetics in London or Glasgow. Send an enquiry, call, or message us on WhatsApp.",
+    "Request a hair loss consultation at Harley Street Medical Wellness in London or Glasgow. Send an enquiry or call your nearest clinic.",
   path: "/book/",
 });
 

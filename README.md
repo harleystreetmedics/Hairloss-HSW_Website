@@ -1,6 +1,6 @@
-# Hair Loss Clinic — Harley Street Aesthetics
+# Hair Loss Clinic — Harley Street Medical Wellness
 
-Static Next.js site for hair loss assessment and treatment at Harley Street Aesthetics (London and Glasgow). Sibling of the Endolift site; same stack, design tokens and components.
+Static Next.js site for hair loss assessment and treatment at Harley Street Medical Wellness (London and Glasgow). Built on the Endolift site's stack and components; the Wellness brand uses the same black, gold, Playfair and Montserrat design.
 
 ## Run locally
 ```bash

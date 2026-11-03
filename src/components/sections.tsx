@@ -77,33 +77,25 @@ export function ResultsPlaceholder() {
   );
 }
 
-/** Medical team from the main site's team pages. */
-export function TeamGrid({ limit }: { limit?: number }) {
-  const people = limit ? TEAM.slice(0, limit) : TEAM;
+/** Medical team from harleystreetmedicalwellness.co.uk. */
+export function TeamGrid() {
   return (
     <>
-      <ul className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-        {people.map((p) => (
-          <li key={p.name} className="rounded-2xl border border-cream/10 bg-card p-7 shadow-card">
-            <span aria-hidden="true" className="flex h-16 w-16 items-center justify-center rounded-full border border-gold/40 bg-black-soft font-serif text-xl text-gold">
-              {p.name.replace(/^(Mr|Dr) /, "").split(" ").map((w) => w[0]).join("").slice(0, 2)}
-            </span>
-            <h3 className="mt-5 font-serif text-2xl text-cream">{p.name}</h3>
-            <p className="mt-1 text-sm font-semibold text-gold">
-              {p.role}
-              {p.post && <span className="font-normal text-stone"> · {p.post}</span>}
-            </p>
-            <p className="mt-1 text-xs tracking-[0.15em] text-stone uppercase">{p.clinics}</p>
-            <p className="mt-4 text-sm leading-relaxed text-stone">{p.bio}</p>
+      <ul className="grid gap-5 md:grid-cols-3">
+        {TEAM.map((p) => (
+          <li key={p.name} className="overflow-hidden rounded-2xl border border-cream/10 bg-card shadow-card">
+            {/* eslint-disable-next-line @next/next/no-img-element -- static export; the clinic's own photos are served from its website */}
+            <img src={p.photo} alt={`${p.name}, ${p.role}`} width={600} height={720} loading="lazy" decoding="async" className="aspect-[5/6] w-full object-cover object-top" />
+            <div className="p-7">
+              <p className="eyebrow text-gold">{p.role} · GMC registered</p>
+              <h3 className="mt-2 font-serif text-2xl text-cream">{p.name}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-stone">{p.bio}</p>
+            </div>
           </li>
         ))}
       </ul>
       <p className="mt-6 text-sm text-stone">
-        Our team is GMC-registered.{" "}
-        <a href={`${BRAND.mainSite}/london/team`} className="text-gold underline underline-offset-2 hover:text-cream">
-          Read full profiles on our main website
-        </a>
-        . <Tbc>which team members see hair loss patients, and GMC numbers</Tbc>
+        <Tbc>which team members see hair loss patients, and GMC numbers</Tbc>
       </p>
     </>
   );
@@ -167,13 +159,9 @@ export function ContactLinks() {
       )}
       <p className="mt-3 flex items-center gap-3">
         <Icon name="calendar" className="h-5 w-5 shrink-0 text-gold" />
-        <span>
-          <a href={BRAND.bookingUrl} target="_blank" rel="noopener" className="font-semibold text-gold underline underline-offset-2 hover:text-cream">
-            Open our online booking calendar
-            <span className="sr-only"> (opens in a new tab)</span>
-          </a>{" "}
-          <Tbc>confirm this calendar is right for hair loss consultations</Tbc>
-        </span>
+        <a href={BRAND.bookingUrl} className="font-semibold text-gold underline underline-offset-2 hover:text-cream">
+          Contact our London clinic on our main website
+        </a>
       </p>
     </div>
   );

@@ -10,11 +10,11 @@ export function Header() {
       <div className="hidden border-b border-white/10 lg:block">
         <div className="container-x flex h-9 items-center justify-between text-xs text-white/75">
           <a href={BRAND.mainSite} className="hover:text-gold">
-            ← Harley Street Aesthetics main site
+            ← Harley Street Medical Wellness main site
           </a>
           <div className="flex items-center gap-6">
             <a href={BRAND.allTreatments} className="hover:text-gold">
-              All treatments
+              All services
             </a>
             <a href={`mailto:${BRAND.email}`} className="hover:text-gold">
               {BRAND.email}

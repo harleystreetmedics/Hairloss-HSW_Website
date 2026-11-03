@@ -84,10 +84,10 @@ export function MobileMenu() {
             </ul>
             <div className="mt-8 space-y-3 text-sm text-white/75">
               <a href={BRAND.mainSite} className="block hover:text-gold">
-                ← Harley Street Aesthetics main site
+                ← Harley Street Medical Wellness main site
               </a>
               <a href={BRAND.allTreatments} className="block hover:text-gold">
-                All treatments
+                All services
               </a>
             </div>
           </nav>

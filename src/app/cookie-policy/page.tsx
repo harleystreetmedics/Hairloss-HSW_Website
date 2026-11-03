@@ -4,7 +4,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "Cookie Policy",
-  description: "The cookies and local storage used on the Harley Street Aesthetics hair loss website, and how to change your choices.",
+  description: "The cookies and local storage used on the Harley Street Medical Wellness hair loss website, and how to change your choices.",
   path: "/cookie-policy/",
 });
 
@@ -19,10 +19,10 @@ export default function CookiePage() {
       <h2>Essential storage</h2>
       <ul>
         <li>
-          <strong>hsa-cookie-consent</strong> (local storage): remembers your cookie choices. Kept until you clear your browser storage.
+          <strong>hsw-cookie-consent</strong> (local storage): remembers your cookie choices. Kept until you clear your browser storage.
         </li>
         <li>
-          <strong>hsa-location</strong> (local storage): remembers whether you chose our London or Glasgow clinic.
+          <strong>hsw-location</strong> (local storage): remembers whether you chose our London or Glasgow clinic.
         </li>
       </ul>
       <h2>Analytics (only with consent)</h2>
@@ -40,7 +40,7 @@ export default function CookiePage() {
       </ul>
       <h2>Embedded content</h2>
       <p>
-        Our clinic pages include an embedded Google Map, and our contact options link to our online booking calendar and WhatsApp. These
+        Our clinic pages include an embedded Google Map, and our contact options link to our main website. These
         services may set their own cookies when you use them, under their own privacy policies.
       </p>
       <p>You can also block or delete cookies in your browser settings.</p>

@@ -7,7 +7,7 @@ import { BRAND } from "@/lib/site";
 export const metadata = pageMetadata({
   title: "Our Hair Loss Clinics & Team",
   description:
-    "Meet the Harley Street Aesthetics hair loss team and find our clinics in London (Belgravia) and Glasgow (Ingram Street).",
+    "Meet the Harley Street Medical Wellness hair loss team and find our clinics in London (Belgravia) and Glasgow (Ingram Street).",
   path: "/about/",
 });
 
@@ -18,7 +18,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="Clinics & team"
         title="About our hair loss clinics"
-        intro="Hair loss care at Harley Street Aesthetics is led by our medical team, with clinics in London and Glasgow."
+        intro="Hair loss care at Harley Street Medical Wellness is led by our medical team, with clinics in London and Glasgow."
         crumbs={[{ name: "Clinics & team", path: "/about/" }]}
       />
       <Section labelledBy="approach-title">
@@ -31,9 +31,9 @@ export default function AboutPage() {
                 anything, and we&rsquo;ll tell you if we think you&rsquo;d be better served elsewhere.
               </p>
               <p>
-                Harley Street Aesthetics is part of a group of clinics offering aesthetic and medical treatments. See all our treatments on the{" "}
+                Harley Street Medical Wellness offers medical wellness and regenerative treatments at our London and Glasgow clinics. See all our services on the{" "}
                 <a href={BRAND.mainSite} className="text-gold underline underline-offset-2">
-                  main Harley Street Aesthetics website
+                  Harley Street Medical Wellness website
                 </a>
                 .
               </p>
@@ -58,7 +58,7 @@ export default function AboutPage() {
           id="team-title"
           eyebrow="Our team"
           title="The people you'll see"
-          intro="Our GMC-registered medical team works across our London and Glasgow clinics."
+          intro="Our GMC-registered medical team, led by our Medical Director, Dr Ahmad."
         />
         <TeamGrid />
       </Section>

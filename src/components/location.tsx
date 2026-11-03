@@ -6,8 +6,8 @@ import { BRAND, CLINIC_LIST, CLINICS, type ClinicId } from "@/lib/site";
 import { Icon } from "./Icon";
 import { Tbc } from "./ui";
 
-// Same storage key as the Endolift site, so a visitor's clinic choice carries across both.
-const KEY = "hsa-location";
+// Remembers the visitor's clinic choice.
+const KEY = "hsw-location";
 
 type Ctx = { location: ClinicId; setLocation: (id: ClinicId) => void };
 const LocationContext = createContext<Ctx>({ location: "london", setLocation: () => {} });

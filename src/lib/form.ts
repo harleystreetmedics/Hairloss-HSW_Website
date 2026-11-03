@@ -10,6 +10,8 @@ export const CONCERN_OPTIONS = [
   "Patchy hair loss",
   "Hair loss after pregnancy",
   "Hair loss around the menopause",
+  "Thinning with PCOS or hormonal changes",
+  "Hair breakage or damaged hair",
   "Itchy, flaky or sore scalp",
   "Beard or eyebrow thinning",
   "Interested in a specific treatment",

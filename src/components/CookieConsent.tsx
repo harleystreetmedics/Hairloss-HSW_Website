@@ -4,10 +4,10 @@ import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { TRACKING } from "@/lib/site";
 
-// Same key and events as the Endolift site (docs/decisions.md #16).
-const KEY = "hsa-cookie-consent";
-const OPEN_EVENT = "hsa:open-cookie-settings";
-export const CONSENT_EVENT = "hsa:consent";
+// Same logic as the Endolift site, with Wellness-prefixed keys (docs/decisions.md #16).
+const KEY = "hsw-cookie-consent";
+const OPEN_EVENT = "hsw:open-cookie-settings";
+export const CONSENT_EVENT = "hsw:consent";
 
 export type Consent = { analytics: boolean; marketing: boolean; ts: string; v: 1 };
 

@@ -44,7 +44,7 @@ export const CONDITIONS: Condition[] = [
     summary: "Gradual thinning at the temples and crown, linked to genetics and hormones.",
     metaTitle: "Male Pattern Baldness Treatment London & Glasgow",
     metaDescription:
-      "Assessment and treatment options for male pattern baldness at Harley Street Aesthetics in London and Glasgow. Diagnosis first, then a personal plan. Results vary.",
+      "Assessment and treatment options for male pattern baldness at Harley Street Medical Wellness in London and Glasgow. Diagnosis first, then a personal plan. Results vary.",
     intro: [
       "Male pattern baldness (androgenetic alopecia) is the most common type of hair loss in men. It usually develops gradually, often starting with a receding hairline or thinning at the crown.",
       "It is linked to genetics and to how hair follicles respond to male hormones (androgens). Over time, affected follicles produce finer, shorter hairs.",
@@ -577,6 +577,94 @@ export const CONDITIONS: Condition[] = [
       },
     ],
     related: ["alopecia-areata", "medical-causes", "scarring-alopecia"],
+  },
+  {
+    slug: "pcos-hair-loss",
+    name: "Hair thinning linked to PCOS and hormones",
+    shortName: "PCOS & hormonal thinning",
+    audience: "women",
+    summary: "Thinning on the top of the scalp linked to polycystic ovary syndrome (PCOS) or other hormonal changes.",
+    metaTitle: "PCOS Hair Loss Assessment London & Glasgow",
+    metaDescription:
+      "Thinning hair with PCOS or other hormonal changes? Get a clinician-led assessment in London or Glasgow and talk through suitable options. Results vary.",
+    intro: [
+      "Polycystic ovary syndrome (PCOS) is a common hormonal condition. In some women, higher levels of androgens (male-type hormones) can lead to thinning on the top of the scalp, in a similar pattern to female pattern hair loss.",
+      "Because hormones affect the whole body, hair thinning with PCOS should be looked at alongside your general health. Your GP or specialist can help manage PCOS itself, while we focus on your hair and scalp.",
+    ],
+    symptoms: [
+      "Thinning over the top of the scalp or a wider parting",
+      "Irregular periods, acne or extra facial or body hair",
+      "Gradual change over months or years",
+    ],
+    causes: [
+      "Higher androgen levels or increased sensitivity to them",
+      "Other hormonal conditions, such as thyroid problems, which can be checked",
+      "Other contributors such as low iron or recent stress",
+    ],
+    assessment: [
+      "A consultation about your hair, periods, general health and any PCOS diagnosis or treatment",
+      "A close look at your scalp and the pattern of thinning",
+      "Blood tests where clinically indicated, arranged by us or through your GP",
+    ],
+    treatments: ["prp-hair-treatment", "scalp-microneedling", "low-level-laser-therapy", "exosome-hair-treatment"],
+    options: [
+      RX_SENTENCE,
+      "If you haven't been diagnosed with PCOS but have symptoms, we may suggest you see your GP for assessment.",
+    ],
+    faqs: [
+      {
+        q: "Can PCOS cause hair loss?",
+        a: "It can. In some women, hormonal changes linked to PCOS contribute to thinning on the top of the scalp. Other causes can look similar, so an assessment is worthwhile.",
+      },
+      {
+        q: "Should I see my GP as well?",
+        a: "Yes, if you have other PCOS symptoms or haven't been diagnosed. Managing the underlying condition is an important part of your plan.",
+      },
+    ],
+    related: ["female-pattern-hair-loss", "medical-causes", "menopause-hair-loss"],
+  },
+  {
+    slug: "hair-breakage",
+    name: "Hair breakage and damaged hair",
+    shortName: "Hair breakage",
+    audience: "all",
+    summary: "Hair that snaps along its length rather than falling out from the root, often from styling, heat or chemical treatments.",
+    metaTitle: "Hair Breakage or Hair Loss? Get Assessed",
+    metaDescription:
+      "Is your hair breaking or falling out? Learn the difference and get a clinician-led assessment of hair and scalp concerns in London or Glasgow.",
+    intro: [
+      "Not all hair that ends up in your brush is hair loss. Breakage happens when the hair shaft snaps, usually leaving short, uneven pieces, while shedding means the whole hair comes out from the root.",
+      "Breakage is often linked to heat styling, bleaching, relaxers, tight styles or rough handling, and sometimes to nutritional or medical factors. Telling breakage and shedding apart helps decide what will help.",
+    ],
+    symptoms: [
+      "Short, broken pieces of hair, often without a white bulb at the end",
+      "Hair that feels dry, rough or brittle",
+      "Thinner-looking ends or uneven lengths",
+      "Breakage where hair is tied or styled most",
+    ],
+    causes: [
+      "Heat styling, bleaching, colouring and chemical straightening",
+      "Tight hairstyles, extensions and rough brushing",
+      "Low iron, thyroid problems or other deficiencies, which can be checked",
+      "Rarely, inherited conditions affecting the hair shaft",
+    ],
+    assessment: [
+      "A consultation about your hair care, styling and health",
+      "A close look at your hair and scalp to tell breakage from shedding",
+      "Blood tests where clinically indicated",
+    ],
+    treatments: [],
+    options: [
+      "Changes to hair care and styling are usually the first step. We'll talk through practical advice.",
+      "If there is also thinning from the root, treatment options for that cause can be discussed.",
+    ],
+    faqs: [
+      {
+        q: "How do I know if my hair is breaking or falling out?",
+        a: "Hairs that shed from the root usually have a small white bulb at one end and are full length. Broken hairs are shorter and snapped along their length. A consultation can confirm which is happening.",
+      },
+    ],
+    related: ["traction-alopecia", "telogen-effluvium", "medical-causes"],
   },
 ];
 

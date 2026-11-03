@@ -6,7 +6,7 @@
 [build.environment]
   NODE_VERSION = "22"
   # Final URL (canonical, sitemap, Open Graph). Change if the subdomain changes.
-  NEXT_PUBLIC_SITE_URL = "https://hairloss.harleystreetaesthetic.co.uk"
+  NEXT_PUBLIC_SITE_URL = "https://hairloss.harleystreetmedicalwellness.co.uk"
   # Keep "false" until launch is approved; then set to "true" in the Netlify UI and redeploy.
   NEXT_PUBLIC_ALLOW_INDEXING = "false"
   # Tracking IDs (loaded only after cookie consent). Set in the Netlify UI when confirmed.

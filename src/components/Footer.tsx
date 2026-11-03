@@ -37,7 +37,7 @@ export function Footer() {
             Clinician-led assessment and non-surgical hair loss treatment for men and women at our London and Glasgow clinics.
           </p>
           <a href={BRAND.allTreatments} className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-white">
-            All treatments at Harley Street Aesthetics <Icon name="arrow" className="h-4 w-4" />
+            All services at Harley Street Medical Wellness <Icon name="arrow" className="h-4 w-4" />
           </a>
         </div>
         <nav aria-label="Conditions" className="lg:col-span-3">
@@ -137,7 +137,7 @@ export function Footer() {
           </p>
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {new Date().getFullYear()} Harley Street Aesthetics, a trading name of Harley Street Medics Ltd. All rights reserved.
+              © {new Date().getFullYear()} Harley Street Medical Wellness. All rights reserved.
             </p>
             <ul className="flex flex-wrap gap-x-5 gap-y-2">
               {LEGAL.map((l) => (

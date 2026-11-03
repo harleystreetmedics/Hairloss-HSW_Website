@@ -13,11 +13,11 @@ export const metadata = pageMetadata({
 
 const GROUPS = [
   { id: "pattern", title: "Pattern and gradual thinning", slugs: ["male-pattern-hair-loss", "female-pattern-hair-loss", "receding-hairline", "crown-thinning", "diffuse-thinning"] },
-  { id: "shedding", title: "Shedding and hormonal changes", slugs: ["telogen-effluvium", "postpartum-hair-loss", "menopause-hair-loss", "medical-causes"] },
+  { id: "shedding", title: "Shedding and hormonal changes", slugs: ["telogen-effluvium", "postpartum-hair-loss", "menopause-hair-loss", "pcos-hair-loss", "medical-causes"] },
   {
     id: "patchy",
     title: "Patchy loss, scalp and specialist conditions",
-    slugs: ["alopecia-areata", "traction-alopecia", "scarring-alopecia", "scalp-conditions", "hair-loss-after-chemotherapy", "beard-and-eyebrow-thinning"],
+    slugs: ["alopecia-areata", "traction-alopecia", "scarring-alopecia", "scalp-conditions", "hair-breakage", "hair-loss-after-chemotherapy", "beard-and-eyebrow-thinning"],
   },
 ];
 

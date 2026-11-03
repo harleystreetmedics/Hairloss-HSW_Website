@@ -132,7 +132,7 @@ export function JsonLd({ data }: { data: object | object[] }) {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, "\\u003c") }} />;
 }
 
-export function Wordmark({ sub = "Aesthetics" }: { sub?: string }) {
+export function Wordmark({ sub = "Medical Wellness" }: { sub?: string }) {
   return (
     <span className="flex flex-col leading-none">
       <span className="font-serif text-[1.15rem] tracking-[0.18em] text-white uppercase sm:text-xl">Harley Street</span>{" "}

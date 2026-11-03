@@ -13,12 +13,13 @@ const sizes = { mobile: { width: 390, height: 844 }, tablet: { width: 820, heigh
     const name = rest[i], url = rest[i + 1];
     for (const s of only) {
       const ctx = await browser.newContext({ viewport: sizes[s], deviceScaleFactor: 1 });
-      if (process.env.SKIPBANNER) await ctx.addInitScript(() => localStorage.setItem('hsa-cookie-consent', JSON.stringify({ analytics: false, marketing: false, ts: 'qa', v: 1 })));
+      if (process.env.SKIPBANNER) await ctx.addInitScript(() => localStorage.setItem('hsw-cookie-consent', JSON.stringify({ analytics: false, marketing: false, ts: 'qa', v: 1 })));
       const page = await ctx.newPage();
       try {
         await page.goto(url, { waitUntil: 'networkidle', timeout: 45000 });
       } catch (e) { console.log('warn', name, s, e.message.split('\n')[0]); }
-      await page.waitForTimeout(800);
+      await page.evaluate(async () => { for (let y = 0; y < document.body.scrollHeight; y += 500) { window.scrollTo(0, y); await new Promise((r) => setTimeout(r, 60)); } window.scrollTo(0, 0); });
+      await page.waitForTimeout(1200);
       const full = process.env.FULL !== '0';
       const jpg = Boolean(process.env.JPG);
       await page.screenshot({ path: path.join(outDir, `${name}-${s}.${jpg ? 'jpg' : 'png'}`), fullPage: full, ...(jpg ? { type: 'jpeg', quality: 55 } : {}) });
@@ -28,5 +29,6 @@ const sizes = { mobile: { width: 390, height: 844 }, tablet: { width: 820, heigh
   }
   await browser.close();
 })();
+
 
 
