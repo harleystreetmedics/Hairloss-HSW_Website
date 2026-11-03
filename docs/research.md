@@ -129,5 +129,28 @@ From harleystreetaesthetic.co.uk, rendered in a headless browser:
 - **Team** (/london/team, /glasgow/team): Mr Khalil Al-Nakib FRCSEd (Consultant Plastic Surgeon, London and Glasgow), Dr Ayda Soltanzadeh (Consultant Dermatologist, London and Glasgow), Dr Nina Ku (Dermatologist), Dr Afraa Mohammed MBBS MD (Dermatologist), Dr Mazhar Khan MBBS MRCGP DRCOG DFFP (Medical Doctor). Described as GMC-registered; no GMC numbers; no hair loss role stated. Bios on the hair site are shortened from these pages.
 - **Not on the main site:** hair loss treatments or prices, CQC/HIS wording, GMC numbers, tracking IDs (no GA4, GTM or Meta Pixel requests seen when the page loaded). The footer "Privacy Policy" and "Terms of Service" links point to `#` (broken), and `/privacy-policy` returns 404. Worth fixing on the main site.
 
+## 10. Harley Street Medical Wellness website (3 Nov 2026, at your request)
+harleystreetmedicalwellness.co.uk has **no dedicated hair loss page** (none in its 79-URL sitemap or navigation). Hair loss appears only as a section on its pricing page, `/london/services/pricing` and `/glasgow/services/pricing`, with identical prices. Screenshots: `docs/screens/ref-hsw-pricing-*.png`.
+
+**"PRP & Autologous Exosomes for Hair"**: "Regenerative PRP and autologous exosome hair restoration treatments, available as single sessions or discounted three-session courses."
+
+| Treatment | 1 session | 3 sessions |
+|---|---|---|
+| PRP Therapy | £399 | £1,099 |
+| Virtue PRP Therapy | £599 | £1,599 |
+| Autologous Exosomes Therapy | £599 | £1,599 |
+| Virtue Exosomes Therapy | £799 | £1,899 |
+
+The page also says: "All treatments include a comprehensive consultation and post-treatment support from our expert practitioners."
+
+Other notes:
+- Wellness lists an In-Clinic Consultation at **£295**, while HSA lists **£195**. The hair site uses the HSA figures; flagged.
+- Wellness London phone is 020 4628 3137, different from HSA's 020 4628 3165. The hair site keeps the HSA numbers.
+- Wellness opening hours: Mon–Fri 9–6, Sat 10–4 (both clinics).
+- Biotin shots and the Beauty IV drip are marketed for hair on the Wellness site. Not used, per the clinic's own position that vitamin drips aren't a proven hair loss treatment.
+- The Wellness "patient stories" (e.g. naming "Dr. Ahmad") and "5.0 Google rating" are not hair-related and weren't reused.
+- Scalp microneedling and low-level laser have no separate price; they may be what the "Virtue" options include.
+- Compared with the Medics Copilot playbook, the current list has **autologous** exosomes (from the patient's blood) and **no cell-conditioned media**, so conditioned media was removed from the site.
+
 ## 7. Not available yet (see open-questions.md)
 Everything from Copilot: confirmed treatment list, devices/products, sessions, prices, consultation fee, packages, finance, practitioners and GMC numbers, CQC/HIS numbers, testimonials, before/after photos and consent, booking link for hair, enquiry destination, GA4/GTM/Pixel IDs, brand voice notes, competitors.

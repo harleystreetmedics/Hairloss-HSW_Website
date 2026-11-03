@@ -8,13 +8,13 @@ Updated 2 November 2026 after reading the company Copilot. Everything still open
 1. **There's no hair loss playbook in the Harley Street Aesthetics Copilot workspace.** The only one is "Non-Surgical Hair Rejuvenation" in the **Harley Street Medics** workspace (sources dated Mar and Jul 2026). Per your brief I've treated that as outdated. Its treatment list matches your current Facebook posts, so I used the list and protocol facts but **not its prices**. Please create or move a hair loss playbook into the HSA workspace and confirm the points below.
 
 ## Brand and ownership
-2. The Facebook hair page is called **"Hair Loss Treatment - Harley Street Medical Wellness"**, but its posts say "Harley Street Aesthetics". Which brand is correct?
+2. **Brand:** hair prices live on the **Harley Street Medical Wellness** site, and the Facebook page is Wellness-branded, but this site is built as Harley Street Aesthetics (per the brief). Should the hair site be Wellness-branded instead (logo, domain, phone 020 4628 3137, consultation £295 vs HSA £195)? Previously: the Facebook hair page is called **"Hair Loss Treatment - Harley Street Medical Wellness"**, but its posts say "Harley Street Aesthetics". Which brand is correct?
 3. Final subdomain (assumed `hairloss.harleystreetaesthetic.co.uk`).
 4. Endolift source code: `Downloads\endolift-site` doesn't exist. If it lives elsewhere, I can align the two codebases.
 
 ## Treatments
-5. **Prices for HSA.** Are the Medics playbook prices still right for HSA? (Conditioned Media £399 / £1,099 for 3; Virtue Conditioned Media £499 / £1,299; Exosomes £599 / £1,599; Virtue Exosomes £699 / £1,899.) What do **PRP**, **microneedling** and **low-level laser** cost? None are priced in the playbook.
-6. What do the **"Virtue"** versions involve (Virtue RF microneedling on the scalp?), and which exosome / conditioned media **products** are used, with their UK regulatory status?
+5. ✅ **Prices now from the Wellness website** (PRP £399 / £1,099; Virtue PRP £599 / £1,599; Autologous Exosomes £599 / £1,599; Virtue Exosomes £799 / £1,899; same in London and Glasgow). Still open: microneedling and LLLT prices. _Previous note:_ Are the Medics playbook prices still right for HSA? (Conditioned Media £399 / £1,099 for 3; Virtue Conditioned Media £499 / £1,299; Exosomes £599 / £1,599; Virtue Exosomes £699 / £1,899.) What do **PRP**, **microneedling** and **low-level laser** cost? None are priced in the playbook.
+6. What do the **"Virtue"** versions involve (Virtue PRP / Virtue Exosomes) (Virtue RF microneedling on the scalp?), and which exosome / conditioned media **products** are used, with their UK regulatory status?
 7. Microneedling device for the scalp; LLLT device (in clinic or home use) and session frequency.
 8. Side effects and aftercare sheets for each treatment (not in the playbook). The site uses general, cautious wording for clinical sign-off.
 9. **Hair Rejuvenation IV Drip (£295)** is in the playbook but not on the site, because your own Facebook posts say vitamin drips aren't a proven general treatment for hair loss. Confirm it should stay off.

@@ -1,6 +1,6 @@
 # Review checklist
 
-_Updated 2 Nov 2026 after the Copilot research: re-ran build, lint, typecheck, links, compliance scan, 17 browser tests and Lighthouse (home 97, PRP 95, pricing 98 mobile performance; 100 accessibility and best practices). Placeholders reduced from 51 to 41; 10 Harley Street removed (not seeing patients). Then, from the main website: medical team, consultation prices (free online / £195 in clinic) and £50 deposit added; placeholders now 35._
+_Updated 2 Nov 2026 after the Copilot research: re-ran build, lint, typecheck, links, compliance scan, 17 browser tests and Lighthouse (home 97, PRP 95, pricing 98 mobile performance; 100 accessibility and best practices). Placeholders reduced from 51 to 41; 10 Harley Street removed (not seeing patients). Then, from the main website: medical team, consultation prices (free online / £195 in clinic) and £50 deposit added; placeholders now 35. On 3 Nov, hair prices were added from the Harley Street Medical Wellness pricing page (PRP from £399, autologous exosomes from £599, Virtue options); placeholders now 32._
 
 **Check:** the team, consultation prices and deposit come from the general main-site pages, not hair-specific sources. Confirm they apply to hair loss, and which team members see hair patients.
 
@@ -64,7 +64,7 @@ Automated scan plus a manual read of every page. Things for your compliance lead
 
 ## 3. Placeholders to fill (`[TBC]`, amber on the page)
 
-35 unique placeholders. Copilot doesn't document these; they need the clinic manager, compliance lead or website/CRM admin (see `docs/open-questions.md`).
+32 unique placeholders. Copilot doesn't document these; they need the clinic manager, compliance lead or website/CRM admin (see `docs/open-questions.md`).
 
 | Placeholder | Pages |
 |---|---|
@@ -77,12 +77,10 @@ Automated scan plus a manual read of every page. Things for your compliance lead
 | confirm this calendar is right for hair loss consultations | /book/, /glasgow/, /london/ |
 | confirm whether offered | /diagnosis/, /treatments/ |
 | confirm whether offered and the device used | /diagnosis/ |
-| confirm whether prices are the same at both clinics | /pricing/ |
 | consented before and after photos (pattern hair loss) | /, /results/ |
 | consented before and after photos (thinning crown) | /, /results/ |
 | CQC registration statement | /london/ |
 | CQC registration statement and number | /404/, /about/, /book/ +36 more |
-| exosome treatment price | /pricing/, /treatments/exosome-hair-treatment/ |
 | FCA credit broker statement and representative example, if required | /pricing/ |
 | frequency and course length | /treatments/low-level-laser-therapy/ |
 | GMC numbers for each hair loss practitioner | /about/ |
@@ -92,10 +90,9 @@ Automated scan plus a manual read of every page. Things for your compliance lead
 | LLLT device (in clinic or home use) | /treatments/low-level-laser-therapy/ |
 | LLLT price | /pricing/, /treatments/low-level-laser-therapy/ |
 | microneedling device used on the scalp | /treatments/scalp-microneedling/ |
-| price per session / course | /, /treatments/prp-hair-treatment/, /treatments/scalp-microneedling/ |
-| PRP price per session and course | /pricing/ |
-| scalp microneedling price | /pricing/ |
+| scalp microneedling price (not listed separately; may be part of the Virtue options) | /pricing/, /treatments/scalp-microneedling/ |
 | verified Google review rating, count and link, plus hair loss testimonials with written permission | /, /results/ |
+| what the Virtue option involves | /pricing/ |
 | whether beard and eyebrow treatments are offered | /conditions/beard-and-eyebrow-thinning/ |
 | whether post-chemotherapy hair support is offered | /conditions/hair-loss-after-chemotherapy/ |
 | which alopecia areata treatments are offered in clinic vs referred | /conditions/alopecia-areata/ |
