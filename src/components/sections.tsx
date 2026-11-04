@@ -66,7 +66,7 @@ export function BookingCalendar() {
     <div className="overflow-hidden rounded-2xl bg-card shadow-card">
       <iframe
         src={BRAND.bookingUrl}
-        title="Book your consultation"
+        title="Book your online consultation"
         loading="lazy"
         className="block h-[900px] w-full border-0"
       />
@@ -81,9 +81,9 @@ export function BookingCalendar() {
   );
 }
 
-export function ClinicCards() {
+export function ClinicCards({ stacked = false }: { stacked?: boolean }) {
   return (
-    <div className="grid gap-5 md:grid-cols-2">
+    <div className={stacked ? "space-y-5" : "grid gap-5 md:grid-cols-2"}>
       {CLINIC_LIST.map((c) => (
         <div key={c.id} className="flex flex-col rounded-2xl border border-cream/10 bg-card p-6 text-cream shadow-card sm:p-8">
           <p className="eyebrow text-gold">{c.city}</p>

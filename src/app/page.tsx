@@ -220,15 +220,11 @@ export default function Home() {
             <SectionHeading
               id="book-title"
               eyebrow="Book a consultation"
-              title={<>Choose a <span className="text-gold">time</span></>}
-              intro="Pick a slot in our calendar. There's no obligation to go ahead with treatment."
+              title={<>Secure your <span className="text-gold">consultation</span></>}
+              intro="Choose a time that suits you for your online consultation. There's no obligation to go ahead with treatment."
             />
             <CheckList
-              items={[
-                "Talk through your hair and scalp with our clinical team",
-                "Understand what may be contributing before choosing a treatment",
-                "Clear costs, agreed before anything starts",
-              ]}
+              items={["Priority booking access", "Direct specialist assessment", "No-obligation discussion"]}
             />
           </div>
           <div className="lg:col-span-8">
