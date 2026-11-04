@@ -11,9 +11,8 @@ The Endolift project's own `docs/deployment.md` wasn't available (its source fol
 
 ## Option A: Netlify (recommended)
 
-1. **Repository.** Push this folder to a private GitHub repo (it's already a git repo with commits per phase):
+1. **Repository.** Already on GitHub: **https://github.com/harleystreetmedics/Hairloss-HSW_Website** (branch `main`). Push later changes with:
    ```bash
-   git remote add origin https://github.com/<org>/hsw-hairloss-site.git
    git push -u origin main
    ```
 2. **Create the site.** Netlify → Add new site → Import an existing project → GitHub → pick the repo. Build settings come from `netlify.toml` (`npm run build`, publish `out`, Node 22).
