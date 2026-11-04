@@ -22,6 +22,7 @@ export default function PrivacyPage() {
       <h2>What we collect</h2>
       <ul>
         <li>Details you give us in the enquiry form or when you contact us: your name, phone number, email, preferred clinic, best time to call, main concern and any message.</li>
+        <li>Details you give when you book through our online booking calendar.</li>
         <li>Records of your consent choices (cookie preferences, and your agreement to be contacted).</li>
         <li>If you accept analytics or marketing cookies: information about how you use the site (see our <Link href="/cookie-policy/">cookie policy</Link>).</li>
       </ul>
@@ -40,7 +41,7 @@ export default function PrivacyPage() {
       </ul>
       <h2>Who we share it with</h2>
       <p>
-        Our website hosting and form provider (Netlify), our email
+        Our website hosting and form provider (Netlify), our booking calendar provider, our email
         and customer-management providers and, if you consent, Google and Meta for analytics and advertising measurement. Some of these
         providers may process data outside the UK under appropriate safeguards.
       </p>

@@ -50,8 +50,8 @@ export default function DiagnosisPage() {
               ]}
             />
             <p className="mt-6 text-sm text-stone">
-              Every treatment includes a comprehensive consultation. A standalone in-clinic consultation with a GMC-registered doctor is
-              £295.
+              Every treatment includes a comprehensive consultation. You can book an online consultation with our clinical team directly in
+              our calendar. A standalone in-clinic consultation with a GMC-registered doctor is £295.
             </p>
           </div>
           <div>

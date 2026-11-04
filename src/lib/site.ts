@@ -14,9 +14,10 @@ export const BRAND = {
   allTreatments: "https://harleystreetmedicalwellness.co.uk/london/services/pricing",
   logo: "https://harleystreetmedicalwellness.co.uk/assets/logo.png",
   email: "hello@harleystreetmedicalwellness.co.uk",
-  // Wellness "Book consultation" goes to the clinic contact page; there is no public booking calendar.
-  bookingUrl: "https://harleystreetmedicalwellness.co.uk/london/contact",
-  // The Wellness site lists no WhatsApp number (the 07700 106236 number belongs to Harley Street Medical Wellness).
+  // The clinic's own booking calendar, embedded on /book/ as on the Endolift site.
+  bookingUrl: "https://link.harleystreetmedicalwellness.co.uk/widget/bookings/wellness-consultant-1",
+  contactUrl: "https://harleystreetmedicalwellness.co.uk/london/contact",
+  // The Wellness site lists no WhatsApp number (07700 106236 belongs to Harley Street Aesthetics).
   whatsapp: { display: "", href: "", enabled: false },
 } as const;
 

@@ -33,7 +33,7 @@ Updated 2 November 2026 after reading the company Copilot. Everything still open
 29. The Wellness site's Privacy Policy, Terms and Cookie Policy links go to `#`, and `/privacy-policy` returns a 404. Worth fixing there.
 
 ## Booking, enquiries and tracking
-13. Booking: the Wellness site has no public calendar, so "Book" uses the enquiry form plus a link to the Wellness contact page. Is there a booking calendar for Wellness?
+13. ✅ Booking: the Wellness calendar (`link.harleystreetmedicalwellness.co.uk/widget/bookings/wellness-consultant-1`, "Online Consultation — Wellness Consultant, 10 min") is now embedded on the booking page and home page. Confirm this is the right calendar for hair loss, or send a hair-specific one.
 14. Enquiry form destination (CRM / webhook / email). Currently Netlify Forms with a TODO.
 15. GA4, GTM and Meta Pixel IDs.
 16. ✅ Resolved from the main site: a £50 deposit secures all appointments. It is redeemable, and refundable with 48 hours' notice. Confirm this applies to hair.

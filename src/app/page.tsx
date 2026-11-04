@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ConditionCard, FaqAccordion, StepTimeline, TreatmentCard } from "@/components/cards";
 import { FollicleArt } from "@/components/FollicleArt";
 import { Icon } from "@/components/Icon";
-import { ClinicsSection, CtaBand, TeamGrid } from "@/components/sections";
+import { BookingCalendar, ClinicsSection, CtaBand, TeamGrid } from "@/components/sections";
 import { Button, CheckList, Disclaimer, JsonLd, Section, SectionHeading } from "@/components/ui";
 import { CONDITIONS, DIAGNOSIS_STEPS, PATTERNS, RX_SENTENCE } from "@/lib/conditions";
 import { GENERAL_FAQS } from "@/lib/faqs";
@@ -213,6 +213,30 @@ export default function Home() {
       </Section>
 
       <CtaBand />
+
+      <Section id="book" tone="soft" labelledBy="book-title">
+        <div className="grid gap-12 lg:grid-cols-12">
+          <div className="lg:col-span-4">
+            <SectionHeading
+              id="book-title"
+              eyebrow="Book a consultation"
+              title={<>Choose a <span className="text-gold">time</span></>}
+              intro="Pick a slot in our calendar. There's no obligation to go ahead with treatment."
+            />
+            <CheckList
+              items={[
+                "Talk through your hair and scalp with our clinical team",
+                "Understand what may be contributing before choosing a treatment",
+                "Clear costs, agreed before anything starts",
+              ]}
+            />
+          </div>
+          <div className="lg:col-span-8">
+            <BookingCalendar />
+          </div>
+        </div>
+      </Section>
+
       <ClinicsSection />
       <div className="bg-black-rich pb-16">
         <div className="container-x">

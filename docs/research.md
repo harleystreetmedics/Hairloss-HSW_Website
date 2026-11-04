@@ -152,5 +152,12 @@ Other notes:
 - Scalp microneedling and low-level laser have no separate price; they may be what the "Virtue" options include.
 - Compared with the Medics Copilot playbook, the current list has **autologous** exosomes (from the patient's blood) and **no cell-conditioned media**, so conditioned media was removed from the site.
 
+## 11. Booking calendar (4 Nov 2026, at your request)
+Harley Street Medical Wellness has its own booking calendar on the same GoHighLevel/LeadConnector setup as the Endolift site:
+
+`https://link.harleystreetmedicalwellness.co.uk/widget/bookings/wellness-consultant-1`
+
+It is live and shows **"Online Consultation — Wellness Consultant, 10 min"** with available slots. It is now embedded on `/book/` and in the home page booking section, exactly as the Endolift site embeds its own calendar. The Wellness website itself doesn't link to this calendar (its "Book consultation" button goes to the contact page), so the link came from the clinic's `link.` booking subdomain.
+
 ## 7. Not available yet (see open-questions.md)
 Everything from Copilot: confirmed treatment list, devices/products, sessions, prices, consultation fee, packages, finance, practitioners and GMC numbers, CQC/HIS numbers, testimonials, before/after photos and consent, booking link for hair, enquiry destination, GA4/GTM/Pixel IDs, brand voice notes, competitors.

@@ -60,6 +60,27 @@ export function TeamGrid() {
   );
 }
 
+/** The clinic's booking calendar, embedded as on the Endolift site. */
+export function BookingCalendar() {
+  return (
+    <div className="overflow-hidden rounded-2xl bg-card shadow-card">
+      <iframe
+        src={BRAND.bookingUrl}
+        title="Book your consultation"
+        loading="lazy"
+        className="block h-[900px] w-full border-0"
+      />
+      <p className="border-t border-cream/10 p-4 text-center text-sm text-stone">
+        Calendar not loading?{" "}
+        <a href={BRAND.bookingUrl} target="_blank" rel="noopener" className="inline-flex items-center gap-1 font-semibold text-gold hover:text-cream">
+          Open the booking calendar <Icon name="external" className="h-4 w-4" />
+          <span className="sr-only">(opens in a new tab)</span>
+        </a>
+      </p>
+    </div>
+  );
+}
+
 export function ClinicCards() {
   return (
     <div className="grid gap-5 md:grid-cols-2">
@@ -118,8 +139,9 @@ export function ContactLinks() {
       )}
       <p className="mt-3 flex items-center gap-3">
         <Icon name="calendar" className="h-5 w-5 shrink-0 text-gold" />
-        <a href={BRAND.bookingUrl} className="font-semibold text-gold underline underline-offset-2 hover:text-cream">
-          Contact our London clinic on our main website
+        <a href={BRAND.bookingUrl} target="_blank" rel="noopener" className="font-semibold text-gold underline underline-offset-2 hover:text-cream">
+          Book online in our calendar
+          <span className="sr-only"> (opens in a new tab)</span>
         </a>
       </p>
     </div>

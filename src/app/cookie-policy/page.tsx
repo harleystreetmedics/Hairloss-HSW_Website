@@ -40,8 +40,8 @@ export default function CookiePage() {
       </ul>
       <h2>Embedded content</h2>
       <p>
-        Our clinic pages include an embedded Google Map, and our contact options link to our main website. These
-        services may set their own cookies when you use them, under their own privacy policies.
+        Our booking page includes our online booking calendar, and our clinic pages include an embedded Google Map. These services may set
+        their own cookies when you use them, under their own privacy policies.
       </p>
       <p>You can also block or delete cookies in your browser settings.</p>
     </LegalPage>
