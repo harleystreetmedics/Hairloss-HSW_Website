@@ -21,7 +21,6 @@ The Endolift project's own `docs/deployment.md` wasn't available (its source fol
    - `NEXT_PUBLIC_SITE_URL` = `https://hairloss.harleystreetmedicalwellness.co.uk` (already in `netlify.toml`)
    - `NEXT_PUBLIC_ALLOW_INDEXING` = `false` until launch, then `true` and redeploy
    - `NEXT_PUBLIC_GTM_ID` / `NEXT_PUBLIC_GA4_ID` / `NEXT_PUBLIC_META_PIXEL_ID` when confirmed
-4. **Forms.** Site configuration → Forms → **Enable form detection**, then redeploy. The `hair-enquiry` form is defined in `public/__forms.html`. Add a form notification (email or webhook to your CRM) under Forms → Form notifications. Test one submission.
 5. **Deploy.** Netlify builds automatically. Check the `*.netlify.app` URL before adding the domain.
 6. **Custom domain.** Domain management → Add a domain → `hairloss.harleystreetmedicalwellness.co.uk` → choose "Add domain" (external DNS). Netlify shows the target, which will be your site's `<site-name>.netlify.app`.
 7. **DNS record at Namecheap** (Advanced DNS → Add new record):
@@ -45,14 +44,12 @@ The Endolift project's own `docs/deployment.md` wasn't available (its source fol
 ## Option B: Vercel
 1. Import the repo at vercel.com/new. `vercel.json` sets `npm run build` and output `out`. Framework preset: "Other" (it's a static export).
 2. Add the same environment variables.
-3. Forms: Netlify Forms won't work on Vercel. Point the enquiry form at your CRM/webhook (`src/components/EnquiryForm.tsx`, `fetch` URL) before deploying.
 4. Domains → add `hairloss.harleystreetmedicalwellness.co.uk`. Vercel shows a CNAME target (`cname.vercel-dns.com`). Add at Namecheap: CNAME, host `hairloss`, value `cname.vercel-dns.com.`
 5. SSL is automatic. Confirm with the same `nslookup` / `curl -I` checks.
 
 ## Option C: Hostinger (same host as the Endolift preview)
 1. `npm run build`, then upload the contents of `out/` to the site's `public_html` (File Manager or FTP).
 2. Hostinger serves `index.html` in each folder, which matches the trailing-slash URLs.
-3. Forms: as with Vercel, Netlify Forms won't work. Connect the form to your CRM/webhook first.
 4. Add the subdomain in hPanel, then at Namecheap add the record hPanel gives you (usually a CNAME for `hairloss` to the Hostinger hostname, or an A record to the server IP).
 5. Enable the free SSL in hPanel → Security → SSL, then run the same checks.
 

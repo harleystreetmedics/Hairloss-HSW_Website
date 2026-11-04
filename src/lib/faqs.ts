@@ -39,6 +39,6 @@ export const GENERAL_FAQS: Faq[] = [
   },
   {
     q: "Is my information kept private?",
-    a: "Yes. We handle your personal and health information confidentially and in line with UK data protection law. Please don't include detailed medical information in the enquiry form; we'll ask about this privately at your consultation.",
+    a: "Yes. We handle your personal and health information confidentially and in line with UK data protection law. Please don't include detailed medical information when you book; we'll ask about this privately at your consultation.",
   },
 ];

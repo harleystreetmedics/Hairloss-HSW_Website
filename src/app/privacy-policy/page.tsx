@@ -21,14 +21,13 @@ export default function PrivacyPage() {
       </p>
       <h2>What we collect</h2>
       <ul>
-        <li>Details you give us in the enquiry form or when you contact us: your name, phone number, email, preferred clinic, best time to call, main concern and any message.</li>
-        <li>Details you give when you book through our online booking calendar.</li>
+        <li>Details you give when you book through our online booking calendar, or when you contact us by phone or email: your name, phone number, email and what you&rsquo;d like to discuss.</li>
         <li>Records of your consent choices (cookie preferences, and your agreement to be contacted).</li>
         <li>If you accept analytics or marketing cookies: information about how you use the site (see our <Link href="/cookie-policy/">cookie policy</Link>).</li>
       </ul>
       <p>
-        Your &ldquo;main concern&rdquo; can relate to your health. We use it only to arrange the right consultation. Please don&rsquo;t send
-        detailed medical information through the website form; your practitioner will collect your medical history securely at consultation.
+        What you tell us when booking can relate to your health. We use it only to arrange the right consultation. Please don&rsquo;t send
+        detailed medical information when you book; your practitioner will collect your medical history securely at consultation.
       </p>
       <p>
         The &ldquo;Which treatment is right for me?&rdquo; questions run entirely in your browser. Your answers are not stored or sent to us.
@@ -41,7 +40,7 @@ export default function PrivacyPage() {
       </ul>
       <h2>Who we share it with</h2>
       <p>
-        Our website hosting and form provider (Netlify), our booking calendar provider, our email
+        Our website hosting provider (Netlify), our booking calendar provider, our email
         and customer-management providers and, if you consent, Google and Meta for analytics and advertising measurement. Some of these
         providers may process data outside the UK under appropriate safeguards.
       </p>

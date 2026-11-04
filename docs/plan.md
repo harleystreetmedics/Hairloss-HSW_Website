@@ -35,7 +35,7 @@
 | `/faq/` | FAQ | |
 | `/about/` | Clinics & team | |
 | `/london/`, `/glasgow/` | Location pages | hair loss clinic London / Glasgow |
-| `/book/` | Book a consultation: enquiry form, calendar, phone, WhatsApp | |
+| `/book/` | Book a consultation: booking calendar, phone, email | |
 | `/privacy-policy/`, `/cookie-policy/`, `/terms/`, `/medical-disclaimer/` | Legal | |
 | `/sitemap.xml`, `/robots.txt` | SEO | |
 
@@ -70,7 +70,7 @@ Not built until confirmed: trichoscopy page, DNA testing, blood test page, trans
 
 **Pricing**: table of treatments with `[TBC]` prices, consultation `[TBC]`, finance line `[TBC]`, "price confirmed at consultation".
 
-**Book**: hero → enquiry form (name, phone, email, clinic, main concern, preferred time, message, consent, honeypot) + side panel with clinic cards, WhatsApp, calendar link `[TBC]`.
+**Book**: hero → embedded booking calendar + side panel with what happens next, contact details and clinic cards. (Updated 4 Nov 2026: the enquiry form was removed; people book directly in the clinic calendar.)
 
 ## Components
 Layout: `UtilityBar`, `Header` (wordmark → main site, nav, `LocationSwitcher`, phone, CTA, `MobileMenu`), `Footer`, `StickyMobileBar`, `CookieConsent`, `Analytics`, `SkipLink`.

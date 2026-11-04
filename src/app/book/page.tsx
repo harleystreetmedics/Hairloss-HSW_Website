@@ -1,4 +1,3 @@
-import { EnquiryForm } from "@/components/EnquiryForm";
 import { BookingCalendar, ClinicCards, ContactLinks } from "@/components/sections";
 import { CheckList, Disclaimer, PageHero, Section } from "@/components/ui";
 import { pageMetadata } from "@/lib/seo";
@@ -6,7 +5,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Book a Hair Loss Consultation",
   description:
-    "Book a hair loss consultation at Harley Street Medical Wellness in London or Glasgow. Choose a time in our calendar, send an enquiry or call your nearest clinic.",
+    "Book a hair loss consultation at Harley Street Medical Wellness in London or Glasgow. Choose a time in our calendar, or call your nearest clinic.",
   path: "/book/",
 });
 
@@ -16,7 +15,7 @@ export default function BookPage() {
       <PageHero
         eyebrow="Book a consultation"
         title="Let's talk about your hair"
-        intro="Pick a time in our calendar for your consultation, or send us your details and we'll call you back. There's no obligation to go ahead with treatment."
+        intro="Pick a time in our calendar for your consultation. There's no obligation to go ahead with treatment."
         crumbs={[{ name: "Book a consultation", path: "/book/" }]}
       />
       <Section tone="soft" labelledBy="calendar-title">
@@ -32,23 +31,13 @@ export default function BookPage() {
             <h2 className="font-serif text-2xl">What happens next</h2>
             <CheckList
               items={[
-                "Choose a time in the calendar, or we'll call you back to arrange one.",
+                "Choose a time in the calendar that suits you.",
                 "At your consultation we assess your hair and scalp and talk through your history.",
                 "We explain your options and costs. You decide, with no pressure.",
               ]}
             />
             <h2 className="pt-4 font-serif text-2xl">Prefer to talk?</h2>
             <ContactLinks />
-          </div>
-        </div>
-        <div className="mt-14">
-          <h2 className="font-serif text-2xl">Or send us your details</h2>
-          <p className="mt-2 mb-5 max-w-2xl text-stone">
-            If you&rsquo;d rather we called you back, or you have a question first, fill in the form and a member of our team will be in
-            touch.
-          </p>
-          <div className="max-w-3xl">
-            <EnquiryForm />
           </div>
         </div>
         <div className="mt-12">

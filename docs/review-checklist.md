@@ -89,7 +89,6 @@ Where the data lives: prices and facts in `src/lib/treatments.ts` (`facts`, `pri
 - [x] Every `[TBC]` filled or removed (`npm run check:tbc` prints 0).
 - [ ] Clinician sign-off of all condition and treatment copy.
 - [ ] Compliance sign-off of items in section 2.
-- [ ] Confirm enquiry destination; switch the form from Netlify Forms if needed (`src/components/EnquiryForm.tsx`, TODO comment).
 - [ ] Add GA4/GTM/Pixel IDs as environment variables; test that nothing loads before consent.
 - [ ] Add real clinic/team photography (WebP/AVIF, with alt text) if wanted.
 - [ ] Decide the 301 redirects from the old Harley Street Medics hair pages (`docs/deployment.md`).
