@@ -1,5 +1,7 @@
 # Review checklist
 
+_4 Nov 2026: the Harley Street Medical Wellness booking calendar is now embedded on the booking page and home page (Endolift approach). Checks re-run: lint, types, build, links, compliance and 17 browser tests all pass. **Please confirm this calendar is the right one for hair loss consultations.**_
+
 _3 Nov 2026 (later): all placeholders filled from Copilot/websites or removed, as you asked. Checks re-run: lint, types, build, links, compliance (pass), 17 browser tests (pass)._
 
 _3 Nov 2026: **rebranded to Harley Street Medical Wellness** and added PCOS and hair breakage pages. Re-ran lint, typecheck, build, links, compliance scan (pass), 17 browser tests (pass) and Lighthouse (home 96, about 97 mobile performance; 100 accessibility and best practices). Placeholders 36: some HSA facts (free online consultation, deposit, finance, company details) are now TBC for Wellness. Note: the Wellness site's own pages show unverified stats ("10K+ happy clients", "98% satisfaction") and testimonials; none were reused._
