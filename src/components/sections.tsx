@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { REVIEW_RATING } from "@/lib/reviews";
 import { BRAND, CLINIC_LIST, TEAM } from "@/lib/site";
 import { ClinicTabs } from "./location";
+import { ReviewsCarousel } from "./ReviewsCarousel";
 import { Icon } from "./Icon";
 import { Button, Section, SectionHeading, Tbc } from "./ui";
 
@@ -25,6 +27,27 @@ export function CtaBand({ title = "Start with the cause", text }: { title?: stri
             Which treatment is right for me?
           </Button>
         </div>
+      </div>
+    </section>
+  );
+}
+
+/** Patient reviews as published on the clinic's main website. */
+export function ReviewsSection() {
+  return (
+    <section aria-labelledby="reviews-title" className="bg-charcoal py-16 text-white sm:py-20 lg:py-24">
+      <div className="container-x">
+        <div className="mb-10 flex max-w-3xl flex-col gap-4 sm:mb-14">
+          <p className="eyebrow text-gold">Patient reviews</p>
+          <h2 id="reviews-title" className="text-3xl leading-tight text-white sm:text-4xl lg:text-5xl">
+            Trusted by <span className="text-gold">patients</span>
+          </h2>
+        </div>
+        <ReviewsCarousel />
+        <p className="mt-6 flex items-center gap-2 text-sm text-white/70">
+          <Icon name="star" className="h-4 w-4 text-gold" />
+          {REVIEW_RATING}
+        </p>
       </div>
     </section>
   );
@@ -66,7 +89,7 @@ export function BookingCalendar() {
     <div className="overflow-hidden rounded-2xl bg-card shadow-card">
       <iframe
         src={BRAND.bookingUrl}
-        title="Book your online consultation"
+        title="Book your free online consultation"
         loading="lazy"
         className="block h-[900px] w-full border-0"
       />

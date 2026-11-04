@@ -85,9 +85,10 @@ export const TEAM = [
   },
 ] as const;
 
-/** Consultation from harleystreetmedicalwellness.co.uk pricing (3 Nov 2026). */
+/** Consultation options (Wellness pricing page, 3 Nov 2026; free online consultation confirmed by the clinic, 4 Nov 2026). */
 export const CONSULTATIONS = {
   included: "All treatments include a comprehensive consultation and post-treatment support from our practitioners.",
+  online: { price: "Free", detail: "Online consultation with our clinical team, booked in our calendar. No obligation." },
   inClinic: { price: "£295", detail: "In-clinic consultation with a GMC-registered doctor." },
 };
 

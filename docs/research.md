@@ -159,5 +159,10 @@ Harley Street Medical Wellness has its own booking calendar on the same GoHighLe
 
 It is live and shows **"Online Consultation — Wellness Consultant, 10 min"** with available slots. It is now embedded on `/book/` and in the home page booking section, exactly as the Endolift site embeds its own calendar. The Wellness website itself doesn't link to this calendar (its "Book consultation" button goes to the contact page), so the link came from the clinic's `link.` booking subdomain.
 
+## 12. Reviews and the free consultation (4 Nov 2026)
+- **Free consultation:** the clinic confirmed on 4 Nov that the online consultation is free for Wellness too. The site now says "free online consultation", alongside the £295 in-clinic option from the Wellness pricing page.
+- **Reviews:** copied verbatim from the "Patient Stories / Trusted by Our Patients" section of harleystreetmedicalwellness.co.uk, together with its "5.0 Average Rating based on Google Reviews" line. Six reviews: Sarah Mitchell, James Patterson, Amelia Chen, Robert Thompson, Priya Sharma, David Williams. They are stored in `src/lib/reviews.ts`.
+  - ⚠ They are **IV therapy, metabolic health and general wellness reviews, not hair loss reviews**. Each card names the service it refers to, and the section says they are "as published on our main website", so nobody reads them as hair loss outcomes. Hair loss reviews would be better when you have them.
+
 ## 7. Not available yet (see open-questions.md)
 Everything from Copilot: confirmed treatment list, devices/products, sessions, prices, consultation fee, packages, finance, practitioners and GMC numbers, CQC/HIS numbers, testimonials, before/after photos and consent, booking link for hair, enquiry destination, GA4/GTM/Pixel IDs, brand voice notes, competitors.

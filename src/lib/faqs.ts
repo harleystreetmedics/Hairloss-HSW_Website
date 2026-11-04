@@ -31,7 +31,7 @@ export const GENERAL_FAQS: Faq[] = [
   },
   {
     q: "How much does treatment cost?",
-    a: "PRP starts from £399 a session and autologous exosome treatment from £599, with lower prices per session for a course of three. Every treatment includes a consultation, and a standalone in-clinic consultation is £295. Your plan and its cost are confirmed in writing after your consultation.",
+    a: "PRP starts from £399 a session and autologous exosome treatment from £599, with lower prices per session for a course of three. Your online consultation is free. Every treatment includes a consultation, and a standalone in-clinic consultation is £295. Your plan and its cost are confirmed in writing after your consultation.",
   },
   {
     q: "Where are your clinics?",

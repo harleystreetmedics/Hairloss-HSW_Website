@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Book a Hair Loss Consultation",
   description:
-    "Book a hair loss consultation at Harley Street Medical Wellness in London or Glasgow. Pick a time in our calendar, or call your nearest clinic.",
+    "Book a free online hair loss consultation at Harley Street Medical Wellness, serving London and Glasgow. Pick a time in our calendar, or call your nearest clinic.",
   path: "/book/",
 });
 
@@ -15,7 +15,7 @@ export default function BookPage() {
       <PageHero
         eyebrow="Book a consultation"
         title="Let's talk about your hair"
-        intro="Pick a time in our calendar for your consultation. There's no obligation to go ahead with treatment."
+        intro="Pick a time in our calendar for your free online consultation. There's no obligation to go ahead with treatment."
         crumbs={[{ name: "Book a consultation", path: "/book/" }]}
       />
       <Section tone="soft">

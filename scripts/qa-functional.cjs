@@ -59,7 +59,7 @@ const ok = (c, m) => console.log((c ? 'PASS ' : 'FAIL ') + m);
 
   // Booking calendar embedded
   await p.goto(B + '/book/', { waitUntil: 'networkidle' });
-  const cal = p.locator('iframe[title="Book your online consultation"]');
+  const cal = p.locator('iframe[title="Book your free online consultation"]');
   ok((await cal.count()) === 1, 'booking calendar iframe present');
   ok((await cal.getAttribute('src')).startsWith('https://link.harleystreetmedicalwellness.co.uk/widget/bookings/'), 'calendar points at the clinic booking widget');
   ok((await p.locator('form').count()) === 0, 'no enquiry form on the booking page');

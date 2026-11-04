@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ConditionCard, FaqAccordion, StepTimeline, TreatmentCard } from "@/components/cards";
 import { FollicleArt } from "@/components/FollicleArt";
 import { Icon } from "@/components/Icon";
-import { BookingCalendar, ClinicsSection, CtaBand, TeamGrid } from "@/components/sections";
+import { BookingCalendar, ClinicsSection, CtaBand, ReviewsSection, TeamGrid } from "@/components/sections";
 import { Button, CheckList, Disclaimer, JsonLd, Section, SectionHeading } from "@/components/ui";
 import { CONDITIONS, DIAGNOSIS_STEPS, PATTERNS, RX_SENTENCE } from "@/lib/conditions";
 import { GENERAL_FAQS } from "@/lib/faqs";
@@ -183,7 +183,7 @@ export default function Home() {
             />
             <CheckList
               items={[
-                <>Consultation: included with every treatment, or £295 for a standalone in-clinic consultation</>,
+                <>Consultation: free online, or £295 for a standalone in-clinic consultation</>,
                 <>PRP: from £399 a session, or £1,099 for a course of 3</>,
                 <>Autologous exosomes: from £599 a session, or £1,599 for a course of 3</>,
                               ]}
@@ -198,6 +198,8 @@ export default function Home() {
       </Section>
 
       
+      <ReviewsSection />
+
       <Section tone="soft" labelledBy="faq-title">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
@@ -221,7 +223,7 @@ export default function Home() {
               id="book-title"
               eyebrow="Book a consultation"
               title={<>Secure your <span className="text-gold">consultation</span></>}
-              intro="Choose a time that suits you for your online consultation. There's no obligation to go ahead with treatment."
+              intro="Choose a time that suits you for your free online consultation. There's no obligation to go ahead with treatment."
             />
             <CheckList
               items={["Priority booking access", "Direct specialist assessment", "No-obligation discussion"]}

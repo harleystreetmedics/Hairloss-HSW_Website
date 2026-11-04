@@ -25,7 +25,7 @@ Updated 2 November 2026 after reading the company Copilot. Everything still open
 12. ✅ Resolved from the main site: a free 15-minute online video consultation, or £195 for 30 minutes in clinic (redeemable). Confirm both apply to hair loss.
 
 ## Wellness details still needed (after the rebrand)
-24. Is there a **free online consultation** for hair loss? The Wellness site only lists a £295 in-clinic consultation, and says every treatment includes a consultation.
+24. ✅ Confirmed on 4 Nov: the online consultation is free. The site now says so, alongside the £295 in-clinic option.
 25. **Deposit and cancellation** terms for Wellness (the £50 deposit was a Harley Street Aesthetics rule).
 26. **Finance** for Wellness: are Klarna, Clearpay or Ideal4Finance available? Do you need an FCA statement?
 27. **WhatsApp:** the Wellness site lists none, so it's hidden on the hair site. Is there a Wellness WhatsApp number?
@@ -43,6 +43,6 @@ Updated 2 November 2026 after reading the company Copilot. Everything still open
 18. The Wellness team (Dr Ahmad, Medical Director; Dr Ayda Soltanzadeh and Dr Mazhar Khan, Wellness Consultants) is now on the hair site, with their photos from the Wellness website. Still open: which of them see hair loss patients, GMC numbers, photo permission, and Dr Ahmad's full name for the profile.
 19. CQC (London) and Healthcare Improvement Scotland (Glasgow) wording and numbers. Not documented in Copilot.
 20. Before/after photos: the playbook says "clinic before/after photos exist for exosome hair regrowth". Do we have written consent for web use?
-21. Google rating, review count and link; hair loss testimonials with permission.
+21. ✅ Partly: the six reviews and the 5.0 Google rating from your main website are now on the site. Still open: a link to the Google profile, the review count, and reviews that are actually about hair loss.
 22. ✅ Opening hours now from the Wellness site: Mon–Fri 9am–6pm, Sat 10am–4pm, both clinics.
 23. See 28.

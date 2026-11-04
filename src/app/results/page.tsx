@@ -1,4 +1,4 @@
-import { CtaBand } from "@/components/sections";
+import { CtaBand, ReviewsSection } from "@/components/sections";
 import { CheckList, Disclaimer, PageHero, Section, SectionHeading } from "@/components/ui";
 import { pageMetadata } from "@/lib/seo";
 
@@ -48,6 +48,7 @@ export default function ResultsPage() {
       <Section tone="soft">
         <Disclaimer />
       </Section>
+      <ReviewsSection />
       <CtaBand />
     </>
   );

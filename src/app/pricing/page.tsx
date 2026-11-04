@@ -42,6 +42,15 @@ export default function PricingPage() {
             <tbody className="divide-y divide-cream/10">
               <tr>
                 <th scope="row" className="p-5 font-serif text-lg font-normal text-cream">
+                  <Link href="/book/" className="hover:text-gold">
+                    Online consultation
+                  </Link>
+                </th>
+                <td className="p-5 text-cream">{CONSULTATIONS.online.price}</td>
+                <td className="p-5 text-sm text-stone">{CONSULTATIONS.online.detail}</td>
+              </tr>
+              <tr>
+                <th scope="row" className="p-5 font-serif text-lg font-normal text-cream">
                   <Link href="/diagnosis/" className="hover:text-gold">
                     In-clinic consultation
                   </Link>

@@ -20,7 +20,7 @@ export default function TermsPage() {
       <p>Any prices shown are a guide and are confirmed at consultation. We may change prices.</p>
       <h2>Bookings and cancellations</h2>
       <p>
-        All treatments include a consultation, and a standalone in-clinic consultation is £295. If you book a treatment remotely (online, by phone or by message), you have a
+        Your online consultation is free. All treatments include a consultation, and a standalone in-clinic consultation is £295. If you book a treatment remotely (online, by phone or by message), you have a
         14-day right to cancel, which we&rsquo;ll confirm in writing, and you won&rsquo;t pay for treatment if your practitioner finds
         it unsuitable for you.
       </p>

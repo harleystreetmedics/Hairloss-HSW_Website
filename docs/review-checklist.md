@@ -1,5 +1,7 @@
 # Review checklist
 
+_4 Nov 2026 (latest): free online consultation wording added, and the patient reviews from the Wellness website are now on the home and results pages. **Please check:** those reviews are about IV therapy, metabolic health and general wellness, not hair loss. Each card names the service, and the section says they come from the main website, but hair-specific reviews would be better when available._
+
 _4 Nov 2026: the Harley Street Medical Wellness booking calendar is now embedded on the booking page and home page (Endolift approach). Checks re-run: lint, types, build, links, compliance and 17 browser tests all pass. **Please confirm this calendar is the right one for hair loss consultations.**_
 
 _3 Nov 2026 (later): all placeholders filled from Copilot/websites or removed, as you asked. Checks re-run: lint, types, build, links, compliance (pass), 17 browser tests (pass)._
