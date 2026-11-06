@@ -1,8 +1,9 @@
 ﻿/* eslint-disable @typescript-eslint/no-require-imports */
 // Browser QA: cookie consent, clinic switcher, quiz, booking calendar, FAQ and console errors.
-// Needs playwright-core (npm i -D playwright-core) and Chrome; serve ./out on port 4173 first (npx serve out -l 4173).
+// Needs playwright-core (npm i -D playwright-core) and Chrome; serve ./out first (npx serve out -l 4183)
+// and set BASE_URL if you use another port.
 const { chromium } = require('playwright-core');
-const B = 'http://127.0.0.1:4173';
+const B = process.env.BASE_URL || 'http://127.0.0.1:4173';
 const ok = (c, m) => console.log((c ? 'PASS ' : 'FAIL ') + m);
 (async () => {
   const b = await chromium.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe' });

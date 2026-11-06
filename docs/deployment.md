@@ -52,6 +52,10 @@ The Endolift project's own `docs/deployment.md` wasn't available (its source fol
 4. Add the subdomain in hPanel, then at Namecheap add the record hPanel gives you (usually a CNAME for `hairloss` to the Hostinger hostname, or an A record to the server IP).
 5. Enable the free SSL in hPanel → Security → SSL, then run the same checks.
 
+## Hosting notes
+- The production build runs **webpack** (`next build --webpack`), because Turbopack crashes on Hostinger's build container. Don't switch the build script back to Turbopack.
+- On Hostinger: framework preset Next.js, branch `main`, Node 22, build command `npm run build`, **output directory `out`**, and environment variables `NEXT_PUBLIC_SITE_URL` and `NEXT_PUBLIC_ALLOW_INDEXING`.
+
 ## Local preview
 ```bash
 npm install

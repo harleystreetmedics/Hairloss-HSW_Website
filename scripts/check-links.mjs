@@ -22,7 +22,8 @@ for (const f of htmlFiles()) {
       external.get(host).add(url);
       continue;
     }
-    const path = url.split(/[?#]/)[0];
+    // Chunk names contain percent-encoded characters (e.g. %5Bslug%5D for a [slug] folder).
+    const path = decodeURIComponent(url.split(/[?#]/)[0]);
     const target = path.endsWith("/") ? join(OUT, path, "index.html") : join(OUT, path);
     if (!existsSync(target)) broken.push(`${routeOf(f)} -> ${url}`);
   }

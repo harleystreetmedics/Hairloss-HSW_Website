@@ -5,14 +5,7 @@ const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
   images: { unoptimized: true },
-  turbopack: {
-    rules: {
-      "*.css": {
-        loaders: ["@tailwindcss/turbopack"],
-        as: "*.css",
-      },
-    },
-  },
+  // Tailwind runs through postcss.config.mjs, so webpack and Turbopack build the CSS the same way.
 };
 
 export default nextConfig;
