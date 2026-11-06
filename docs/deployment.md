@@ -54,7 +54,9 @@ The Endolift project's own `docs/deployment.md` wasn't available (its source fol
 
 ## Hosting notes
 - The production build runs **webpack** (`next build --webpack`), because Turbopack crashes on Hostinger's build container. Don't switch the build script back to Turbopack.
-- On Hostinger: framework preset Next.js, branch `main`, Node 22, build command `npm run build`, **output directory `out`**, and environment variables `NEXT_PUBLIC_SITE_URL` and `NEXT_PUBLIC_ALLOW_INDEXING`.
+- On Hostinger: branch `main`, Node 22, build command `npm run build`, **output directory `out`**, and environment variables `NEXT_PUBLIC_SITE_URL` and `NEXT_PUBLIC_ALLOW_INDEXING`.
+- **Framework preset:** choose a **static site / other** preset, not "Next.js". With the Next.js preset, Hostinger builds the app in server mode (the log shows "Collecting build traces" and no `out` folder is produced), which doesn't match this project's static export.
+- `scripts/flatten-segments.mjs` skips quietly when there is no `out` folder, so a server-mode build no longer fails outright; it prints what the build left behind instead.
 
 ## Local preview
 ```bash
