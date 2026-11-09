@@ -158,7 +158,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section id="results" tone="soft" labelledBy="results-title">
+      <Section id="results" labelledBy="results-title">
         <SectionHeading
           id="results-title"
           eyebrow="Results"
@@ -170,7 +170,7 @@ export default function Home() {
         </Button>
       </Section>
 
-      <Section id="team" labelledBy="team-title">
+      <Section id="team" tone="soft" labelledBy="team-title">
         <SectionHeading
           id="team-title"
           eyebrow="Our team"
@@ -183,6 +183,8 @@ export default function Home() {
         />
         <TeamGrid />
       </Section>
+
+      <ClinicsSection />
 
       <Section id="pricing" tone="soft" labelledBy="pricing-title">
         <div className="grid items-center gap-10 lg:grid-cols-12">
@@ -248,7 +250,6 @@ export default function Home() {
         </div>
       </Section>
 
-      <ClinicsSection />
       <div className="bg-black-rich pb-16">
         <div className="container-x">
           <Disclaimer />

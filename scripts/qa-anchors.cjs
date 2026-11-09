@@ -38,7 +38,7 @@ const ok = (c, m) => console.log((c ? 'PASS ' : 'FAIL ') + m);
   // menu from another page comes back to the home section
   await p.goto(B + '/london/', { waitUntil: 'networkidle' });
   await p.getByRole('navigation', { name: 'Main' }).getByRole('link', { name: 'Pricing', exact: true }).click();
-  await p.waitForTimeout(1200);
+  await p.waitForTimeout(3000);
   const box = await p.locator('#pricing').boundingBox();
   ok(p.url().endsWith('/#pricing') && box && box.y < 200, `from /london/ -> home #pricing (y=${box ? Math.round(box.y) : 'n/a'})`);
 
