@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { REVIEW_RATING } from "@/lib/reviews";
+import { REVIEW_SOURCES } from "@/lib/reviews";
 import { BRAND, CLINIC_LIST, TEAM } from "@/lib/site";
 import { ClinicTabs } from "./location";
 import { ReviewsCarousel } from "./ReviewsCarousel";
@@ -44,10 +44,14 @@ export function ReviewsSection() {
           </h2>
         </div>
         <ReviewsCarousel />
-        <p className="mt-6 flex items-center gap-2 text-sm text-white/70">
-          <Icon name="star" className="h-4 w-4 text-gold" />
-          {REVIEW_RATING}
-        </p>
+        <ul className="mt-6 space-y-2 text-sm text-white/70">
+          {REVIEW_SOURCES.map((line) => (
+            <li key={line} className="flex items-center gap-2">
+              <Icon name="star" className="h-4 w-4 shrink-0 text-gold" />
+              {line}
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

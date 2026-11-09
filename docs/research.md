@@ -164,5 +164,10 @@ It is live and shows **"Online Consultation — Wellness Consultant, 10 min"** w
 - **Reviews:** copied verbatim from the "Patient Stories / Trusted by Our Patients" section of harleystreetmedicalwellness.co.uk, together with its "5.0 Average Rating based on Google Reviews" line. Six reviews: Sarah Mitchell, James Patterson, Amelia Chen, Robert Thompson, Priya Sharma, David Williams. They are stored in `src/lib/reviews.ts`.
   - ⚠ They are **IV therapy, metabolic health and general wellness reviews, not hair loss reviews**. Each card names the service it refers to, and the section says they are "as published on our main website", so nobody reads them as hair loss outcomes. Hair loss reviews would be better when you have them.
 
+## 13. Google reviews from harleystreetmedics.clinic (9 Nov 2026, at your request)
+Taken from the Trustindex Google-review widget on harleystreetmedics.clinic, word for word: six reviews (Phillip MacDonald, Roisin Mackenzie, Kathryn McVey, Steve Rudland, Rab Nawaz Hattar, David Mullan), all five stars and all "1 year ago", under the heading "EXCELLENT · Based on 17 reviews". They now sit at the front of the reviews carousel, each labelled "Google review", with the Wellness patient stories after them. Both rating lines are shown below the carousel, each naming the website it came from.
+- ⚠ These are reviews of the clinic group's general service (one mentions cyst removals in Glasgow), **not hair loss**. Nothing claims otherwise. Only the design and the clinic details were kept off this site from the Medics pages, per your brief; the reviews are the clinic's own published Google reviews.
+- No link to the Google Business Profile is published on that site, so the carousel has no "read all reviews" link. Send me the profile URL and I'll add one.
+
 ## 7. Not available yet (see open-questions.md)
 Everything from Copilot: confirmed treatment list, devices/products, sessions, prices, consultation fee, packages, finance, practitioners and GMC numbers, CQC/HIS numbers, testimonials, before/after photos and consent, booking link for hair, enquiry destination, GA4/GTM/Pixel IDs, brand voice notes, competitors.

@@ -1,12 +1,58 @@
-// Patient reviews exactly as published on harleystreetmedicalwellness.co.uk (read 4 Nov 2026).
-// They are clinic reviews, not hair loss reviews: each one names the service it refers to, and the
-// section says where they come from. Nothing here is edited or invented (docs/research.md §12).
+// Patient reviews exactly as published on the clinic's own websites (read 4 and 9 Nov 2026).
+// Nothing here is edited or invented. They are clinic reviews, not hair loss reviews: each card
+// shows what the review is about or where it came from (docs/research.md §12 and §13).
 
-export type Review = { name: string; service: string; quote: string };
+export type Review = { name: string; service: string; quote: string; date?: string };
 
-export const REVIEW_RATING = "5.0 average rating based on Google reviews, as published on our main website.";
+/** Rating lines, each quoted from the website it appears on. */
+export const REVIEW_SOURCES = [
+  "Rated Excellent based on 17 Google reviews, as published on harleystreetmedics.clinic.",
+  "5.0 average rating based on Google reviews, as published on harleystreetmedicalwellness.co.uk.",
+];
 
 export const REVIEWS: Review[] = [
+  // Google reviews, from harleystreetmedics.clinic (Trustindex widget, read 9 Nov 2026).
+  {
+    name: "Phillip MacDonald",
+    service: "Google review",
+    date: "1 year ago",
+    quote:
+      "The team at the surgery are great. This is my second trip and would highly recommend anyone else to see the team here. Professional, meticulous, friendly and welcoming",
+  },
+  {
+    name: "Roisin Mackenzie",
+    service: "Google review · Glasgow",
+    date: "1 year ago",
+    quote:
+      "Excellent service from the Harley Street team in Glasgow for 2 cyst removals. All staff were friendly and welcoming including surgeon (Dr Kabeya) and Fraser. Procedure was painfree. Stitches healed up really well and I'm really happy with how it looks. I would definitely go back if I needed to again. Thank you!",
+  },
+  {
+    name: "Kathryn McVey",
+    service: "Google review",
+    date: "1 year ago",
+    quote:
+      "Absoutley blown away with the service. Could not recommend Harley Street Medics enough! They were super kind and supportive from beginning to end. Would definitely come back again!",
+  },
+  {
+    name: "Steve Rudland",
+    service: "Google review",
+    date: "1 year ago",
+    quote: "Excellent service. Very skilled surgeon. No fuss. Very efficient admin and no price creep.",
+  },
+  {
+    name: "Rab Nawaz Hattar",
+    service: "Google review",
+    date: "1 year ago",
+    quote:
+      "I had a great experience with this clinic. The staff displayed a high level of professionalism and made me feel comfortable throughout my visit.",
+  },
+  {
+    name: "David Mullan",
+    service: "Google review",
+    date: "1 year ago",
+    quote: "Great service, fitted me in on a cancellation. Friendly staff, keeping you informed at all times",
+  },
+  // Patient stories, from harleystreetmedicalwellness.co.uk (read 4 Nov 2026).
   {
     name: "Sarah Mitchell",
     service: "NAD+ IV therapy",

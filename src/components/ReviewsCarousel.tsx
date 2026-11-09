@@ -17,7 +17,7 @@ export function ReviewsCarousel() {
   return (
     <div>
       <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
-        <p className="text-sm text-white/75">Real experiences from our clinics in London &amp; Glasgow, as published on our main website.</p>
+        <p className="text-sm text-white/75">Real experiences from our clinics in London &amp; Glasgow, as published on our clinic websites.</p>
         <div className="flex gap-2">
           <button
             type="button"
@@ -53,9 +53,17 @@ export function ReviewsCarousel() {
                 <figcaption className="text-sm">
                   <span className="block font-semibold text-white">{r.name}</span>
                   <span className="text-gold">{r.service}</span>
+                  {r.date && <span className="block text-white/55">{r.date}</span>}
                 </figcaption>
               </div>
-              <blockquote className="mt-6 flex-1 font-serif text-lg leading-relaxed text-white/90">
+              <div aria-label="5 out of 5 stars" className="mt-5 flex gap-1">
+                {[0, 1, 2, 3, 4].map((i) => (
+                  <svg key={i} viewBox="0 0 24 24" aria-hidden="true" className="h-4 w-4 fill-gold">
+                    <path d="m12 3 2.7 5.6 6.1.8-4.4 4.3 1 6.1L12 17l-5.4 2.8 1-6.1-4.4-4.3 6.1-.8L12 3Z" />
+                  </svg>
+                ))}
+              </div>
+              <blockquote className="mt-4 flex-1 font-serif text-lg leading-relaxed text-white/90">
                 <p>{r.quote}</p>
               </blockquote>
             </figure>

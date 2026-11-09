@@ -1,5 +1,7 @@
 # Review checklist
 
+_9 Nov 2026: the Google reviews from harleystreetmedics.clinic are now in the carousel, ahead of the Wellness patient stories. **Please check** you're happy showing Medics' Google reviews on a Wellness-branded site, and that the "Excellent, based on 17 reviews" figure is current._
+
 _9 Nov 2026: the menu now scrolls to sections of the home page instead of opening separate pages, and the treatment finder quiz is on the home page too. `scripts/qa-anchors.cjs` checks all seven menu items land on the right section; it passes, as do the 17 existing browser tests._
 
 _Lighthouse note (4 Nov): with the booking calendar embedded, Lighthouse reports NO_LCP on the home page, so it shows no performance score. **The live Endolift home page behaves exactly the same way**, so this comes from the booking widget, not from this site. Other pages are unaffected: /book/ scores 98 for performance, and accessibility is 100 throughout. The /book/ best-practices score is 79 only because the embedded calendar sets third-party cookies. If you'd rather have a clean score, the home-page calendar could load on click instead; say the word._
