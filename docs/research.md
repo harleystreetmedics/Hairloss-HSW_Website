@@ -169,5 +169,10 @@ Taken from the Trustindex Google-review widget on harleystreetmedics.clinic, wor
 - ⚠ These are reviews of the clinic group's general service (one mentions cyst removals in Glasgow), **not hair loss**. Nothing claims otherwise. Only the design and the clinic details were kept off this site from the Medics pages, per your brief; the reviews are the clinic's own published Google reviews.
 - No link to the Google Business Profile is published on that site, so the carousel has no "read all reviews" link. Send me the profile URL and I'll add one.
 
+## 14. Maps and directions on harleystreetmedics.clinic (9 Nov 2026)
+Its contact page shows the two clinics **side by side**, each in a thin gold-bordered card headed "Glasgow Location" and "London Location", with a Google Maps embed inside (546×350). Addresses and phone numbers sit in the footer, not on the cards. Screenshot: `docs/screens/ref-hsm-contact.png`.
+
+The hair site now uses the same arrangement in its clinics section: two gold-bordered cards, "London location" and "Glasgow location", each with its own map. Ours also keeps the address, opening hours, a click-to-call button and a Get directions link on the card, which the Medics page leaves to the footer.
+
 ## 7. Not available yet (see open-questions.md)
 Everything from Copilot: confirmed treatment list, devices/products, sessions, prices, consultation fee, packages, finance, practitioners and GMC numbers, CQC/HIS numbers, testimonials, before/after photos and consent, booking link for hair, enquiry destination, GA4/GTM/Pixel IDs, brand voice notes, competitors.

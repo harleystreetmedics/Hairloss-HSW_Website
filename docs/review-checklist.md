@@ -1,5 +1,7 @@
 # Review checklist
 
+_9 Nov 2026: the clinics section now shows both maps side by side in gold-bordered cards, in the Harley Street Medics style, instead of the London/Glasgow tabs._
+
 _9 Nov 2026: the Google reviews from harleystreetmedics.clinic are now in the carousel, ahead of the Wellness patient stories. **Please check** you're happy showing Medics' Google reviews on a Wellness-branded site, and that the "Excellent, based on 17 reviews" figure is current._
 
 _9 Nov 2026: the menu now scrolls to sections of the home page instead of opening separate pages, and the treatment finder quiz is on the home page too. `scripts/qa-anchors.cjs` checks all seven menu items land on the right section; it passes, as do the 17 existing browser tests._

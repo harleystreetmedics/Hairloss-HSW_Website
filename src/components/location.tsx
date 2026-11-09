@@ -4,7 +4,6 @@ import Link from "next/link";
 import { createContext, useCallback, useContext, useEffect, useState, type ReactNode } from "react";
 import { BRAND, CLINIC_LIST, CLINICS, type ClinicId } from "@/lib/site";
 import { Icon } from "./Icon";
-import { Tbc } from "./ui";
 
 // Remembers the visitor's clinic choice.
 const KEY = "hsw-location";
@@ -103,67 +102,54 @@ export function StickyMobileBar() {
   );
 }
 
-/** Clinic panel with London/Glasgow tabs and a map, as on the Endolift home page. */
-export function ClinicTabs() {
-  const { location, setLocation } = useLocation();
-  const c = CLINICS[location];
+/** Both clinics side by side, each in a gold-bordered card with its own map,
+ *  in the same style as the Harley Street Medics contact page. */
+export function ClinicMaps() {
   return (
-    <div className="grid overflow-hidden rounded-3xl border border-cream/10 bg-card shadow-card lg:grid-cols-12">
-      <div className="p-7 sm:p-10 lg:col-span-5">
-        <div role="group" aria-label="Choose a clinic" className="inline-flex rounded-full border border-cream/15 p-1">
-          {CLINIC_LIST.map((x) => (
-            <button
-              key={x.id}
-              type="button"
-              aria-pressed={x.id === location}
-              onClick={() => setLocation(x.id)}
-              className={`min-h-9 rounded-full px-5 text-xs font-semibold tracking-wider uppercase transition ${x.id === location ? "bg-gold text-on-gold" : "text-stone hover:text-cream"}`}
-            >
-              {x.city}
-            </button>
-          ))}
-        </div>
-        <h3 className="mt-6 font-serif text-3xl text-cream">{c.city} clinic</h3>
-        {c.addresses.map((a) => (
-          <p key={a.line1} className="mt-4 flex gap-3 text-stone">
-            <Icon name="pin" className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
-            <span>
-              {a.line1}
-              {a.line2 && `, ${a.line2}`}
-              <br />
-              {a.locality} {a.postcode}
-              {a.tbc && (
-                <>
+    <div className="grid gap-6 lg:grid-cols-2">
+      {CLINIC_LIST.map((c) => (
+        <div key={c.id} className="flex flex-col rounded-2xl border border-gold/40 bg-card p-5 shadow-card sm:p-7">
+          <h3 className="font-serif text-2xl text-cream sm:text-3xl">{c.city} location</h3>
+          <iframe
+            title={`Map of our ${c.city} clinic`}
+            src={c.mapEmbed}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="mt-5 block h-[22rem] w-full rounded-xl border-0"
+          />
+          <address className="mt-6 space-y-3 text-sm not-italic text-stone">
+            {c.addresses.map((a) => (
+              <p key={a.line1} className="flex gap-3">
+                <Icon name="pin" className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
+                <span>
+                  {a.line1}
+                  {a.line2 && `, ${a.line2}`}
                   <br />
-                  <Tbc>{a.tbc}</Tbc>
-                </>
-              )}
-            </span>
-          </p>
-        ))}
-        <p className="mt-3 flex gap-3 text-stone">
-          <Icon name="clock" className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
-          {c.hours}
-        </p>
-        <p className="mt-3 flex gap-3">
-          <Icon name="phone" className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
-          <a href={c.phone.href} className="font-semibold text-cream hover:text-gold">
-            {c.phone.display}
-          </a>
-        </p>
-        <a href={c.mapsUrl} target="_blank" rel="noopener" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-cream">
-          Get directions <Icon name="external" className="h-4 w-4" />
-          <span className="sr-only">(opens Google Maps in a new tab)</span>
-        </a>
-      </div>
-      <iframe
-        key={c.id}
-        title={`Map of our ${c.city} clinic`}
-        src={c.mapEmbed}
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-        className="block h-80 w-full border-0 lg:col-span-7 lg:h-full lg:min-h-[420px]"
-      />
+                  {a.locality} {a.postcode}
+                </span>
+              </p>
+            ))}
+            <p className="flex gap-3">
+              <Icon name="clock" className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
+              <span>{c.hours}</span>
+            </p>
+          </address>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <a href={c.phone.href} className="inline-flex min-h-11 items-center gap-2 rounded-full border border-gold px-5 text-sm font-semibold text-gold hover:bg-gold hover:text-on-gold">
+              <Icon name="phone" className="h-4 w-4" /> {c.phone.display}
+            </a>
+            <a
+              href={c.mapsUrl}
+              target="_blank"
+              rel="noopener"
+              className="inline-flex min-h-11 items-center gap-2 rounded-full border border-cream/20 px-5 text-sm font-semibold text-cream hover:border-gold hover:text-gold"
+            >
+              Get directions <Icon name="external" className="h-4 w-4" />
+              <span className="sr-only">to our {c.city} clinic (opens Google Maps in a new tab)</span>
+            </a>
+          </div>
+        </div>
+      ))}
     </div>
   );
 }

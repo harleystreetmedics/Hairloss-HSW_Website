@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { REVIEW_SOURCES } from "@/lib/reviews";
 import { BRAND, CLINIC_LIST, TEAM } from "@/lib/site";
-import { ClinicTabs } from "./location";
+import { ClinicMaps } from "./location";
 import { ReviewsCarousel } from "./ReviewsCarousel";
 import { Icon } from "./Icon";
 import { Button, Section, SectionHeading, Tbc } from "./ui";
@@ -60,8 +60,13 @@ export function ReviewsSection() {
 export function ClinicsSection({ tone = "rich" as "rich" | "soft" }) {
   return (
     <Section id="clinics" tone={tone} labelledBy="loc-title">
-      <SectionHeading id="loc-title" eyebrow="Our clinics" title={<>Visit us in London or <span className="text-gold">Glasgow</span></>} />
-      <ClinicTabs />
+      <SectionHeading
+        id="loc-title"
+        eyebrow="Maps and directions"
+        title={<>Visit us in London or <span className="text-gold">Glasgow</span></>}
+        intro="Both clinics are a short walk from the station. Tap a map for directions."
+      />
+      <ClinicMaps />
     </Section>
   );
 }
