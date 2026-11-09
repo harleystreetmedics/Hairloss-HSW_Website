@@ -35,7 +35,7 @@ export function CtaBand({ title = "Start with the cause", text }: { title?: stri
 /** Patient reviews as published on the clinic's main website. */
 export function ReviewsSection() {
   return (
-    <section aria-labelledby="reviews-title" className="bg-charcoal py-16 text-white sm:py-20 lg:py-24">
+    <section id="reviews" aria-labelledby="reviews-title" className="scroll-mt-28 bg-charcoal py-16 text-white sm:py-20 lg:py-24">
       <div className="container-x">
         <div className="mb-10 flex max-w-3xl flex-col gap-4 sm:mb-14">
           <p className="eyebrow text-gold">Patient reviews</p>
@@ -55,7 +55,7 @@ export function ReviewsSection() {
 
 export function ClinicsSection({ tone = "rich" as "rich" | "soft" }) {
   return (
-    <Section tone={tone} labelledBy="loc-title">
+    <Section id="clinics" tone={tone} labelledBy="loc-title">
       <SectionHeading id="loc-title" eyebrow="Our clinics" title={<>Visit us in London or <span className="text-gold">Glasgow</span></>} />
       <ClinicTabs />
     </Section>

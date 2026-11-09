@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ConditionCard, FaqAccordion, StepTimeline, TreatmentCard } from "@/components/cards";
 import { FollicleArt } from "@/components/FollicleArt";
 import { Icon } from "@/components/Icon";
+import { Quiz } from "@/components/Quiz";
 import { BookingCalendar, ClinicsSection, CtaBand, ReviewsSection, TeamGrid } from "@/components/sections";
 import { Button, CheckList, Disclaimer, JsonLd, Section, SectionHeading } from "@/components/ui";
 import { CONDITIONS, DIAGNOSIS_STEPS, PATTERNS, RX_SENTENCE } from "@/lib/conditions";
@@ -64,7 +65,7 @@ export default function Home() {
         </div>
       </section>
 
-      <Section tone="soft" labelledBy="type-title">
+      <Section id="find-your-type" tone="soft" labelledBy="type-title">
         <SectionHeading
           id="type-title"
           eyebrow="Find your hair loss type"
@@ -100,7 +101,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section labelledBy="conditions-title">
+      <Section id="conditions" labelledBy="conditions-title">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <SectionHeading id="conditions-title" eyebrow="Conditions" title={<>Every type of hair loss, <span className="text-gold">assessed</span></>} />
           <Button href="/conditions/" variant="outline" className="mb-10 shrink-0 sm:mb-12">
@@ -116,7 +117,7 @@ export default function Home() {
         </ul>
       </Section>
 
-      <Section tone="soft" labelledBy="treatments-title">
+      <Section id="treatments" tone="soft" labelledBy="treatments-title">
         <SectionHeading
           id="treatments-title"
           eyebrow="Treatments"
@@ -132,7 +133,7 @@ export default function Home() {
         </ul>
       </Section>
 
-      <Section labelledBy="diagnosis-title">
+      <Section id="diagnosis" labelledBy="diagnosis-title">
         <SectionHeading
           id="diagnosis-title"
           eyebrow="How diagnosis works"
@@ -145,7 +146,19 @@ export default function Home() {
         </Button>
       </Section>
 
-      <Section tone="soft" labelledBy="results-title">
+      <Section id="treatment-finder" tone="soft" labelledBy="finder-title">
+        <SectionHeading
+          id="finder-title"
+          eyebrow="Treatment finder"
+          title={<>Which treatment is right for <span className="text-gold">me</span>?</>}
+          intro="A few quick questions to point you to useful information before your consultation. This is not a diagnosis, and your answers are not stored or sent anywhere."
+        />
+        <div className="max-w-4xl">
+          <Quiz />
+        </div>
+      </Section>
+
+      <Section id="results" tone="soft" labelledBy="results-title">
         <SectionHeading
           id="results-title"
           eyebrow="Results"
@@ -157,7 +170,7 @@ export default function Home() {
         </Button>
       </Section>
 
-      <Section labelledBy="team-title">
+      <Section id="team" labelledBy="team-title">
         <SectionHeading
           id="team-title"
           eyebrow="Our team"
@@ -171,7 +184,7 @@ export default function Home() {
         <TeamGrid />
       </Section>
 
-      <Section tone="soft" labelledBy="pricing-title">
+      <Section id="pricing" tone="soft" labelledBy="pricing-title">
         <div className="grid items-center gap-10 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <SectionHeading
@@ -200,7 +213,7 @@ export default function Home() {
       
       <ReviewsSection />
 
-      <Section tone="soft" labelledBy="faq-title">
+      <Section id="faq" tone="soft" labelledBy="faq-title">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <SectionHeading id="faq-title" eyebrow="FAQ" title={<>Common <span className="text-gold">questions</span></>} />

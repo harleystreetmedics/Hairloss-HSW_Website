@@ -1,5 +1,7 @@
 # Review checklist
 
+_9 Nov 2026: the menu now scrolls to sections of the home page instead of opening separate pages, and the treatment finder quiz is on the home page too. `scripts/qa-anchors.cjs` checks all seven menu items land on the right section; it passes, as do the 17 existing browser tests._
+
 _Lighthouse note (4 Nov): with the booking calendar embedded, Lighthouse reports NO_LCP on the home page, so it shows no performance score. **The live Endolift home page behaves exactly the same way**, so this comes from the booking widget, not from this site. Other pages are unaffected: /book/ scores 98 for performance, and accessibility is 100 throughout. The /book/ best-practices score is 79 only because the embedded calendar sets third-party cookies. If you'd rather have a clean score, the home-page calendar could load on click instead; say the word._
 
 _4 Nov 2026 (latest): free online consultation wording added, and the patient reviews from the Wellness website are now on the home and results pages. **Please check:** those reviews are about IV therapy, metabolic health and general wellness, not hair loss. Each card names the service, and the section says they come from the main website, but hair-specific reviews would be better when available._

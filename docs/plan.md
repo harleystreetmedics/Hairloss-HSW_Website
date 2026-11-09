@@ -72,6 +72,9 @@ Not built until confirmed: trichoscopy page, DNA testing, blood test page, trans
 
 **Book**: hero → embedded booking calendar + side panel with what happens next, contact details and clinic cards. (Updated 4 Nov 2026: the enquiry form was removed; people book directly in the clinic calendar.)
 
+## Menu behaviour (9 Nov 2026)
+The header and mobile menu link to sections of the home page: `#conditions`, `#treatments`, `#diagnosis`, `#treatment-finder`, `#pricing`, `#faq`, `#clinics`. From any other page the link returns to the home page and scrolls there. The standalone pages above remain, reached from the cards, buttons and footer, and still listed in the sitemap. The menu highlights whichever section is in view.
+
 ## Components
 Layout: `UtilityBar`, `Header` (wordmark → main site, nav, `LocationSwitcher`, phone, CTA, `MobileMenu`), `Footer`, `StickyMobileBar`, `CookieConsent`, `Analytics`, `SkipLink`.
 Content: `Button`, `Section`, `SectionHeading`, `PageHero` (+ `Breadcrumbs`), `ConditionCard`, `TreatmentCard`, `PatternPicker`, `StepTimeline`, `CheckList`, `FaqAccordion`, `ReviewsCarousel` (renders placeholder when empty), `ResultsPlaceholder`, `TeamPlaceholder`, `CtaBand`, `ClinicCards`, `ClinicTabs`, `Disclaimer`, `Tbc`, `JsonLd`, `EnquiryForm`, `Quiz`, `FollicleArt` (SVG imagery).

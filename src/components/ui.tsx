@@ -60,7 +60,7 @@ export function Section({ children, tone = "rich", id, labelledBy, className = "
     <section
       id={id}
       aria-labelledby={labelledBy}
-      className={`${tone === "rich" ? "bg-black-rich" : "bg-black-soft"} border-t border-white/5 py-16 text-cream sm:py-20 lg:py-24 ${className}`}
+      className={`${tone === "rich" ? "bg-black-rich" : "bg-black-soft"} scroll-mt-28 border-t border-white/5 py-16 text-cream sm:py-20 lg:py-24 ${className}`}
     >
       <div className="container-x">{children}</div>
     </section>

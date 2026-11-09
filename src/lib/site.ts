@@ -98,12 +98,15 @@ export const TRACKING = {
   metaPixelId: process.env.NEXT_PUBLIC_META_PIXEL_ID ?? "",
 };
 
+// The menu scrolls to sections of the home page rather than opening separate pages.
+// `section` is the element id on the home page; `page` is the full page, still linked from
+// the cards, buttons and footer, and still indexed by search engines.
 export const NAV = [
-  { href: "/conditions/", label: "Conditions" },
-  { href: "/treatments/", label: "Treatments" },
-  { href: "/diagnosis/", label: "Diagnosis" },
-  { href: "/which-treatment/", label: "Treatment finder" },
-  { href: "/pricing/", label: "Pricing" },
-  { href: "/faq/", label: "FAQ" },
-  { href: "/about/", label: "Clinics & team" },
+  { href: "/#conditions", section: "conditions", page: "/conditions/", label: "Conditions" },
+  { href: "/#treatments", section: "treatments", page: "/treatments/", label: "Treatments" },
+  { href: "/#diagnosis", section: "diagnosis", page: "/diagnosis/", label: "Diagnosis" },
+  { href: "/#treatment-finder", section: "treatment-finder", page: "/which-treatment/", label: "Treatment finder" },
+  { href: "/#pricing", section: "pricing", page: "/pricing/", label: "Pricing" },
+  { href: "/#faq", section: "faq", page: "/faq/", label: "FAQ" },
+  { href: "/#clinics", section: "clinics", page: "/about/", label: "Clinics & team" },
 ] as const;

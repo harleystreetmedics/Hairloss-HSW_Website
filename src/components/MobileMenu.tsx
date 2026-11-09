@@ -8,17 +8,42 @@ import { BRAND, NAV } from "@/lib/site";
 import { Icon } from "./Icon";
 import { LocationSwitcher } from "./location";
 
-const isActive = (path: string, href: string) => path === href || (href !== "/" && path.startsWith(href));
+/** Highlights the menu item for the section currently in view on the home page. */
+function useCurrentSection() {
+  const path = usePathname() ?? "/";
+  const [current, setCurrent] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Only the home page has these sections; elsewhere the value is ignored (see `active` below).
+    if (path !== "/") return;
+    const sections = NAV.map((n) => document.getElementById(n.section)).filter((el): el is HTMLElement => Boolean(el));
+    if (sections.length === 0) return;
+    const seen = new Map<string, boolean>();
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) seen.set(entry.target.id, entry.isIntersecting);
+        const first = NAV.map((n) => n.section).find((id) => seen.get(id));
+        setCurrent(first ?? null);
+      },
+      // Counts a section as current once its top passes under the header.
+      { rootMargin: "-120px 0px -55% 0px" },
+    );
+    sections.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, [path]);
+
+  return { path, current };
+}
 
 export function NavLinks() {
-  const path = usePathname() ?? "/";
+  const { path, current } = useCurrentSection();
   return (
     <ul className="flex items-center gap-5 text-[0.8rem] font-medium tracking-wide whitespace-nowrap 2xl:gap-6">
       {NAV.map((n) => {
-        const active = isActive(path, n.href);
+        const active = path === "/" && current === n.section;
         return (
           <li key={n.href}>
-            <Link href={n.href} aria-current={active ? "page" : undefined} className={`hover:text-gold ${active ? "text-gold" : "text-white/85"}`}>
+            <Link href={n.href} aria-current={active ? "true" : undefined} className={`hover:text-gold ${active ? "text-gold" : "text-white/85"}`}>
               {n.label}
             </Link>
           </li>
@@ -30,7 +55,7 @@ export function NavLinks() {
 
 export function MobileMenu() {
   const [open, setOpen] = useState(false);
-  const path = usePathname() ?? "/";
+  const { path, current } = useCurrentSection();
   const buttonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
@@ -48,6 +73,12 @@ export function MobileMenu() {
       document.body.style.overflow = "";
     };
   }, [open]);
+
+  const items = [
+    { href: "/", section: "", label: "Home" },
+    ...NAV.map((n) => ({ href: n.href, section: n.section as string, label: n.label })),
+    { href: "/book/", section: "", label: "Book a consultation" },
+  ];
 
   return (
     <>
@@ -68,19 +99,22 @@ export function MobileMenu() {
           <nav aria-label="Mobile" className="container-x py-6">
             <LocationSwitcher className="md:hidden" />
             <ul className="mt-6 divide-y divide-white/10">
-              {[{ href: "/", label: "Home" }, ...NAV, { href: "/book/", label: "Book a consultation" }].map((n) => (
-                <li key={n.href}>
-                  <Link
-                    href={n.href}
-                    onClick={() => setOpen(false)}
-                    aria-current={path === n.href ? "page" : undefined}
-                    className={`flex min-h-14 items-center justify-between font-serif text-xl ${path === n.href ? "text-gold" : "text-white"}`}
-                  >
-                    {n.label}
-                    <Icon name="chevronRight" className="h-4 w-4 text-gold" />
-                  </Link>
-                </li>
-              ))}
+              {items.map((n) => {
+                const active = n.section ? path === "/" && current === n.section : path === n.href;
+                return (
+                  <li key={n.href}>
+                    <Link
+                      href={n.href}
+                      onClick={() => setOpen(false)}
+                      aria-current={active ? "true" : undefined}
+                      className={`flex min-h-14 items-center justify-between font-serif text-xl ${active ? "text-gold" : "text-white"}`}
+                    >
+                      {n.label}
+                      <Icon name="chevronRight" className="h-4 w-4 text-gold" />
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
             <div className="mt-8 space-y-3 text-sm text-white/75">
               <a href={BRAND.mainSite} className="block hover:text-gold">
