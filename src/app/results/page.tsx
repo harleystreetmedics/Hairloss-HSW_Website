@@ -1,3 +1,4 @@
+import { ResultsGallery } from "@/components/ResultsGallery";
 import { CtaBand, ReviewsSection } from "@/components/sections";
 import { CheckList, Disclaimer, PageHero, Section, SectionHeading } from "@/components/ui";
 import { pageMetadata } from "@/lib/seo";
@@ -45,8 +46,10 @@ export default function ResultsPage() {
           </div>
         </div>
       </Section>
-      <Section tone="soft">
-        <Disclaimer />
+      <Section id="gallery" tone="soft" labelledBy="gallery-title">
+        <SectionHeading id="gallery-title" eyebrow="Before and after" title={<>Patient <span className="text-gold">results</span></>} />
+        <ResultsGallery />
+        <Disclaimer className="mt-12" />
       </Section>
       <ReviewsSection />
       <CtaBand />
