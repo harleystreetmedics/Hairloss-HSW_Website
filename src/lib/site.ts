@@ -106,7 +106,8 @@ export const NAV = [
   { href: "/#treatments", section: "treatments", page: "/treatments/", label: "Treatments" },
   { href: "/#diagnosis", section: "diagnosis", page: "/diagnosis/", label: "Diagnosis" },
   { href: "/#treatment-finder", section: "treatment-finder", page: "/which-treatment/", label: "Treatment finder" },
+  { href: "/#results", section: "results", page: "/results/", label: "Results" },
   { href: "/#pricing", section: "pricing", page: "/pricing/", label: "Pricing" },
   { href: "/#faq", section: "faq", page: "/faq/", label: "FAQ" },
-  { href: "/#team", section: "team", page: "/about/", label: "Clinics & team" },
+  { href: "/#team", section: "team", page: "/about/", label: "Clinics" },
 ] as const;

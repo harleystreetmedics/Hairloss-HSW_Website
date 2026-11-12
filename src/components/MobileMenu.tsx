@@ -38,7 +38,7 @@ function useCurrentSection() {
 export function NavLinks() {
   const { path, current } = useCurrentSection();
   return (
-    <ul className="flex items-center gap-5 text-[0.8rem] font-medium tracking-wide whitespace-nowrap 2xl:gap-6">
+    <ul className="flex items-center gap-4 text-[0.8rem] font-medium tracking-wide whitespace-nowrap">
       {NAV.map((n) => {
         const active = path === "/" && current === n.section;
         return (

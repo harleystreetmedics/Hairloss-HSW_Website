@@ -14,7 +14,7 @@ const ok = (c, m) => console.log((c ? 'PASS ' : 'FAIL ') + m);
   await p.goto(B + '/', { waitUntil: 'networkidle' });
   await p.waitForTimeout(800);
 
-  const labels = ['Conditions', 'Treatments', 'Diagnosis', 'Treatment finder', 'Pricing', 'FAQ', 'Clinics & team'];
+  const labels = ['Conditions', 'Treatments', 'Diagnosis', 'Treatment finder', 'Results', 'Pricing', 'FAQ', 'Clinics'];
   for (const label of labels) {
     const link = p.getByRole('navigation', { name: 'Main' }).getByRole('link', { name: label, exact: true });
     const href = await link.getAttribute('href');
