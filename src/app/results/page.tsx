@@ -38,8 +38,9 @@ export default function ResultsPage() {
             <CheckList
               items={[
                 "Only real patients, treated at our clinics, with their written consent.",
-                "No filters, editing or retouching, and the same lighting and angle.",
-                "Each photo states the treatment and the time between photos.",
+                "No filters, editing or retouching. We publish the photos as they were taken.",
+                "The same area, photographed again at a review appointment months later.",
+                "Where the lighting or angle differs between two photos, we say so.",
                 "No stock images presented as results.",
               ]}
             />

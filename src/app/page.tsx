@@ -3,6 +3,7 @@ import { ConditionCard, FaqAccordion, StepTimeline, TreatmentCard } from "@/comp
 import { FollicleArt } from "@/components/FollicleArt";
 import { Icon } from "@/components/Icon";
 import { Quiz } from "@/components/Quiz";
+import { ResultsGallery } from "@/components/ResultsGallery";
 import { BookingCalendar, ClinicsSection, CtaBand, ReviewsSection, TeamGrid } from "@/components/sections";
 import { Button, CheckList, Disclaimer, JsonLd, Section, SectionHeading } from "@/components/ui";
 import { CONDITIONS, DIAGNOSIS_STEPS, PATTERNS, RX_SENTENCE } from "@/lib/conditions";
@@ -165,7 +166,8 @@ export default function Home() {
           title={<>Honest about <span className="text-gold">results</span></>}
           intro="Hair grows slowly, so changes usually take 3–6 months to judge, and results vary between people. We'll only ever show real patient photos with written consent."
         />
-        <Button href="/results/" variant="outline">
+        <ResultsGallery limit={3} />
+        <Button href="/results/" variant="outline" className="mt-10">
           About results
         </Button>
       </Section>
